@@ -53,6 +53,7 @@
         &_img2 {
             width: 5rem;
         }
+
     }
 
     &__bottom {
@@ -73,11 +74,22 @@
             width: 6rem;
             height: 4rem;
         }
+        
 
         &_pseudo {
             position: absolute;
             bottom: 0;
             left: 5%;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1.2rem;
+            height: 1.2rem;
+            background: url(../icons/curle_success_icon.png);
+            background-size: contain;
+            right: 56%;
+            top: 25%;
         }
     }
 
