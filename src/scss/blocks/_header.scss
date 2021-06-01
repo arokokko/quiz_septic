@@ -1,0 +1,79 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &_img {
+            width: 6.8rem;
+            height: auto;
+        }
+    }
+
+    &__yandex_img {
+        width: 11rem;
+        height: auto;
+    }
+
+    &__whatsapp {
+        display: flex;
+        align-items: center;
+
+        &_btn {
+            text-align: left;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: .5rem;
+                height: .5rem;
+                background-color: $green;
+                border-radius: 50%;
+                top: 40%;
+                right: 0;
+                transform: translateX(50%);
+            }            
+        }
+        &_btn > * {
+            display: inline-block;
+        }
+        &_btn > img {
+            width: 1.1rem;
+            height: auto;
+
+        }
+    }
+
+    &__contacts {
+        &_descr {
+            position: relative;
+            padding-left: .9rem;
+            &::before {
+                content: '';
+                position: absolute;
+                width: .5rem;
+                height: .5rem;
+                background-color: $green;
+                border-radius: 50%;
+                top: 25%;
+                left: 0;
+            }
+        }
+
+        &_phone > a {
+            color: $black;
+            transition: all .3s;
+        }
+        &_phone > a:hover {
+            text-decoration: underline;
+        }
+    }
+}

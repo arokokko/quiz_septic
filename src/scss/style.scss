@@ -1,3 +1,14 @@
-
+// @import './assets/libs';
+@import './assets/fonts';
+@import './assets/variables';
 @import './assets/base';
-@import './blocks/body.scss';
+@import './assets/titles';
+@import './assets/buttons';
+
+
+@import './blocks/main.scss';
+@import './blocks/first.scss';
+@import './blocks/header.scss';
+@import './blocks/side_bar';
+
+

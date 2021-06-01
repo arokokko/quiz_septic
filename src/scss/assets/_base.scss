@@ -2,14 +2,112 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Stolzl', sans-serif;
     font-weight: 400;
-    color: #fff;
 }
 
+html {
+    font-size: 1vw;
+}
+
+body {
+    font-size: 1vw;
+    line-height: 1.2;
+    color: $black;
+    background-color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+a,
+button{
+	outline: 0;
+	border: none;
+	cursor: pointer;
+}
 a {
-    text-decoration: none;
+	text-decoration: none;
     display: inline-block;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+address {
+	font-style: normal;
+}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.center {
+	display: block;
+	margin: 0 auto;
+}
+
+.fw900 {
+    font-weight: 900;
+}
+.fw700 {
+    font-weight: 700;
+}
+.fw500 {
+    font-weight: 500;
+}
+.fw300 {
+    font-weight: 300;
+}
+.fw100 {
+    font-weight: 100;
+}
+
+.fz24 {
+    font-size: 1.5rem;
+}
+.fz18 {
+    font-size: 1.1rem;
+}
+.fz14 {
+    font-size: .9rem;
+}
+.fz13 {
+    font-size: .8rem;
+}
+.fz10 {
+    font-size: .64rem;
+}
+
+.mrs {
+	margin-right: .8rem;
+}
+.mr {
+	margin-right: 1.5rem;
+}
+.mbs {
+	margin-bottom: .5rem;
+}
+.mb {
+	margin-bottom: .8rem;
+}
+.pll {
+	padding-left: 1.5rem;
 }
 
 

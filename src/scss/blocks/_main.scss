@@ -1,0 +1,84 @@
+.main {
+    margin-top: 4rem;
+
+    &__septic {
+        position: absolute;
+        bottom: 0;
+        right: 8rem;
+        width: 28rem;
+        height: auto;
+    }
+
+    &__title {
+        margin: 1.5rem 0 2.5rem;
+    }
+
+    &__bullets {
+        display: flex;
+        justify-content: start;
+        
+        
+    }
+
+    &__bullet {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        
+        &:first-child::after {
+            content: '';
+            position: absolute;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: url(../icons/curle_success_icon.png);
+            background-size: contain;
+            right: 50%;
+            top: 30%;
+        }
+
+        & > img {
+            height: auto;
+            margin-right: .7rem;
+            position: relative;
+        }
+        &_img1 {
+            width: 6rem;
+        }
+        &_img2 {
+            width: 5rem;
+        }
+    }
+
+    &__bottom {
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: start;
+        position: relative;
+
+        &_img1 {
+            margin-left: -4rem;
+            margin-top: 1.5rem;
+            width: 11rem;
+            height: auto;
+        }
+        &_img2 {
+            margin-left: -4rem;
+            margin-top: 1rem;
+            width: 6rem;
+            height: 4rem;
+        }
+
+        &_pseudo {
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+        }
+    }
+
+}
