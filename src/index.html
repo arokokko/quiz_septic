@@ -9,7 +9,7 @@
     <title>Septic Tanks Quiz</title>
 </head>
 <body>
-    <section class="first__screen">
+    <section class="main__screen">
         
         <header>
             <div class="container">
@@ -23,7 +23,7 @@
                     </a>
                     
                     <div class="header__whatsapp">
-                        <button class="header__whatsapp_btn btn-small fz10 mrs"><img src="icons/whatsapp_icon.png" class="mrs"></img><span>Написать <br>в Whatsapp</span></button>
+                        <button class="header__whatsapp_btn btn-small fz10 mrs"><img src="icons/whatsapp_icon.png" class="mrs"><span>Написать <br>в Whatsapp</span><span class="circle circle_green header__whatsapp_circle animate__animated animate__flash animate__infinite animate__slow"></span></button>
                         <div class="header__whatsapp_descr fz13">
                             Среднее время <br>ответа:
                             <span class="fw700">13 секунд</span>
@@ -31,7 +31,7 @@
                     </div>
                     
                     <div class="header__contacts">
-                        <div class="header__contacts_descr fz13 mbs">Звоните, мы сейчас работаем</div>
+                        <div class="header__contacts_descr fz13 mbs"><span class="circle circle_green header__contacts_circle animate__animated animate__flash animate__infinite animate__slow"></span>Звоните, мы сейчас работаем</div>
                         <div class="header__contacts_phone ">
                             <a href="tel:+79999999999" class="fw900 fz24">+7 (999) 999-99-99</a>
                         </div>
@@ -47,7 +47,7 @@
                     <div class="pseudo-btn_long main__pseudo-btn fz18">
                         <span class="pseudo-btn_inner">Нужна <span class="fw700">автономная канализация?</span></span>
                     </div>
-                    <h1 class="main__title titleH1 fw900">
+                    <h1 class="main__title titleH1 fw900 animate__animated animate__slideInUp animate__slow">
                         Подберите подходящую <br>
                         модель септика по лучшей<br>
                         цене <span class="fw300">у официального <br>
@@ -62,7 +62,8 @@
                             </div>
                         </div>
                         <div class="main__bullet">
-                            <img src="./img/label_discount.png" alt="скидки" class="main__bullet_img2">
+                            <img src="./img/label_sale.png" alt="распродажа" class="main__bullet_img2">
+                            <img src="./img/sale.png" alt="скидки" class="main__bullet_img3">
                             <div class="main__bullets_item">Весенняя распродажа<br>
                                 со <span class="fw700">скидкой -60%</span>
                             </div>
@@ -70,20 +71,33 @@
                         
                     </div>
                     <div class="main__bottom">
+                        <div class="main__button_wrapper button__wrapper">
+                            <span class="main__button_arrows main__button_arrows-right">
+                                    <img class="button__arrow button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                                    <img class="button__arrow button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                                    <img class="button__arrow button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                            </span>
+                            <button class="btn_large main__btn_large btn-flare fz14" >ПРОЙТИ ТЕСТ+ПОДОБРАТЬ СЕПТИК</button>
+                            <span class="main__button_arrows main__button_arrows-left">
+                                <img class="button__arrow button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_left.png" alt="стрелка влево">
+                                <img class="button__arrow button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_left.png" alt="стрелка влево">
+                                <img class="button__arrow button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_left.png" alt="стрелка влево">
+                        </span>
+                        </div>
                         
-                        <button class="btn_large main__btn_large fz14" >ПРОЙТИ ТЕСТ+ПОДОБРАТЬ СЕПТИК</button>
                         <div class="pseudo-btn_descr main__bottom_pseudo fz13">
-                            <span class="pseudo-btn_inner">и получить <span class="fw500 fz14">купон скидку -5000 руб</span></span>
+                            <span class="pseudo-btn_inner">и получить <span class="fw500">купон скидку -5000 руб</span></span>
                         </div>
                         <img src="./img/percentage_map.png" alt="проценты" class="main__bottom_img1">
                         <img src="./img/clock.png" alt="часы" class="main__bottom_img2">
+                        <div class="main__bottom_text fz13">Займет не<br> больше <span class="fw700">1 минуты</span></div>
                     </div>
                     <img src="./img/septic_tanks_main.png" alt="септик танк" class="main__septic">
                 </div>
             </div>
             
         </main>
-        <div class="side__bar_wrapper">
+        <div class="side__bar_wrapper ">
             <button class="side__bar_toggle"></button>
             <div class="side__bar fz10 fw500 "> 
                 Вы получите:
@@ -102,7 +116,84 @@
                 </div>
             </div>
         </div>
+        <footer class="footer hidden">
+            <div class="container">
+                <button class="footer__circle ">
+                    <img src="icons/arrow_footer.png" alt="стрелка вниз-вверх">
+                </button>
+                <div class="footer__wrapper fz13 ">
+                    <div class="footer__content footer__content_left">
+                        Компания ФОУ ВОУ ФРИ <br>
+                        Москва 2021
+                    </div>
+                    <div class="footer__content footer__content_center">
+                        Все права защищены<br>
+                        <a href="#">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__content footer__content_right">
+                        Сделано с любовью в <br>
+				        <div>Paradigma.website</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
         
+    </section>
+
+    <section class="quiz">
+        <div class="container">
+            <div class="quiz__basic">
+                <aside class="quiz__aside aside">
+                    <div class="quize__aside_descr aside__info">
+                        <img src="img/leaves.png " class="aside__leaves " alt="септик">
+                        <div class="aside__online fz10"><span class="circle circle_white aside__online_circle animate__animated animate__flash animate__infinite animate__slow"></span>Онлайн</div>
+                        <img src="img/manager.png " class="aside__photo" alt="фото">
+                        <div class="aside__pseudo-btn fz14"><span class="pseudo-btn_inner">Иванов Иван</span></div>
+                        <div class="aside__occupation fz13">Старший менеджер</div>
+                        <div class="fz13 aside__text aside__text1 ">
+                            По количеству проживающих<br>
+                            определяем <span class="fw700">суточный<br>
+                            объём стоков.</span>
+                        </div>
+
+                    </div>
+                    <div class="quiz__aside_buttons aside__buttons fz12">
+                        <div class="aside__buttons_title fz14">
+                            Пока что <span class="fw700">для Вас:</span>
+                        </div>
+                        <div class="aside__button aside__button1">
+                            <img src="icons/locker_icon.png">
+                            <span>Подборка <span class="fw700">не готова</span></span>
+                        </div>
+                        <div class="aside__button aside__button2">
+                            <img src="icons/locker_icon.png">
+                            <span>Инструкция: <span class="fw700">закрыта</span></span>
+                        </div>
+                        <div class="aside__button aside__button3">
+                            <img src="icons/locker_icon.png">
+                            <span>Подарок <span class="fw700">не выбран</span></span>
+                        </div>
+                    </div>
+
+                </aside>
+                <div class="quiz__main">
+                    <div class="quiz__content_wrapper"></div>
+                    <div class="quiz__scoreboard">
+                        <button class="quiz__btn-close btn__close"></button>
+                        <div class="quiz__score"></div>
+                        <span class="main__button_arrows main__button_arrows-right">
+                            <img class="button__arrow button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                            <img class="button__arrow button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                            <img class="button__arrow button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                        </span>
+                        <div class="no_opacity">nothing here</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </section>
 
 

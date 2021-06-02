@@ -1,7 +1,8 @@
-.first__screen {
+.main__screen {
     background: url(../img/background.png) center center / cover no-repeat;
 	width: 100%;
     min-height: 100vh;
     font-size: .88rem;
     padding: 2rem 0 4rem;
+    display: none;
 }

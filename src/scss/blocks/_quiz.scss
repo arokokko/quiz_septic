@@ -1,0 +1,152 @@
+.quiz {
+    &__basic {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    &__main {
+        width: 90%;
+        height: 90vh;
+        border-radius: .5rem;
+        box-shadow: 0 0 5rem 0 rgba(25, 25, 25, 0.15);
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__scoreboard {
+        width: 10%;
+        height: 100%;
+        border-radius: 0 .5rem .5rem 0;
+        background-image: linear-gradient(to bottom, #53bded, #0581ca);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__aside {
+        position: absolute;
+        top: 1.3rem;
+        left: 0;
+    }
+}
+.aside {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    &__info {
+        padding: 1.5rem 2rem;
+        width: 100%;
+        background: url(../img/background_manager.png) center center / cover no-repeat;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        
+    }
+    &__leaves {
+        position: absolute;
+        top: -2.5rem;
+        left: -4rem;
+        width: 9rem;
+    }
+
+    &__online {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: $white;
+        background: $green;
+        padding: .5rem .5rem .5rem 1rem;
+        border-radius: .4rem;
+
+        &_circle {
+            position: absolute;
+            top: .65rem;
+            left: .45rem;
+        }
+
+    }
+
+    &__photo {
+        width: 70%;
+        margin: 0 auto;
+    }
+    &__pseudo-btn {
+        width: 80%;
+        margin: -1rem auto .5rem auto;
+        background-color: $blue;
+        padding: .4rem 1rem;
+        border-radius: .2rem;
+        transform: skewX(-5deg);
+        color: $white;
+    }
+    &__text {
+        margin-top: 1.5rem;
+        background: $white;
+        border-radius: .3rem;
+        padding: .5rem;
+        position: relative;
+        z-index: 2;
+        &:before {
+            content: '';
+            position: absolute;
+            background: $white;
+            left: 45%; 
+            top: 0;
+            width: 2rem; 
+            height: 2rem;
+            z-index: -1; 
+            transform: rotate(45deg); 
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_title {
+            text-transform: uppercase;
+        }
+
+    }
+    &__button {
+        width: 85%;
+        margin-top: 1rem;
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem 1rem 3rem;
+        border-radius: .5rem;
+        cursor:no-drop;
+        position: relative;
+
+        & > img {
+            width: 1rem;
+        }
+
+    }
+    &__button1 {
+        background: url(../img/background_button_top.png);
+        background-size: cover;
+    }
+    &__button2 {
+        background: url(../img/background_button_middle.png);
+        background-size: cover;
+    }
+    &__button3 {
+        background: url(../img/background_button_bottom.png);
+        background-size: cover;
+    }
+
+}

@@ -1,0 +1,65 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgba($white, .5);
+    background-size: cover;
+    width: 100%;
+    z-index: 45;
+    padding: 1.2rem 0;
+	transition: all 0.4s;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+
+	&__content {
+		&_center {
+			text-align: center;
+		}
+		&_right {
+			opacity: 0;
+		}
+		& > a {
+			color: $green;
+		}
+		& > a:hover {
+			text-decoration: underline;
+		}
+	
+	}
+
+	&__circle {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translate(-50%, -45%) rotate(0);
+		transition: all 0.4s; 
+		background: transparent;
+
+		&:hover {
+			opacity: 0.75;
+		}
+
+		& img {
+			width: 2.3rem;
+		}
+	}
+
+}
+  
+.footer.hidden {
+    background: transparent;
+	transform: translateY(65%);
+}
+
+.hidden .footer__circle {
+	transform: translate(-50%, -45%) rotate(180deg);
+}
+.hidden .footer__wrapper {
+	opacity: 0;
+}
+  
+  

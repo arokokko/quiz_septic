@@ -29,19 +29,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
-            &::after {
-                content: '';
-                position: absolute;
-                width: .5rem;
-                height: .5rem;
-                background-color: $green;
-                border-radius: 50%;
-                top: 40%;
-                right: 0;
-                transform: translateX(50%);
-            }            
         }
+        &_circle {
+            position: absolute;
+            right: 0;
+            transform: translateX(50%);
+        }            
+        
         &_btn > * {
             display: inline-block;
         }
@@ -56,18 +50,14 @@
         &_descr {
             position: relative;
             padding-left: .9rem;
-            &::before {
-                content: '';
-                position: absolute;
-                width: .5rem;
-                height: .5rem;
-                background-color: $green;
-                border-radius: 50%;
-                top: 25%;
-                left: 0;
-            }
+            
         }
-
+        &_circle {
+            position: absolute;
+            left: 0;
+            top: 25%;
+            // transform: translateX(-50%);
+        } 
         &_phone > a {
             color: $black;
             transition: all .3s;

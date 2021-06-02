@@ -45,13 +45,21 @@
         & > img {
             height: auto;
             margin-right: .7rem;
-            position: relative;
+            
         }
         &_img1 {
             width: 6rem;
+            position: relative;
         }
         &_img2 {
             width: 5rem;
+            position: relative;
+        }
+        &_img3 {
+            position: absolute;
+            width: 4rem;
+            left: .4rem;
+            animation: rotate 10s infinite linear;
         }
 
     }
@@ -60,6 +68,7 @@
         margin-top: 2.5rem;
         display: flex;
         justify-content: start;
+        align-items: center;
         position: relative;
 
         &_img1 {
@@ -67,12 +76,16 @@
             margin-top: 1.5rem;
             width: 11rem;
             height: auto;
+            z-index: 3;
         }
         &_img2 {
             margin-left: -4rem;
-            margin-top: 1rem;
             width: 6rem;
             height: 4rem;
+        }
+        &_text {
+            align-self: center;
+            margin-left: -1rem;
         }
         
 
@@ -90,6 +103,25 @@
             background-size: contain;
             right: 56%;
             top: 25%;
+        }
+    }
+
+    &__button {
+        &_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        &_arrows {
+            position: absolute;
+            z-index: 2;
+            &-right {
+                left: 2.5rem;
+            }
+            &-left {
+                right: 2.5rem;
+            }
         }
     }
 

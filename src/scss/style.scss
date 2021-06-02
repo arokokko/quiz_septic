@@ -1,4 +1,4 @@
-// @import './assets/libs';
+@import './assets/libs';
 @import './assets/fonts';
 @import './assets/variables';
 @import './assets/base';
@@ -7,8 +7,10 @@
 
 
 @import './blocks/main.scss';
-@import './blocks/first.scss';
+@import './blocks/main_screen.scss';
 @import './blocks/header.scss';
 @import './blocks/side_bar';
+@import './blocks/footer';
+@import './blocks/quiz';
 
 

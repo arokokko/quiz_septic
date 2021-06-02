@@ -1,11 +1,11 @@
 .side__bar_wrapper {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
 }
 .side__bar {
-    // transform: translateX(110%);
+    
     background-image: linear-gradient(to bottom, #72f76b, $green);
     color: white;
     text-transform: uppercase;
@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    cursor:no-drop;
+    cursor: no-drop;
 
     &_item {
         position: relative;
@@ -35,14 +35,14 @@
         }
 
         & > img {
-            min-width: 1.5rem;
+            width: 2rem;
             margin-top: 1rem;
             margin-bottom: 0.2rem;
 
         }
         &:not(:last-child) {
             padding-bottom: .9rem;
-            border-bottom: 1px solid $white;
+            border-bottom: .1rem solid $white;
         }
     }
 
@@ -51,10 +51,14 @@
         background: $white;
         width: 1.6rem;
         height: 1.6rem;
-        position: fixed;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         top: -0.6rem;
         left: 50%;
         transform: translateX(-50%);
+        transition: all .4s;
 
         &::before {
             content:'';
@@ -63,18 +67,24 @@
             background:$green;
             width: 80%;
             height: 80%;
-            align-self: center;
-            top: 2px;
-            left: 2px;
 
         }
         &::after {
             content:"×";
             position: absolute;
             color: $white;
-            align-self: center;
-            top: 1px;
-            left: 6px;
+            font-size: 1.5rem;
+        }
+        &:hover {
+            transform: translateX(-50%) scale(1.1);
         }
     }
+
+}
+
+.hidden .side__bar {
+    transform: translateX(110%);
+}
+.hidden .side__bar_toggle::after {
+    content: "<";
 }
