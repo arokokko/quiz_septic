@@ -22,3 +22,12 @@
         margin-left: 8rem;
     }
 }
+
+@keyframes progress_bar {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100rem 0;
+	}
+}

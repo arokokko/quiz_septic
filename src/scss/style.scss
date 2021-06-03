@@ -1,6 +1,7 @@
 @import './assets/libs';
 @import './assets/fonts';
 @import './assets/variables';
+@import './assets/animation';
 @import './assets/base';
 @import './assets/titles';
 @import './assets/buttons';
@@ -12,5 +13,9 @@
 @import './blocks/side_bar';
 @import './blocks/footer';
 @import './blocks/quiz';
+@import './blocks/selects';
+@import './blocks/progress_bar';
+
+@import './assets/logic';
 
 

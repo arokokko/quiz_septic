@@ -1,0 +1,47 @@
+.progress-bar {
+    order: -1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    border: .2rem solid $grey;
+    border-radius: 2rem;
+    background: $grey;
+}
+.progress-bar__line-wrap {
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: $grey;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.progress-bar__line {
+    position: absolute;
+    left: 0;
+    margin-right: 0.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6bd873;
+    background-image: repeating-linear-gradient(-55deg, transparent, transparent .5rem, $green .6rem, $green 1.1rem), linear-gradient(to top, #6bd873 0, #6bd873 100%);
+    animation: progress_bar 50s linear infinite;
+    background-size: 200rem;
+    transition: width 0.4s;
+    border-radius: 2rem;
+    padding: 0;
+}
+.progress-bar__inner_text {
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

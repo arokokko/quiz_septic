@@ -1,0 +1,169 @@
+
+.quiz__selects {
+    display: flex;
+    flex-direction: column;
+
+    & input[type="radio"] {
+        display: none;
+        &:not(:disabled) ~ label {
+        cursor: pointer;
+        }
+        &:disabled ~ label {
+        color: $dark_grey;
+        border-color: $dark_grey;
+        cursor: not-allowed;
+        }
+        
+    }
+
+    & label {
+        width: 18rem;
+        display: block;
+        border: .1rem solid $dark_grey;
+        border-radius: 0.3rem;
+        padding: 1rem 1rem 1rem 4rem;
+        margin-bottom: 1.2rem;
+        position: relative;
+        transition: all .4s;
+    }
+    & label.pressure {
+        width: 20rem;
+        min-height: 4rem;
+        padding: .3rem .5rem .3rem 4rem;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    & input[type="radio"] + label {
+        &::before {
+            content: "";
+            background: url(../icons/success_disable_icon.png);
+            background-size: contain;
+            position: absolute;
+            top: .5rem;
+            left: 1rem;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+    & input[type="radio"] + label.pressure {
+        &::before {
+            
+            top: 22%;
+        }
+    }
+
+    & input[type="radio"]:checked + label {
+        border: .1rem solid $green;
+        
+        position: relative;
+            &::before {
+                content: "";
+                background: url(../icons/success_icon.png);
+                background-size: contain;
+                position: absolute;
+                top: .5rem;
+                left: 1rem;
+                height: 2rem;
+                width: 2rem;
+            }
+    }
+    & input[type="radio"]:checked + label.pressure {
+            &::before {
+                
+                top: 22%;
+                
+            }
+    }
+    & input[type="radio"]:checked + label > span {
+        font-weight: 700;
+    }
+}  
+.input_help {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: -.9rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: all .4s;
+    z-index: 1;
+
+    &-text {
+        opacity: 0;
+        width: 7rem;
+        border-radius: .3rem;
+        background: #fff;
+        box-shadow: 0 0 2rem 0 #d3d5d5;
+        padding: .4rem .4rem;
+        position: absolute;
+        top: -1.5rem;
+        right: 1.2rem;
+        text-align: center;
+        z-index: -1;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:hover .input_help-text {
+        opacity: .9;
+    }
+
+    & > img {
+       z-index: 3; 
+    }
+}
+.label_custom {
+    span {
+        display: block;
+        position: absolute;
+        padding-left: 2rem;
+        margin-top: .4rem;
+    }
+}
+.quiz__selects {
+
+    & input[type="radio"]:checked + label.label_custom::before,
+    & input[type="radio"] + label.label_custom::before {
+        top: 97%;
+        left: 0;
+    }
+    & input[type="radio"]:checked + label.label_custom-dbl::before,
+    & input[type="radio"] + label.label_custom-dbl::before { 
+        top: 105%;
+        left: 0;
+    }
+    & label.label_custom {
+        border: none;
+    }
+    & input[type="radio"]:checked + label.label_custom {
+        border: none;
+        
+    
+    }   
+
+    & input[type="radio"]:checked + label.label_custom > img {
+        border: .1rem solid $green;
+        border-radius: .3rem;
+    }  
+    & label.label_custom {
+        width: 10rem;
+        padding: 0;
+        margin-bottom: 4rem;
+        margin-right: 2rem;
+    }
+
+    & label.label_gift {
+        width: 9rem;
+    }
+    & label.label_custom > img {
+        width: 100%;
+        height: 100%;
+    }
+    & label.label_gift > img {
+        width: 80%;
+    }
+}
+
