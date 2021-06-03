@@ -1,0 +1,24 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    }
+  
+    100% {
+        transform: rotate(360deg)
+    }
+}
+  
+@keyframes flare {
+    0% {
+        left: -3rem;
+        margin-left: 0;
+    }
+    30% {
+        left: 110%;
+        margin-left: 8rem;
+    }
+    100% {
+        left: 110%;
+        margin-left: 8rem;
+    }
+}
