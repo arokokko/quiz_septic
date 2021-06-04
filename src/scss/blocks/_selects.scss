@@ -1,7 +1,6 @@
 
 .quiz__selects {
-    display: flex;
-    flex-direction: column;
+    
 
     & input[type="radio"] {
         display: none;
@@ -26,6 +25,9 @@
         position: relative;
         transition: all .4s;
     }
+
+    // more than 2 lines in description
+    // start
     & label.pressure {
         width: 20rem;
         min-height: 4rem;
@@ -34,6 +36,7 @@
         align-items: center;
         
     }
+    // end
 
     & input[type="radio"] + label {
         &::before {
@@ -115,6 +118,8 @@
        z-index: 3; 
     }
 }
+
+// screen 5 start
 .label_custom {
     span {
         display: block;
@@ -141,7 +146,6 @@
     & input[type="radio"]:checked + label.label_custom {
         border: none;
         
-    
     }   
 
     & input[type="radio"]:checked + label.label_custom > img {
@@ -155,15 +159,105 @@
         margin-right: 2rem;
     }
 
-    & label.label_gift {
-        width: 9rem;
-    }
     & label.label_custom > img {
         width: 100%;
         height: 100%;
     }
-    & label.label_gift > img {
-        width: 80%;
+    
+}
+// screen 5 end
+
+// screen 6 start
+.label_gift {
+    margin-right: 1.5rem;
+    span {
+        display: block;
+        position: absolute;
+        bottom: -1.7rem;
+        left: 2.1rem;
+    }
+    span.dbl_line {
+        bottom: -2.1rem;
     }
 }
+.quiz__selects {
 
+    & input[type="radio"]:checked + label.label_gift::before,
+    & input[type="radio"] + label.label_gift::before {
+        top: 103%;
+        left: 0;
+    }
+    
+    & label.label_gift > img {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    & label.label_gift {
+        width: 10rem;
+        min-height: 12.5rem;
+        padding: 1rem .5rem;
+    }
+}
+// screen 6 end
+
+// screen 2 start
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+  
+.quantity_inner {
+    display: inline-flex;
+    align-items: center;
+    background: $grey;
+    border-radius: .3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+} 
+.quantity_inner .bt_minus,
+.quantity_inner .bt_plus {
+    font-size: 1rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background: $white;
+    border-radius: 50%;
+    font-weight: 500;
+}       
+.quantity_inner .bt_minus,
+.quantity_inner .bt_plus,
+.quantity_inner .quantity {
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: 0;
+    
+}
+.quantity_inner .quantity {
+    height: 2.5rem;
+    width: 3.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+.quiz__select {
+    &-name {
+        margin-bottom: 0.4rem;
+
+        & > img {
+            height: 1rem;
+        }
+    }
+}
+// screen 2 end

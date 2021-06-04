@@ -1,6 +1,8 @@
 .quiz {
+    display: none;
     &__basic {
-        margin-top: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         display: flex;
         justify-content: flex-end;
         position: relative;
@@ -8,7 +10,7 @@
 
     &__main {
         width: 90%;
-        // height: 90vh;
+        min-height: 90vh;
         border-radius: .5rem;
         box-shadow: 0 0 5rem 0 rgba(25, 25, 25, 0.15);
         position: relative;
@@ -52,6 +54,9 @@
     &__content5 {
         display: none;
     }
+    &__content6 {
+        display: none;
+    }
 
     &__content {
         &_wrapper {
@@ -59,7 +64,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 3rem 6rem 3rem 4rem;
+            padding: 3rem 6rem 2rem 4rem;
         }
         &_title {
             &-wrapper {
@@ -85,41 +90,56 @@
 
         }
         &_gift {
-            margin-left: 20%;
             width: 35%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
 
-            &-img {
+            &-wrapper {
                 width: 100%;
+                min-height: 17rem;
                 background: $grey;
                 border: .15rem dashed $green; 
                 border-radius: .3rem;
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                padding: 2rem 1rem;
+                padding: 2rem 1rem 1rem;
+                margin-bottom: .5rem;
+                position: relative;
+            }
+            &-wrapper > *:not(:last-child) {
                 margin-bottom: .5rem;
             }
-            &-img > *:first-child {
+            &-wrapper > :first-child {
                 margin-bottom: 1rem;
             }
-            &-img > img {
-                width: 60%;
+            &-wrapper > img {
+                width: 80%;
                 height: auto;
             }
             &-bottom {
                 text-decoration: underline;
             }
-            &-custom {
-                margin-left: 0;
-                width: 100%;
+            &-stickers {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: .5rem;
+                left: -2rem;
+                color: $white;
             }
+            
         }
         
     }
     &__selects {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
         &-help {
             margin-top: 2rem;
             position: relative;
@@ -130,7 +150,7 @@
             background: url(../icons/dashed_arrow_up_icon.png);
             background-size: contain;
             top: -2rem;
-            right: 1.4rem;
+            left: 43%;
             width: 5.5rem;
             height: 2.5rem;
         }
@@ -307,10 +327,64 @@
 
 }
 
-.quiz__content5 .quiz__selects {
+.quiz__content6 .quiz__selects,
+.quiz__content5 .quiz__selects,
+.quiz__content2 .quiz__selects {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+
+.quiz__content5 .quiz__selects,
+.quiz__content2 .quiz__selects {
+        
+    &-help::before {
+        left: 70%;
+    }
+}
+
 .quiz__content6 .quiz__selects {
-    flex-direction: row;
+        
+    &-help::before {
+        left: 80%;
+    }
+}
+
+.quiz__content2 .quiz__selects > div {
+    margin-right: 2.5rem;
+    margin-top: 1.2rem;
+}
+
+.gift__sticker {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: .1rem 5rem 5rem 5rem;
+    padding: .3rem .5rem;
+    margin-bottom: .6rem;
+}
+
+.gift__sticker > img{
+    width: 1rem;
+    margin-right: .4rem;
+}
+
+.gift__sticker > span{
+    text-align: left;
+}
+
+.gift__sticker-violet {
+    background: linear-gradient(to right, #5c44a2, #8f69c3);
+}
+.gift__sticker-green {
+    background: linear-gradient(to right, #1c901a, #06ab1b);
+}
+.gift__sticker-orange {
+    background: linear-gradient(to right, #ea5203, #f9a40d);
+}
+.gift__sticker-blue {
+    background: linear-gradient(to right, #0d409d, #0d409d);
+}
+.gift__sticker-red {
+    background: linear-gradient(to right, #cc1e07, #f33134);
 }

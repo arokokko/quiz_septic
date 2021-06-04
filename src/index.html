@@ -179,8 +179,19 @@
                 </aside>
                 <div class="quiz__main">
                     <div class="quiz__content_wrapper">
+
+                        <div class="quiz__progress-bar progress-bar">
+							<div class="progress-bar__line-wrap fz13">
+                                <span class="progress-bar__inner_text">Расчет <span class="fw700">пройден на 16%</span></span>
+								<div class="progress-bar__line" >
+                                    
+								</div>
+							</div>
+						</div>
+
+<!-- first screen-->                        
                         
-                        <div class="quiz__content quiz__content1 animate__animated animate__slideInRight ">
+                        <form class="quiz__content quiz__content1 animate__animated animate__slideInRight id="first">
                             <div class="quiz__content_title-wrapper">
                                 <div class="quiz__content_title-count fz10"><span class="pseudo-btn_inner">Вопрос <span data-question_count="1">1</span> из 6</span></div>
                                 <div class="quiz__content_title fz18" data-question1="true">Сколько человек будет проживать<br>
@@ -188,27 +199,30 @@
                                 </div>
                             </div>
                             <div class="quiz__content_selects-wrapper">
+
+        <!-- first selects -->                                
+
                                 <div class="quiz__selects fz14">
                                     <div>
-                                        <input type="radio" id="control_11" name="select" value="От 1 до 3 человек" >
+                                        <input type="radio" id="control_11" name="count" value="От 1 до 3 человек" >
                                         <label for="control_11">
                                         <span>От 1 до 3 человек</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_12" name="select" value="4 - 6 человек">
+                                        <input type="radio" id="control_12" name="count" value="4 - 6 человек">
                                         <label for="control_12">
                                         <span>4 - 6 человек</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_13" name="select" value="7 - 11 человек">
+                                        <input type="radio" id="control_13" name="count" value="7 - 11 человек">
                                         <label for="control_13">
                                         <span>7 - 11 человек</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_14" name="select" value="Больше 12">
+                                        <input type="radio" id="control_14" name="count" value="Больше 12">
                                         <label for="control_14">
                                         <span>Больше 12</span>
                                         </label>
@@ -218,19 +232,232 @@
                                         система начала подбор септика
                                     </div>
                                 </div>
+
+        <!-- first gift -->
+
                                 <div class="quiz__content_gift">
-                                    <div class="quiz__content_gift-img fz14">
-                                        <div class="quiz__content_gift-img_text img__text-top">
+                                    <div class="quiz__content_gift-wrapper fz14">
+                                        <div class="quiz__content_gift-stickers fz8">
+                                            <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                                                на-30%</span></div>
+                                            <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
+                                                для сезонного <br>проживания</span></div>
+                                            <div class="gift__sticker gift__sticker-bottom gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                                                2021 года</span></div>
+                                        </div>
+                                        <img data-img="true" src="img/septic_tank_blurred.png" alt="септический бак">
+                                        <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                                            
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-middle">
                                             Подбор <span class="fw700">из 800+<br>
                                             видов</span> септиков
                                         </div>
-                                        <img data-img="true" src="img/septic_tank_blurred.png" alt="септический бак">
+                                        <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                                            
+                                        </div>
                                     </div>
                                     <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="quiz__content quiz__content3 animate__animated animate__slideInRight ">
+                        
+        <!--first buttons -->
+
+                            <div class="quiz__buttons fz13">
+                                <div class="quiz__btn_back-wrapper ">
+                                    
+                                    <button type="button" class="quiz__btn_back btn__back">
+                                        <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
+                                        Назад
+                                    </button>
+                                </div>
+                                <div class="quiz__btn_forward-wrapper">
+                                    <div class="quiz__btn_forward-help fz8">
+                                        Выберите 1 из вариантов ответа<br>
+                                        и нажмите на кнопку далее
+                                    </div>
+                                    <button type="submit" class="quiz__btn_forward btn__forward">
+                                        Далее 
+                                        <span class="">
+                                            <img class="button__arrow-small button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+<!-- second screen-->                         
+
+                        <form class="quiz__content quiz__content2 animate__animated animate__slideInRight id="second">
+                            <div class="quiz__content_title-wrapper">
+                                <div class="quiz__content_title-count fz10"><span class="pseudo-btn_inner">Вопрос <span data-question_count="2">2</span> из 6</span></div>
+                                <div class="quiz__content_title fz18" data-question1="true">
+                                    Укажите количество сантехнических точек?
+                                </div>
+                            </div>
+                            <div class="quiz__content_selects-wrapper">
+
+        <!-- second selects-->                        
+                            <div class="quiz__selects fz13">
+                                <div>
+                                    <div class="quiz__select-name">
+                                        <img src="icons/bath_icon.png" alt="ванная">
+                                        <span>Ванная, шт</span>
+                                    </div>
+                                    <div class="quantity_inner">        
+                                        <button class="bt_minus" type="button">
+                                            -
+                                        </button>
+                                        <input type="number" value="0" name="bath" class="quantity" data-max-count="10" id="control_21" >
+                                        <button class="bt_plus" type="button">
+                                            +
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="quiz__select-name">
+                                        <img src="icons/shower_icon.png" alt="Душ">
+                                        <span>Душ, шт</span>
+                                    </div>
+                                    <div class="quantity_inner">        
+                                        <button class="bt_minus" type="button">
+                                            -
+                                        </button>
+                                        <input type="number" value="0" name="shower" class="quantity" data-max-count="10" id="control_22" >
+                                        <button class="bt_plus" type="button">
+                                            +
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="quiz__select-name">
+                                        <img src="icons/sink_icon.png" alt="Раковина">
+                                        <span>Раковина, шт</span>
+                                    </div>
+                                    <div class="quantity_inner">        
+                                        <button class="bt_minus" type="button">
+                                            -
+                                        </button>
+                                        <input type="number" value="0" name="sink" class="quantity" data-max-count="10" id="control_23" >
+                                        <button class="bt_plus" type="button">
+                                            +
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="quiz__select-name">
+                                        <img src="icons/dish_wash_icon.png" alt="Посудомойка">
+                                        <span>Посудомойка, шт</span>
+                                    </div>
+                                    <div class="quantity_inner">        
+                                        <button class="bt_minus" type="button">
+                                            -
+                                        </button>
+                                        <input type="number" value="0" name="dish-wash" class="quantity" data-max-count="10" id="control_24" >
+                                        <button class="bt_plus" type="button">
+                                            +
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="quiz__select-name">
+                                        <img src="icons/toilet_icon.png" alt="Унитаз">
+                                        <span>Унитаз, шт</span>
+                                    </div>
+                                    <div class="quantity_inner">        
+                                        <button class="bt_minus" type="button">
+                                            -
+                                        </button>
+                                        <input type="number" value="0" name="toilet" class="quantity" data-max-count="10" id="control_25" >
+                                        <button class="bt_plus" type="button">
+                                            +
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <div class="quiz__select-name">
+                                        <img src="icons/washing_machine_icon.png" alt="Стир. машина">
+                                        <span>Стир. машина, шт</span>
+                                    </div>
+                                    <div class="quantity_inner">        
+                                        <button class="bt_minus" type="button">
+                                            -
+                                        </button>
+                                        <input type="number" value="0" name="washing" class="quantity" data-max-count="10" id="control_25" >
+                                        <button class="bt_plus" type="button">
+                                            +
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                <div class="quiz__selects-help fz13">
+                                    <span class="fw700">Выберите вариант,</span> чтобы<br>
+                                    система продолжила подбор септика
+                                </div>
+                            </div>
+
+        <!-- second gifts-->                        
+                                <div class="quiz__content_gift">
+                                    <div class="quiz__content_gift-wrapper fz14">
+                                        <div class="quiz__content_gift-stickers fz8">
+                                            <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                                                на-30%</span></div>
+                                            <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
+                                                для сезонного <br>проживания</span></div>
+                                            <div class="gift__sticker gift__sticker-bottom gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                                                2021 года</span></div>
+                                        </div>
+                                        <img data-img="true" src="img/septic_tank_single.png" alt="септический бак">
+                                        <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                                            Промежуточный результат
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                                            Вам подходит станция
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                                            Юнилос Астра 4
+                                        </div>
+                                    </div>
+                                    <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
+                                </div>
+                            </div>
+
+        <!-- second buttons-->                    
+                            <div class="quiz__buttons fz13">
+                                <div class="quiz__btn_back-wrapper ">
+                                    
+                                    <button type="button" class="quiz__btn_back btn__back">
+                                        <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
+                                        Назад
+                                    </button>
+                                </div>
+                                <div class="quiz__btn_forward-wrapper">
+                                    <div class="quiz__btn_forward-help fz8">
+                                        Выберите 1 или несколько вариантов ответа<br>
+                                        и нажмите на кнопку далее
+                                    </div>
+                                    <button type="submit" class="quiz__btn_forward btn__forward">
+                                        Далее 
+                                        <span class="">
+                                            <img class="button__arrow-small button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>                        
+
+<!-- third screen-->                         
+
+                        <form class="quiz__content quiz__content3 animate__animated animate__slideInRight id="third">
                             <div class="quiz__content_title-wrapper">
                                 <div class="quiz__content_title-count fz10"><span class="pseudo-btn_inner">Вопрос <span data-question_count="3">3</span> из 6</span></div>
                                 <div class="quiz__content_title fz18" data-question1="true">
@@ -238,9 +465,11 @@
                                 </div>
                             </div>
                             <div class="quiz__content_selects-wrapper">
+
+        <!-- third selects-->                        
                                 <div class="quiz__selects fz14">
                                     <div>
-                                        <input type="radio" id="control_31" name="select" value="Низкий. Ниже 1,5 метра" >
+                                        <input type="radio" id="control_31" name="level" value="Низкий. Ниже 1,5 метра" >
                                         <label for="control_31">
                                         <span>Низкий. Ниже 1,5 метра</span>
                                         <div class="input_help">
@@ -255,7 +484,7 @@
                                         
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_32" name="select" value="Высокий. Выше 1,5 метра">
+                                        <input type="radio" id="control_32" name="level" value="Высокий. Выше 1,5 метра">
                                         <label for="control_32">
                                         <span>Высокий. Выше 1,5 метра</span>
                                         <div class="input_help">
@@ -269,26 +498,72 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_33" name="select" value="Не знаю">
+                                        <input type="radio" id="control_33" name="level" value="Не знаю">
                                         <label for="control_33">
                                         <span>Не знаю</span>
                                         </label>
                                     </div>
-                                    
+                                    <div class="quiz__selects-help fz13">
+                                        <span class="fw700">Выберите вариант,</span> чтобы<br>
+                                        система продолжила подбор септика
+                                    </div>
                                 </div>
+
+        <!-- third gifts-->                        
                                 <div class="quiz__content_gift">
-                                    <div class="quiz__content_gift-img fz14">
-                                        <img data-img="true" src="img/septic_tank_blurred.png" alt="септический бак">
-                                        <div class="quiz__content_gift-img_text img__text-bottom">
-                                            Подбор <span class="fw700">из 800+<br>
-                                            видов</span> септиков
+                                    <div class="quiz__content_gift-wrapper fz14">
+                                        <div class="quiz__content_gift-stickers fz8">
+                                            <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                                                на-30%</span></div>
+                                            <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
+                                                для сезонного <br>проживания</span></div>
+                                            <div class="gift__sticker gift__sticker-bottom gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                                                2021 года</span></div>
+                                        </div>
+                                        <img data-img="true" src="img/septic_tank_single.png" alt="септический бак">
+                                        <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                                            Промежуточный результат
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                                            Вам подходит станция
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                                            Юнилос Астра 4
                                         </div>
                                     </div>
                                     <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="quiz__content quiz__content4 animate__animated animate__slideInRight ">
+
+        <!-- third buttons-->                    
+                            <div class="quiz__buttons fz13">
+                                <div class="quiz__btn_back-wrapper ">
+                                    
+                                    <button type="button" class="quiz__btn_back btn__back">
+                                        <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
+                                        Назад
+                                    </button>
+                                </div>
+                                <div class="quiz__btn_forward-wrapper">
+                                    <div class="quiz__btn_forward-help fz8">
+                                        Выберите 1 из вариантов ответа<br>
+                                        и нажмите на кнопку далее
+                                    </div>
+                                    <button type="submit" class="quiz__btn_forward btn__forward">
+                                        Далее 
+                                        <span class="">
+                                            <img class="button__arrow-small button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+<!-- fourth screen-->
+
+                        <form class="quiz__content quiz__content4 animate__animated animate__slideInRight id="fourth">
                             <div class="quiz__content_title-wrapper">
                                 <div class="quiz__content_title-count fz10"><span class="pseudo-btn_inner">Вопрос&nbsp;<span data-question_count="4">4</span>&nbsp;из&nbsp;6</span></div>
                                 <div class="quiz__content_title fz18" data-question1="true">
@@ -296,22 +571,24 @@
                                 </div>
                             </div>
                             <div class="quiz__content_selects-wrapper">
+
+        <!-- fourth selects-->                        
                                 <div class="quiz__selects fz14">
                                     <div>
-                                        <input type="radio" id="control_41" name="select" value="Проживаю круглый год" >
+                                        <input type="radio" id="control_41" name="time" value="Проживаю круглый год" >
                                         <label for="control_41" class="pressure">
                                         <span>Проживаю круглый год</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_42" name="select" value="Проживаю только летом. Зимой не пользуюсь канализацией">
+                                        <input type="radio" id="control_42" name="time" value="Проживаю только летом. Зимой не пользуюсь канализацией">
                                         <label for="control_42" class="pressure">
                                         <span>Проживаю только летом. Зимой не
                                             пользуюсь канализацией</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_43" name="select" value="Проживаю летом. Зимой пользуюсь канализацией один раз в 2 недели или чаще">
+                                        <input type="radio" id="control_43" name="time" value="Проживаю летом. Зимой пользуюсь канализацией один раз в 2 недели или чаще">
                                         <label for="control_43" class="pressure">
                                         <span>Проживаю летом. Зимой пользуюсь
                                             канализацией один раз в 2 недели
@@ -319,26 +596,73 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_44" name="select" value="Не знаю">
+                                        <input type="radio" id="control_44" name="time" value="Не знаю">
                                         <label for="control_44" class="pressure">
                                         <span>Не знаю</span>
                                         </label>
                                     </div>
+                                    <div class="quiz__selects-help fz13">
+                                        <span class="fw700">Выберите вариант,</span> чтобы<br>
+                                        система продолжила подбор септика
+                                    </div>
                                     
                                 </div>
+
+        <!-- fourth gifts-->                        
                                 <div class="quiz__content_gift">
-                                    <div class="quiz__content_gift-img fz14">
-                                        <img data-img="true" src="img/septic_tank_blurred.png" alt="септический бак">
-                                        <div class="quiz__content_gift-img_text img__text-bottom">
-                                            Подбор <span class="fw700">из 800+<br>
-                                            видов</span> септиков
+                                    <div class="quiz__content_gift-wrapper fz14">
+                                        <div class="quiz__content_gift-stickers fz8">
+                                            <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                                                на-30%</span></div>
+                                            <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
+                                                для сезонного <br>проживания</span></div>
+                                            <div class="gift__sticker gift__sticker-bottom gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                                                2021 года</span></div>
+                                        </div>
+                                        <img data-img="true" src="img/septic_tank_single.png" alt="септический бак">
+                                        <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                                            Промежуточный результат
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                                            Вам подходит станция
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                                            Юнилос Астра 4
                                         </div>
                                     </div>
                                     <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="quiz__content quiz__content5 animate__animated animate__slideInRight ">
+
+        <!-- fourth buttons-->                    
+                            <div class="quiz__buttons fz13">
+                                <div class="quiz__btn_back-wrapper ">
+                                    
+                                    <button type="button" class="quiz__btn_back btn__back">
+                                        <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
+                                        Назад
+                                    </button>
+                                </div>
+                                <div class="quiz__btn_forward-wrapper">
+                                    <div class="quiz__btn_forward-help fz8">
+                                        Выберите 1 из вариантов ответа<br>
+                                        и нажмите на кнопку далее
+                                    </div>
+                                    <button type="submit" class="quiz__btn_forward btn__forward">
+                                        Далее 
+                                        <span class="">
+                                            <img class="button__arrow-small button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+<!-- fifth screen-->
+
+                        <form class="quiz__content quiz__content5 animate__animated animate__slideInRight id="fifth">
                             <div class="quiz__content_title-wrapper">
                                 <div class="quiz__content_title-count fz10"><span class="pseudo-btn_inner">Вопрос <span data-question_count="5">5</span> из 6</span></div>
                                 <div class="quiz__content_title fz18" data-question1="true">
@@ -346,9 +670,11 @@
                                 </div>
                             </div>
                             <div class="quiz__content_selects-wrapper">
+
+        <!-- fifth selects-->                        
                                 <div class="quiz__selects fz13">
                                     <div>
-                                        <input type="radio" id="control_51" name="select" value="На грунт" >
+                                        <input type="radio" id="control_51" name="drains" value="На грунт" >
                                         <label for="control_51" class="label_custom">
                                             <img src="img/ground.png" alt="грунт">
                                             <span>На грунт</span>
@@ -363,7 +689,7 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_52" name="select" value="Ливневая канава">
+                                        <input type="radio" id="control_52" name="drains" value="Ливневая канава">
                                         <label for="control_52" class="label_custom">
                                             <img src="img/ditch.png" alt="канава">
                                             <span>Ливневая канава</span>
@@ -378,7 +704,7 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_53" name="select" value="Дренажный колодец">
+                                        <input type="radio" id="control_53" name="drains" value="Дренажный колодец">
                                         <label for="control_53" class="label_custom label_custom-dbl">
                                             <img src="img/well.png" alt="колодец">
                                             <span>Дренажный колодец</span>
@@ -393,7 +719,7 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_54" name="select" value="Овраг" >
+                                        <input type="radio" id="control_54" name="drains" value="Овраг" >
                                         <label for="control_54" class="label_custom">
                                             <img src="img/ravine.png" alt="Овраг">
                                             <div class="input_help">
@@ -408,7 +734,7 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_55" name="select" value="Рассасывающая траншея">
+                                        <input type="radio" id="control_55" name="drains" value="Рассасывающая траншея">
                                         <label for="control_55" class="label_custom label_custom-dbl">
                                             <img src="img/trench.png" alt="траншея">
                                             <div class="input_help">
@@ -423,27 +749,76 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_56" name="select" value="Не определился">
+                                        <input type="radio" id="control_56" name="drains" value="Не определился">
                                         <label for="control_56" class="label_custom">
                                             <img src="img/undefined.png" alt="не определился">
                                             <span>Не определился</span>
                                         </label>
                                     </div>
+                                    <div class="quiz__selects-help fz13">
+                                        <span class="fw700">Выберите вариант,</span> чтобы<br>
+                                        система продолжила подбор септика
+                                    </div>
                                     
                                 </div>
+
+        <!-- fifth gift-->  
+
                                 <div class="quiz__content_gift quiz__content_gift-custom">
-                                    <div class="quiz__content_gift-img fz14">
+                                    <div class="quiz__content_gift-wrapper fz14">
+                                        <div class="quiz__content_gift-stickers fz8">
+                                            <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                                                на-30%</span></div>
+                                            <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
+                                                для сезонного <br>проживания</span></div>
+                                            <div class="gift__sticker gift__sticker-bottom gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                                                2021 года</span></div>
+                                        </div>
                                         <img data-img="true" src="img/septic_tank_blurred.png" alt="септический бак">
-                                        <div class="quiz__content_gift-img_text img__text-bottom">
-                                            Подбор <span class="fw700">из 800+<br>
-                                            видов</span> септиков
+                                        <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                                            Промежуточный результат
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                                            Вам подходит станция
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                                            Юнилос Астра 4
                                         </div>
                                     </div>
                                     <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="quiz__content quiz__content6 animate__animated animate__slideInRight ">
+
+        <!-- fifth buttons-->          
+
+                            <div class="quiz__buttons fz13">
+                                <div class="quiz__btn_back-wrapper ">
+                                    
+                                    <button type="button" class="quiz__btn_back btn__back">
+                                        <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
+                                        Назад
+                                    </button>
+                                </div>
+                                <div class="quiz__btn_forward-wrapper">
+                                    <div class="quiz__btn_forward-help fz8">
+                                        Выберите 1 из вариантов ответа<br>
+                                        и нажмите на кнопку далее
+                                    </div>
+                                    <button type="submit" class="quiz__btn_forward btn__forward">
+                                        Далее 
+                                        <span class="">
+                                            <img class="button__arrow-small button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+<!-- sixth screen-->
+                    
+                        <form class="quiz__content quiz__content6 animate__animated animate__slideInRight id="sixth" ">
                             <div class="quiz__content_title-wrapper">
                                 <div class="quiz__content_title-count fz10"><span class="pseudo-btn_inner">Вопрос <span data-question_count="6">6</span> из 6</span></div>
                                 <div class="quiz__content_title fz18" data-question1="true">
@@ -451,12 +826,14 @@
                                 </div>
                             </div>
                             <div class="quiz__content_selects-wrapper">
-                                <div class="quiz__selects fz13">
+
+        <!-- sixth selects-->                        
+                                <div class="quiz__selects fz10">
                                     <div>
-                                        <input type="radio" id="control_61" name="select" value="Скидка на монтаж - 5000 руб" >
-                                        <label for="control_61" class="label_custom label_gift">
+                                        <input type="radio" id="control_61" name="gift" value="Скидка на монтаж - 5000 руб" >
+                                        <label for="control_61" class=" label_gift">
                                             <img src="img/gift_installation.png" alt="подарок">
-                                            <span>Скидка на монтаж
+                                            <span class="dbl_line">Скидка на монтаж
                                                 - 5000 руб</span>
                                             <div class="input_help">
                                             <img src="icons/question_icon.png" alt="подсказка">
@@ -469,8 +846,8 @@
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_62" name="select" value="5 роскошных туй">
-                                        <label for="control_62" class="label_custom label_gift">
+                                        <input type="radio" id="control_62" name="gift" value="5 роскошных туй">
+                                        <label for="control_62" class="label_gift">
                                             <img src="img/trees.png" alt="подарок">
                                             <span>5 роскошных туй</span>
                                             <div class="input_help">
@@ -483,52 +860,59 @@
                                             </div>
                                         </label>
                                     </div>
-                                                                        
+                                    <div class="quiz__selects-help fz13">
+                                        <span class="fw700">Выберите вариант,</span> чтобы<br>
+                                            система начала подбор подарка
+                                    </div>                                    
                                 </div>
-                                <div class="quiz__content_gift ">
-                                    <div class="quiz__content_gift-img fz14">
-                                        <img data-img="true" src="img/gift_blurred.png" alt="септический бак">
-                                        <div class="quiz__content_gift-img_text img__text-bottom">
-                                            Подбор <span class="fw700">из 800+<br>
-                                            видов</span> септиков
-                                        </div>
-                                    </div>
-                                    <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="quiz__progress-bar progress-bar">
-							<div class="progress-bar__line-wrap fz13">
-                                <span class="progress-bar__inner_text">Расчет <span class="fw700">пройден на 16%</span></span>
-								<div class="progress-bar__line" >
+        <!-- sixth gift-->                        
+                                <div class="quiz__content_gift ">
+                                    <div class="quiz__content_gift-wrapper fz14">
+                                        <img data-img="true" src="img/trees.png" alt="подарок">
+                                        <div class="quiz__content_gift-wrapper_text gift_text-top ">
+                                            
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                                            Ваш подарок
+                                        </div>
+                                        <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700 ttu">
+                                            5 роскошных туй
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="quiz__content_gift-bottom fz13">  </div>
                                     
-								</div>
-							</div>
-						</div>
-                        <div class="quiz__buttons fz13">
-                            <div class="quiz__btn_back-wrapper ">
-                                
-                                <button class="quiz__btn_back btn__back">
-                                    <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
-                                    Назад
-                                </button>
-                            </div>
-                            <div class="quiz__btn_forward-wrapper">
-                                <div class="quiz__btn_forward-help fz8">
-                                    Выберите 1 из вариантов ответа<br>
-                                    и нажмите на кнопку далее
                                 </div>
-                                <button class="quiz__btn_forward btn__forward">
-                                    Далее 
-                                    <span class="">
-                                        <img class="button__arrow-small button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
-                                        <img class="button__arrow-small button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
-                                        <img class="button__arrow-small button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
-                                    </span>
-                                </button>
+                                
                             </div>
-                        </div>
+
+        <!-- sixth buttons-->                    
+                            <div class="quiz__buttons fz13">
+                                <div class="quiz__btn_back-wrapper ">
+                                    
+                                    <button type="button" class="quiz__btn_back btn__back">
+                                        <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
+                                        Назад
+                                    </button>
+                                </div>
+                                <div class="quiz__btn_forward-wrapper">
+                                    <div class="quiz__btn_forward-help fz8">
+                                        Выберите 1 из вариантов ответа<br>
+                                        и нажмите на кнопку далее
+                                    </div>
+                                    <button type="submit" class="quiz__btn_forward btn__forward">
+                                        Далее 
+                                        <span class="">
+                                            <img class="button__arrow-small button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">
+                                            <img class="button__arrow-small button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
 
                     </div>
 
@@ -550,6 +934,42 @@
             </div>
 
         </div>
+    </section>
+
+    <section class="loading">
+        <div class="container">
+            <div class="loading__main">
+                <div class="loading__content_wrapper">
+
+                    <div class="progress-bar">
+                        <div class="progress-bar__line-wrap fz13">
+                            <span class="progress-bar__inner_text">Расчет <span class="fw700">пройден на 90%</span></span>
+                            <div class="progress-bar__line" style="width:90%;" >
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loading__content">
+                        <img class="loading__img" src="icons/loader_icon.png" alt="загрузка">
+                        <div class="loading__descr">
+                            <span class="fw700">Каталог станций сформирован.</span><br>
+                            Он откроется сразу после регистрации
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loading__scoreboard">
+                    <button class="quiz__btn-close btn__close">&times;</button>
+                    <div class="quiz__score_wrapper">
+                        
+                    </div>
+                    <div class="no_opacity">nothing here</div>
+                </div>
+
+            </div>
+        </div>
+
+        
     </section>
 
 
