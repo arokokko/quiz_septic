@@ -1,10 +1,10 @@
-
-import tabs from './modules/tabs';
-
 window.addEventListener('DOMContentLoaded', () => {
-    tabs();
-    console.log(1);
+    const btnStartQuiz = document.querySelector('.button_start_quiz');
+    const firstScreen = document.querySelector('.main__screen');
+    const quizScreen = document.querySelector('.quiz');
 
-        
-    
-});
+    btnStartQuiz.addEventListener('click', () => {
+        firstScreen.classList.add('hide');
+        quizScreen.classList.remove('hide');
+    });
+})

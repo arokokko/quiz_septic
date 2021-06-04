@@ -88,3 +88,10 @@
 .hidden .side__bar_toggle::after {
     content: "<";
 }
+
+@media (max-width: 992px) {
+	
+    .side__bar_wrapper {
+        display: none;
+    }
+}

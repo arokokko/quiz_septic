@@ -115,3 +115,18 @@ span.pseudo-btn_inner {
     display: inline-block;
     transform: skewX(5deg);
 }
+
+
+@media (max-width: 992px) {
+	
+    .pseudo-btn_long {
+        padding: .5rem 2rem;
+        font-size: 12px;
+    }
+    .btn_large {
+        width: 27rem;
+        height: 4rem;
+        z-index: 2;
+    }
+    
+}

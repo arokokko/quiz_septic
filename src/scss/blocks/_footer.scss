@@ -9,6 +9,10 @@
     padding: 1.2rem 0;
 	transition: all 0.4s;
 
+	&__mobile {
+		display: none;
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -62,4 +66,47 @@
 	opacity: 0;
 }
   
+
+@media (max-width: 768px) {
+	
+    .footer {
+		&__circle,
+		&__wrapper {
+			display: none;
+		}
+		&__mobile {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			background-color: rgba($grey, .9);
+			justify-content: space-between;
+			width: 100%;
+			height: 5rem;
+			&_download {
+				background: $dark_grey;
+				width: 50%;
+			}
+		}
+		&__mobile > div {
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-bottom: 1.2rem;
+		}
+		&__mobile > div > img {
+			width: 1.9rem;
+		}
+	}
+    
+}
+@media (max-width: 576px) {
+	.footer {
+		
+		&__mobile {
+			font-size: 10px;
+		}
+	}
+}
   

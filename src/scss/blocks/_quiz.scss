@@ -1,5 +1,5 @@
 .quiz {
-    display: none;
+    // display: none;
     &__basic {
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -42,7 +42,10 @@
             text-transform: uppercase;
         }
     }
-    &__content1 {
+    &__content5 {
+        display: none;
+    }
+    &__content2 {
         display: none;
     }
     &__content3 {
@@ -51,12 +54,10 @@
     &__content4 {
         display: none;
     }
-    &__content5 {
-        display: none;
-    }
     &__content6 {
         display: none;
     }
+    
 
     &__content {
         &_wrapper {

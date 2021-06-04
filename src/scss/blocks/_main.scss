@@ -86,6 +86,16 @@
         &_text {
             align-self: center;
             margin-left: -1rem;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1.2rem;
+                height: 1.2rem;
+                background: url(../icons/curle_success_icon.png);
+                background-size: contain;
+                right: 56%;
+                top: 25%;
+            }
         }
         
 
@@ -93,17 +103,9 @@
             position: absolute;
             bottom: 0;
             left: 5%;
+            z-index: 3;
         }
-        &::after {
-            content: '';
-            position: absolute;
-            width: 1.2rem;
-            height: 1.2rem;
-            background: url(../icons/curle_success_icon.png);
-            background-size: contain;
-            right: 56%;
-            top: 25%;
-        }
+        
     }
 
     &__button {
@@ -125,4 +127,119 @@
         }
     }
 
+}
+
+@media (max-width: 992px) {
+	.main {
+        margin-top: 3rem;
+    
+        &__septic {
+            right: 4rem;
+            width: 22rem;
+        }
+        &__bottom {
+            &_img2,
+            &_text {
+                
+                position: absolute;
+                bottom: -65%;
+                
+            }
+            &_img2 {
+                width: 4.5rem;
+                height: 3rem;
+                left: 20%;
+                bottom: -65%;
+            }
+            &_text {
+                left: 22%;
+                bottom: -55%;
+
+                &::after {
+                    left: -25%;
+                    top: 0;
+                }
+            }
+        }
+        &__bullet {
+            &_img1 {
+                width: 5rem;
+            }
+            &_img2 {
+                width: 4rem;
+            }
+            &_img3 {
+                width: 3.3rem;
+            }
+            &:first-child::after {
+                width: 1.3rem;
+                height: 1.3rem;
+                right: 57%;
+                top: 17%;
+            }
+        }
+    }        
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        &__septic {
+            bottom: 10rem;
+            left: 30%;
+            width: 20rem;
+            z-index: 0;
+        }
+        &__bottom {
+            margin-top: 18rem;
+            &_pseudo {
+                position: absolute;
+                bottom: 0;
+                left: 10%;
+                
+            }
+            &_img2 {
+                left: 30%;
+            }
+            &_text {
+                left: 33%;
+            }
+        }
+            
+    }        
+}
+@media (max-width: 576px) {
+    .main {
+    
+        &__septic {
+            left: 24%;
+        }
+        &__bullets {
+            flex-direction: column;
+        }
+        &__bullets > div {
+            margin-bottom: 1.5rem;
+        }
+        &__bottom {
+            &_pseudo {
+                bottom: -1rem;
+                left: 15%;
+            }
+            &_img1 {
+                display: none;
+            }
+            &_img2 {
+                left: 35%;
+                bottom: -4rem;
+            }
+            &_text {
+                bottom: -3.5rem;
+                left: 40%;
+            }
+            
+        }
+    }
 }
