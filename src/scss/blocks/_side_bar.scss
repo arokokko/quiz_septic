@@ -17,6 +17,7 @@
     align-items: center;
     text-align: center;
     cursor: no-drop;
+    transition: all .4s;
 
     &_item {
         position: relative;
@@ -59,6 +60,7 @@
         left: 50%;
         transform: translateX(-50%);
         transition: all .4s;
+        z-index: 2;
 
         &::before {
             content:'';

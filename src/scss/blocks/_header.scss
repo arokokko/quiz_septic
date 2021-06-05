@@ -3,6 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    &__mobile_close {
+        display: none;
+        font-size: 4rem;
+        position: absolute;
+        top: 0;
+        right: 1.5rem;
+        cursor: pointer;
+    }
 
     &__logo {
         display: flex;
@@ -72,7 +82,52 @@
 @media (max-width: 992px) {
 	
     .header {
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+		margin-top: 0;
+		
+		top: 0;
+        left: 0;
+		background: #fff;
+		height: 100vh;
+		width: 100vw;
+		padding: 3rem 3rem 6rem;
+		z-index: 5;
+        transform: translateX(-110%);
+        transition: all .4s;
+
+        &__mobile_close {
+            display: block;
+        }
+    }
+    .header > * {
+        margin-bottom: 2.5rem;
+    }
+    header.mobile .header {
+        transform: translateX(0);
+    }
+}
+@media (max-width: 576px) {
+	
+    .header {
+        &__logo {
     
-        display: none;
+            &_img {
+                width: 5.8rem;
+                height: auto;
+            }
+            &_text {
+                font-size: 0.8rem;
+            }
+        }
+    
+        &__yandex_img {
+            width: 10rem;
+            height: auto;
+        }
+    }
+    .header > * {
+        margin-bottom: 1.5rem;
     }
 }

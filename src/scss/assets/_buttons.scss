@@ -130,3 +130,14 @@ span.pseudo-btn_inner {
     }
     
 }
+@media (max-width: 576px) {
+	
+    .pseudo-btn_long {
+        padding: .5rem 2rem;
+        font-size: 11px;
+    }
+    .btn_large {
+        width: 25rem;
+    }
+    
+}

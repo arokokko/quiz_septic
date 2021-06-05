@@ -14,8 +14,9 @@
         <header>
             <div class="container">
                 <div class="header">
+                    <div class="close header__mobile_close ">&times;</div>
                     <div class="header__logo">
-                        <a href="#" ><img class="header__logo_img mr" src="img/logo.png" alt="логотип"></img></a>
+                        <a href="#" class="mr"><img class="header__logo_img mr" src="img/logo.png" alt="логотип"></img></a>
                         <div class="header__logo_text fz14"><span class="fw900 ">Продажа и установка<br>автономных канализаций (септиков) </span><br>для частного дома и дачи</div>
                     </div>
                     <a class="header__yandex" href="#">
@@ -67,7 +68,7 @@
                     </h1>
                     <div class="main__bullets fz13">
                         <div class="main__bullet">
-                            <img src="./img/septic_tanks_small.png" alt="септик танк" class="main__bullet_img1">
+                            <img src="./img/septic_tanks_small_mark.png" alt="септик танк" class="main__bullet_img1">
                             <div class="main__bullets_item">Подбор <span class="fw700">из<br>
                                 800+</span> моделей
                             </div>
@@ -129,7 +130,7 @@
         </div>
         <footer class="footer hidden">
             <div class="container">
-                <button class="footer__circle ">
+                <button class="footer__circle footer__toggle">
                     <img src="icons/arrow_footer.png" alt="стрелка вниз-вверх">
                 </button>
                 <div class="footer__wrapper fz13 ">
@@ -148,15 +149,15 @@
                     
                 </div>
                 <div class="footer__mobile fz18">
-                    <div class="footer__mobile_download">
-                        <img src="icons/email_social_icon.png" class="mrs">
-                        <div>Скачать инструкцию</div>
-                    </div>
+                    <a href="#" class="footer__mobile_download">
+                        <img src="img/handle_book.png" class="footer__mobile_img1 mrs">
+                        <span>Скачать инструкцию</span>
+                    </a>
             
-                    <div class="footer__mobile_whatsapp">
-                        <img src="icons/whatsapp_icon.png" class="mrs">
-                        <div>Написать в Whatsapp</div>
-                    </div>
+                    <a href="#" class="footer__mobile_whatsapp">
+                        <img src="icons/whatsapp_icon.png" class="footer__mobile_img2 mrs">
+                        <span>Написать в Whatsapp</span>
+                    </a>
                 </div>
             </div>
         </footer>
@@ -961,7 +962,7 @@
     <section class="loading">
         <div class="container">
             
-            <div class="loading__main">
+            <div class="loading__outer">
                 <img src="img/leaves.png " class="loading__leaves " alt="септик">
                 <div class="loading__content_wrapper">
 
@@ -978,6 +979,78 @@
                         <div class="loading__loader_descr">
                             <span class="fw700">Каталог станций сформирован.</span><br>
                             Он откроется сразу после регистрации
+                        </div>
+                    </div>
+                    <div class="loading__inner">
+                        <div class="loading__content">
+                            <div class="loading__content_pseudo-btn fz13"><span class="pseudo-btn_inner">Спасибо за ответы</span></div>
+                            
+                            <form action="#" class="loading__content_form sending__form">
+                                <h2 class="sending__form_title "><span class="fw700">Система сформировала каталог<br>станций,</span> которые вам подходят.</h2>
+                                <div class="sending__form_question fz13">Как вам удобнее получить результат?</div>
+                                <div class="sending__form_socials fz13">
+                                    <div class="social social_whatsapp active">
+                                        <img src="icons/whatsapp_social_icon.png" alt="WhatsApp" class="social_img">
+                                        <div class="social_descr">WhatsApp</div>
+                                    </div>
+                                    <div class="social social_viber">
+                                        <img src="icons/viber_social_icon.png" alt="Viber" class="social_img">
+                                        <div class="social_descr">Viber</div>
+                                    </div>
+                                    <div class="social social_telegram">
+                                        <img src="icons/telegram_social_icon.png" alt="Telegram" class="social_img">
+                                        <div class="social_descr">Telegram</div>
+                                    </div>
+                                    <div class="social social_email">
+                                        <img src="icons/email_social_icon.png" alt="Email" class="social_img">
+                                        <div class="social_descr">Email</div>
+                                    </div>
+                                </div>
+                                <input type="text" placeholder="Ваш телефон в WhatsApp" class="sending__form_input" required>
+                                <div class="sending__form_note fz10 ">
+                                    Подарок и Скидка на монтаж будет закреплена за вашим номером
+                                </div>
+                                <button type="submit" class="btn_large sending__form_btn fw500">Получить результат 
+                                    <span class="sending__form_btn-bonus fw500">   + бонусы</span>
+                                </button>
+                                <div class="sending__form_privacy fz10">
+                                    <input type="checkbox" name="" id="form_privacy" required>
+                                    <label for="form_privacy" class=" ">
+                                        <span>Ознакомлен с <a href="#" class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
+                                    </label>
+                                </div>
+                            </form>
+                            <div class="loading__content_gifts fz12">
+                                <div class="loading__content-item ttu fz14">Вы&nbsp;сейчас
+                                    <span class="fw700">получите:</span>
+                                </div>
+                                <div class="loading__content-item">
+                                    <img src="img/septic_unlocked.png" alt="русский септик">
+                                    <div><span class="fw700">Подборку</span>
+                                        идеальных
+                                        септиков</div>
+                                </div>
+                                <div class="loading__content-item">
+                                    <img src="img/trees_unlocked.png" alt="русский септик">
+                                    <div><span class="fw700">Подарок:</span>
+                                        5 роскошных
+                                        туй 
+                                    </div>
+                                </div>
+                                <div class="loading__content-item fz10">
+                                    <img src="img/guide_unlocked.png" alt="русский септик">
+                                    <div><span class="fw700 ">Инструкцию:</span>
+                                    Как правильно
+                                    выбрать септик</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="loading__picture">
+                            <img src="img/hand_with_phone.png" alt="септик бак" class="loading__picture-large">
+                            <div class="loading__picture-small">
+                                <img src="img/check_time.png" alt="контроль времени" class="loading__picture-time">
+                                <img src="img/time_around.png" alt="анимация времени" class="loading__picture-around">
+                            </div>
                         </div>
                     </div>
 

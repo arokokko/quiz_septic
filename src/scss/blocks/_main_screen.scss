@@ -4,7 +4,7 @@
     min-height: 100vh;
     font-size: .88rem;
     padding: 2rem 0 4rem;
-    // display: none;
+    display: none;
 }
 .menu {
     display: none;
@@ -57,19 +57,24 @@
 }
 
 @media (max-width: 992px) {
-	
+	.main__screen {
+        padding-bottom: 9rem;
+    }
     .menu {
         display: flex;
     }
     .burger {
         display: block;
     }
-}
-
-@media (max-width: 768px) {
-	
-    .main__screen {
-        
-        padding-bottom: 8rem;
+    header.mobile .menu,
+    header.mobile .burger {
+        display: none;
     }
 }
+
+// @media (max-width: 768px) {
+	
+//     .main__screen {
+//         padding-bottom: 9rem;
+//     }
+// }
