@@ -48,7 +48,7 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -66,6 +66,185 @@
         & > img {
             width: 1rem;
             margin-right: 0.5rem;
+        }
+    }
+
+    &__remark {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 3rem auto 0 auto;
+        background: url(../img/background_remark.png) center center / cover no-repeat;
+        padding: 2rem;
+        border-radius: .6rem;
+
+        &_title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        &_content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        &_item {
+            padding-left: 2.3rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 1.7rem;
+                height: 1.7rem;
+                position: absolute;
+                background: url(../icons/success_blue_icon.png);
+                background-size: contain;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
+        }
+        &_item:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+    &__engineer {
+        margin: 3rem auto 0 auto;
+        width: 80%;
+        overflow: hidden;
+
+        &_title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        &_wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background: url(../img/background_engineer.png) center center / cover no-repeat;
+            padding: 2rem 2rem 1.5rem 1.5rem;
+            border-radius: .6rem;
+        }
+        &_left {
+            width: 80%;
+            position: relative;
+            bottom: -3.6rem;
+            margin-right: 1rem;
+        }
+        &_left > div {
+            position: absolute;
+            top: 2.5rem;
+            right: 1rem;
+        }
+        &_left span {
+            display: inline-block;
+            margin-bottom: .4rem;
+        }
+        &_right {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_subtitle {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        &_list {
+            text-align: left;
+            margin-bottom: 3rem;
+
+        }
+        &_list > li:not(:last-child) {
+            margin-bottom: 1rem;
+            
+            
+        }
+        &_list > li {
+            padding: 0 3rem 0 6rem;
+            position: relative;
+        }
+        &_list > li::before {
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            background: url(../icons/success_icon1.png);
+            background-size: contain;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 3.5rem;
+            
+        }
+        &_form {
+            width: 100%;
+
+        }
+        &_form .label {
+            padding: .6rem 1.5rem;
+            position: absolute;
+            top: -1rem;
+            left: 8rem;
+        }
+    }
+    
+    &__photos {
+        position: relative;
+        margin: 3rem auto 0 auto;
+        width: 80%;
+
+        &_title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        &_descr {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        &_gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            & > a {
+                width: 30%;
+                margin-bottom: 2rem;
+            }
+        }
+        &_btn {
+            display: block;
+            margin: 0 auto 2rem auto;
+            width: 60%;
+            position: relative;
+
+        }
+        &_arrow {
+            position: absolute;
+            bottom: 5rem;
+            right: 2rem;
+            width: 8rem;
+        }
+        &_smile {
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+
+            &::before {
+                content: "";
+                width: 5rem;
+                height: 5rem;
+                position: absolute;
+                background: url(../icons/smile_icon.png);
+                background-size: contain;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 36%;
+            }
         }
     }
 
@@ -98,8 +277,8 @@
     }
 }
 .tabs__switch {
-    width: 46%;
-    height: 3rem;
+    width: 45%;
+    height: 3.5rem;
     border-radius: .5rem;
     color: $white;
     background-color: rgba(#1d89c9, .6);

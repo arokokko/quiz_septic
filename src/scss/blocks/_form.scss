@@ -22,14 +22,15 @@
         position: relative;
         overflow: hidden;
         padding: 1rem 2rem;
+        margin-bottom: 0.6rem;
     }
     &_note {
         padding-left: .5rem;
-        margin: .6rem 0;
     }
     &_btn {
         width: 24rem;
         height: 4rem;
+        margin: 0.6rem 0;
         
         &-bonus {
             background: $white;
@@ -119,3 +120,31 @@
     font-weight: 500;
     
 }
+
+.small__form {
+    position: relative;
+    background-color: #fbfbfb;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-label  {
+        position: absolute;
+        top: -1rem;
+        display: inline-block;
+        background-color: $blue;
+        color: $white;
+        padding: .4rem 1.5rem;
+        border-radius: .2rem;
+        transform: skewX(-5deg);
+    }
+}
+.small__form .sending__form_question {
+    margin: 1rem;
+} 
+.small__form .sending__form_input,
+.small__form .sending__form_btn {
+    width: 100%;
+} 
