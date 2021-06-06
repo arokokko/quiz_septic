@@ -1,0 +1,54 @@
+.card {
+    &__desr {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__title {
+        margin: .6rem 0;
+
+    }
+    &__title > a {
+        color: $black;
+        font-weight: 900;
+    }
+    &__tech {
+        line-height: 1.5;
+    }
+    &__links {
+        margin-top: 0.6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        
+    }
+    &__btn {
+        width: 55%;
+        border-radius: 5rem;
+        box-shadow: 0 .6rem 1rem 0 rgba(4, 179, 25, 0.25), inset 0 0 1.5rem 0 rgba(151, 215, 146, 0.71);
+        background-image: linear-gradient(90deg, $green 0%, $green_light 50%, $green 100%);
+        color: $white;
+        transition: all .4s;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & span {
+            padding: .6rem;
+        }
+    }
+    &__btn:hover {
+        box-shadow: 0 0.3rem 1rem $green;
+    }
+    &__calc {
+        color: $green_light;
+        text-decoration: underline;
+        transition: all .4s;
+    }
+    &__calc:hover {
+        color: $green;
+    }
+    
+}

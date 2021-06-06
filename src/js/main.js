@@ -1,5 +1,10 @@
-window.addEventListener('DOMContentLoaded', () => {
+import tabs from "./modules/tabs";
 
+window.addEventListener('DOMContentLoaded', () => {
+    tabs();
+
+
+    
     // mobile menu
     const btnMobileMenu = document.querySelector('.menu');
     const btnCloseMobileMenu = document.querySelector('.header__mobile_close');
