@@ -105,7 +105,8 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			padding-bottom: 1.3rem;
+			padding-bottom: 1.5rem;
+			padding-left: 1rem;
 		}
 		
 	}
@@ -120,6 +121,11 @@
 		&__mobile > div > img {
 			width: 1.6rem;
 		}
+
+		&__mobile_download > span {
+			font-size: 0.8rem;
+		}
 	}
+	
 }
   

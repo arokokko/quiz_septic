@@ -148,3 +148,35 @@
 .small__form .sending__form_btn {
     width: 100%;
 } 
+
+@media (max-width: 786px) {
+	.sending__form {
+        align-items: center;
+        
+        &_question {
+            margin-top: 23rem;
+        }
+        &_title br {
+            display: none;
+        }
+        &_privacy {
+            margin: 1rem 0;
+            font-size: 0.8rem;
+        }
+        &_note {
+            font-size: 0.8rem;
+        }
+        & input, 
+        & button {
+            font-size: 0.9rem;
+        }
+    }
+    .small__form {
+        padding: 1rem;
+        & input, 
+        & button {
+            font-size: 0.9rem;
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
 .loading {
-    // display: none;
+    display: none;
     padding: 3rem;
     &__leaves {
         position: absolute;
@@ -148,6 +148,74 @@
     
     
     
+}
+
+@media (max-width: 992px) {
+	.loading {
+        padding: 0;
+
+        &__leaves {
+             display: none;
+        }
+        &__outer {
+            margin: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+        &__inner {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+        &__content {
+            &_wrapper {
+                width: 89%;
+                padding-left: 10%;
+            }
+        }
+    }
+    .loading .container {
+        max-width: 100%;
+    }
+
+}
+@media (max-width: 786px) {
+	.loading {
+        &__outer {
+            flex-direction: column;
+        }
+        &__scoreboard {
+            align-self: flex-end;
+            order: -1;
+            padding: 2rem 2rem 0 0;
+            background: transparent;
+        }
+        &__picture {
+            width: 20rem;
+            height: 23rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 4rem;
+
+            &-small > img:first-child {
+                width: 5rem;
+                top: 5rem;
+                right: 5rem;
+            }
+            &-small > img:last-child {
+                width: 4rem;
+                top: 5.5rem;
+                right: 5.5rem;
+            }
+        }
+        &__content {
+            min-width: 100%;
+            align-items: center;
+        }
+    }
+
 }
 
 

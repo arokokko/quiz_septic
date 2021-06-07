@@ -4,14 +4,15 @@
     min-height: 100vh;
     font-size: .88rem;
     padding: 2rem 0 4rem;
+    position: relative;
     display: none;
 }
 .menu {
     display: none;
-    position: absolute;
+    position: relative;
     min-width: 8rem;
-    top: 2rem;
-    right: 2rem;
+    // top: 2rem;
+    // right: 2rem;
     justify-content: space-between;
     & > div:first-child {
         margin-right: 1rem;
@@ -66,10 +67,10 @@
     .burger {
         display: block;
     }
-    header.mobile .menu,
-    header.mobile .burger {
-        display: none;
-    }
+    // header.mobile .menu,
+    // header.mobile .burger {
+    //     display: none;
+    // }
 }
 
 // @media (max-width: 768px) {

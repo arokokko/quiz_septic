@@ -15,11 +15,11 @@
         box-shadow: 0 0 5rem 0 rgba(25, 25, 25, 0.15);
         position: relative;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-end; 
     }
     &__scoreboard {
         width: 9%;
-        height: 100%;
+        min-height: 100%;
         border-radius: 0 .5rem .5rem 0;
         background-image: linear-gradient(to bottom, #53bded, #0581ca);
         display: flex;
@@ -42,19 +42,19 @@
             text-transform: uppercase;
         }
     }
-    &__content5 {
+    &__content4 {
         display: none;
     }
     &__content2 {
         display: none;
     }
-    &__content3 {
-        display: none;
-    }
-    &__content4 {
-        display: none;
-    }
     &__content6 {
+        display: none;
+    }
+    &__content1 {
+        display: none;
+    }
+    &__content3 {
         display: none;
     }
     
@@ -284,15 +284,21 @@
         }
     }
 
-    &__buttons {
+    &__bottom {
         width: 100%;
-        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 2rem;
 
         &_title {
             text-transform: uppercase;
+        }
+        &_buttons {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
     }
@@ -389,3 +395,150 @@
 .gift__sticker-red {
     background: linear-gradient(to right, #cc1e07, #f33134);
 }
+
+
+
+@media (max-width: 992px) {
+	.quiz {
+        &__basic {
+            margin: 0;
+            flex-direction: column;
+            padding-bottom: 3rem;
+        }
+    
+        &__main {
+            order: -1;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
+        &__content {
+            &_wrapper {
+                width: 89%;
+                padding-left: 10%;
+            }
+        }
+        &__selects-help::before {
+            display: none;
+        }
+    }
+    .quiz .container {
+        max-width: 100%;
+    }
+    .aside {
+        position: relative;
+        width: 80%;
+        align-self: center;
+        &__info {
+            display: none;
+        }
+        &__bottom {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1.5rem;
+    
+            &_buttons {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+        &__button {
+            width: 15rem;
+            margin: 1rem 1rem 0;
+        }
+    }
+}
+
+@media (max-width: 786px) {
+	.quiz {
+        &__basic {
+            margin: 0;
+            flex-direction: column;
+            padding-bottom: 3rem;
+        }
+
+        &__scoreboard {
+            flex-direction: row-reverse;
+            width: 100%;
+            align-self: flex-end;
+            order: -1;
+            padding: 2rem 2rem 0 0;
+            background: transparent;
+        }
+        
+        &__score_wrapper,
+        &__score_bottom {
+            display: none;
+        }
+    
+        &__main {
+            flex-direction: column;
+        }
+        &__content {
+            &_wrapper {
+                width: 100%;
+                padding: 0 10% 2rem;
+            }
+        }
+    }
+    .quiz__content5 .quiz__selects,
+    .quiz__content2 .quiz__selects {
+        margin: 0 auto;
+        width: 60%;
+        justify-content: center;
+    }
+    .quiz__content2 .quiz__selects > div {
+        margin-left: 2.5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 786px) {
+	.quiz {
+        &__content {
+            &_title {
+                text-align: center;
+                margin-top: 1rem;
+                &-wrapper {
+                    flex-wrap: wrap;
+                }
+            }
+            &_selects-wrapper {
+                flex-direction: column;
+            }
+            &_gift {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+        &__selects {
+            align-items: center;
+            width: 100%;
+
+            &-help {
+                margin: 0 0 1.5rem;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 420px) {
+	.quiz {
+        &__content {
+            
+            &_gift {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
