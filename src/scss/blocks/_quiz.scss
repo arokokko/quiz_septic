@@ -42,19 +42,19 @@
             text-transform: uppercase;
         }
     }
-    &__content4 {
-        display: none;
-    }
     &__content2 {
         display: none;
     }
-    &__content6 {
+    &__content3 {
+        display: none;
+    }
+    &__content4 {
         display: none;
     }
     &__content1 {
         display: none;
     }
-    &__content3 {
+    &__content5 {
         display: none;
     }
     
@@ -358,9 +358,12 @@
 }
 
 .quiz__content2 .quiz__selects > div {
-    margin-right: 2.5rem;
-    margin-top: 1.2rem;
+    margin: 1rem 2rem;
 }
+.quiz__content6 .quiz__selects > div {
+    margin: 0 .5rem 2rem;
+}
+
 
 .gift__sticker {
     display: inline-flex;
@@ -481,28 +484,12 @@
         &__main {
             flex-direction: column;
         }
+        
         &__content {
             &_wrapper {
                 width: 100%;
                 padding: 0 10% 2rem;
             }
-        }
-    }
-    .quiz__content5 .quiz__selects,
-    .quiz__content2 .quiz__selects {
-        margin: 0 auto;
-        width: 60%;
-        justify-content: center;
-    }
-    .quiz__content2 .quiz__selects > div {
-        margin-left: 2.5rem;
-        margin-top: 2rem;
-    }
-}
-
-@media (max-width: 786px) {
-	.quiz {
-        &__content {
             &_title {
                 text-align: center;
                 margin-top: 1rem;
@@ -516,6 +503,10 @@
             &_gift {
                 width: 50%;
                 margin: 0 auto;
+
+                &-wrapper {
+                    width: 80%;
+                }
             }
         }
         &__selects {
@@ -528,7 +519,25 @@
         }
         
     }
+    .quiz__content6 .quiz {
+        &__content {
+            
+            &_gift {
+
+                &-wrapper {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .quiz__content6 .quiz__selects,
+    .quiz__content5 .quiz__selects,
+    .quiz__content2 .quiz__selects {
+        margin: 0 auto;
+        justify-content: center;
+    }
 }
+
 
 @media (max-width: 420px) {
 	.quiz {
@@ -537,8 +546,15 @@
             &_gift {
                 width: 70%;
                 margin: 0 auto;
+
+                &-wrapper {
+                    width: 100%;
+                }
             }
         }
+    }
+    .quiz__content6 .quiz__selects > div {
+        margin: 2rem 0;
     }
 }
 

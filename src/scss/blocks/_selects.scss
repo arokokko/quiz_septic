@@ -261,3 +261,13 @@ input[type="number"]:focus {
     }
 }
 // screen 2 end
+
+@media (max-width: 786px) {
+    .quiz__selects {
+        & label.label_custom,
+        & label.label_gift {
+            width: 12rem;
+        }
+    }
+    
+}
