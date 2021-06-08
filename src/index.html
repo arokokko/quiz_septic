@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./icons/favicon.png" type="image/ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Septic Tanks Quiz</title>
 </head>
@@ -24,7 +25,7 @@
                     </a>
                     
                     <div class="header__whatsapp">
-                        <button class="header__whatsapp_btn btn-small fz10 mrs"><img src="icons/whatsapp_icon.png" class="mrs"><span>Написать <br>в Whatsapp</span><span class="circle circle_green header__whatsapp_circle animate__animated animate__flash animate__infinite animate__slow"></span></button>
+                        <a data-fancybox data-src="#popup-small" data-modal type="button" class="header__whatsapp_btn btn-small fz10 mrs" href=" "><img src="icons/whatsapp_icon.png" class="mrs"><span>Написать <br>в Whatsapp</span><span class="circle circle_green header__whatsapp_circle animate__animated animate__flash animate__infinite animate__slow"></span></a>
                         <div class="header__whatsapp_descr fz13">
                             Среднее время <br>ответа:
                             <span class="fw700">13 секунд</span>
@@ -152,15 +153,15 @@
                     </div>
                     
                 </div>
-                <div class="footer__mobile fz18">
-                    <a href="#" class="footer__mobile_download">
+                <div data-fancybox data-src="#popup-large" data-modal type="button" class="footer__mobile fz18">
+                    <a href=" " class="footer__mobile_download">
                         <img src="img/handle_book.png" class="footer__mobile_img1 mrs">
                         <span class="fz14">Скачать инструкцию как выбрать септик</span>
                     </a>
             
-                    <a href="#" class="footer__mobile_whatsapp">
+                    <a data-fancybox data-src="#popup-small" data-modal type="button" href=" " class="footer__mobile_whatsapp">
                         <img src="icons/whatsapp_icon.png" class="footer__mobile_img2 mrs">
-                        <span>Написать в Whatsapp</span>
+                        <span class="fz14">Написать в Whatsapp</span>
                     </a>
                 </div>
             </div>
@@ -168,7 +169,7 @@
         
     </section>
 
-    <section class="quiz  ">
+    <section class="quiz hide ">
         <div class="container">
             <div class="quiz__basic">
 <!--quiz aside--> 
@@ -216,7 +217,7 @@
 
                         <div class="quiz__progress-bar progress-bar">
 							<div class="progress-bar__line-wrap fz13">
-                                <span class="progress-bar__inner_text">Расчет <span class="fw700">пройден на 16%</span></span>
+                                <span class="progress-bar__inner_text">Расчет <span class="fw700">пройден на 0%</span></span>
 								<div class="progress-bar__line" >
                                     
 								</div>
@@ -238,30 +239,30 @@
 
                                 <div class="quiz__selects fz14">
                                     <div>
-                                        <input type="radio" id="control_11" name="count" value="От 1 до 3 человек" >
+                                        <input type="radio" id="control_11" name="people" value="От 1 до 3 человек" >
                                         <label for="control_11">
                                         <span>От 1 до 3 человек</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_12" name="count" value="4 - 6 человек">
+                                        <input type="radio" id="control_12" name="people" value="4 - 6 человек">
                                         <label for="control_12">
                                         <span>4 - 6 человек</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_13" name="count" value="7 - 11 человек">
+                                        <input type="radio" id="control_13" name="people" value="7 - 11 человек">
                                         <label for="control_13">
                                         <span>7 - 11 человек</span>
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="radio" id="control_14" name="count" value="Больше 12">
+                                        <input type="radio" id="control_14" name="people" value="Больше 12">
                                         <label for="control_14">
                                         <span>Больше 12</span>
                                         </label>
                                     </div>
-                                    <div class="quiz__selects-help fz13">
+                                    <div class="quiz__selects-help fz13 no_opacity">
                                         <span class="fw700">Начните отвечать,</span> чтобы<br>
                                         система начала подбор септика
                                     </div>
@@ -272,12 +273,9 @@
                                 <div class="quiz__content_gift">
                                     <div class="quiz__content_gift-wrapper fz14">
                                         <div class="quiz__content_gift-stickers fz8">
-                                            <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
-                                                на-30%</span></div>
-                                            <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
-                                                для сезонного <br>проживания</span></div>
-                                            <div class="gift__sticker gift__sticker-bottom gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
-                                                2021 года</span></div>
+                                            <div class="gift__sticker gift__sticker-top "></div>
+                                            <div class="gift__sticker gift__sticker-middle "></div>
+                                            <div class="gift__sticker gift__sticker-bottom "></div>
                                         </div>
                                         <img data-img="true" src="img/septic_tank_blurred.png" alt="септический бак">
                                         <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
@@ -291,7 +289,7 @@
                                             
                                         </div>
                                     </div>
-                                    <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
+                                    <div class="quiz__content_gift-bottom fz13 no_opacity">и ещё 12 станций</div>
                                 </div>
                             </div>
                         
@@ -300,13 +298,13 @@
                             <div class="quiz__buttons fz13">
                                 <div class="quiz__btn_back-wrapper ">
                                     
-                                    <button type="button" class="quiz__btn_back btn__back">
+                                    <!-- <button type="button" class="quiz__btn_back btn__back">
                                         <img class="button__arrows" src="img/arrows.png" alt="стрелки влево">
                                         Назад
-                                    </button>
+                                    </button> -->
                                 </div>
                                 <div class="quiz__btn_forward-wrapper">
-                                    <div class="quiz__btn_forward-help fz8">
+                                    <div class="quiz__btn_forward-help fz8 no_opacity">
                                         Выберите 1 из вариантов ответа<br>
                                         и нажмите на кнопку далее
                                     </div>
@@ -997,10 +995,10 @@
                             <div class="loading__content_pseudo-btn fz13"><span class="pseudo-btn_inner">Спасибо за ответы</span></div>
         
         <!-- form -->                    
-                            <form action="#" class="loading__content_form sending__form">
-                                <h2 class="sending__form_title fz18"><span class="fw700">Система сформировала каталог<br> станций,</span> которые вам подходят.</h2>
+                            <form action="#" class="loading__content_form sending__form" id="large_form">
+                                <h2 class="sending__form_title fz20"><span class="fw700">Система сформировала каталог<br> станций,</span> которые вам подходят.</h2>
                                 <div class="sending__form_question fz13">Как вам удобнее получить результат?</div>
-                                <div class="sending__form_socials fz13">
+                                <div class="sending__form_socials fz13" data-social>
                                     <div class="social social_whatsapp active">
                                         <img src="icons/whatsapp_social_icon.png" alt="WhatsApp" class="social_img">
                                         <div class="social_descr">WhatsApp</div>
@@ -1018,8 +1016,8 @@
                                         <div class="social_descr">Email</div>
                                     </div>
                                 </div>
-                                <input type="text" placeholder="Ваш телефон в WhatsApp" class="sending__form_input" name="phone" required>
-                                <input type="email" placeholder="Ваш email" class="sending__form_input" name="email" hidden >
+                                <input type="tel" placeholder="Ваш телефон в WhatsApp" class="sending__form_input" name="phone" required>
+                                <input type="email" placeholder="Ваш email" class="sending__form_input" name="email"  hidden>
                                 <div class="sending__form_note fz10 ">
                                     Подарок и Скидка на монтаж будет закреплена за вашим номером
                                 </div>
@@ -1027,9 +1025,9 @@
                                     <span class="sending__form_btn-bonus fw500">   + бонусы</span>
                                 </button>
                                 <div class="sending__form_privacy fz10">
-                                    <input type="checkbox"  id="form_privacy" required>
+                                    <input type="checkbox"  id="form_privacy" required checked>
                                     <label for="form_privacy" class=" ">
-                                        <span>Ознакомлен с <a href="#" class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
+                                        <span>Ознакомлен с <a data-fancybox data-src="#privacy-policy" data-modal href=" " class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
                                     </label>
                                 </div>
                             </form>
@@ -1097,17 +1095,17 @@
                             <img class="button__arrow button__arrow3 animate__animated animate__flash animate__infinite " src="img/arrow_down.png" alt="стрелка вниз">
                         </span>
                     </div>
-                    <div class="catalog__created fz18">
+                    <h3 class="catalog__created fz18">
                         <span class="fw700">Каталог станций сформирован.</span><br>
                         Он откроется сразу после регистрации
-                    </div>
+                    </h3>
                     <div class="catalog__unlocked fz14">
                         <img src="icons/open_locker_icon.png" alt="каталог разблокирован">
                         <span class="pseudo-btn_inner">Каталог подходящих станций</span>
                     </div>
                     
                     <div class="catalog__tabs">
-                        <h2 class="catalog__tabs_title fz18">
+                        <h2 class="catalog__tabs_title fz20">
                             <span class="fw700">Система подобрала станции,</span> 
                             которые для Вас подойдут 
                         </h2>
@@ -1115,7 +1113,7 @@
                             <button type="button" class="tabs__switch active">Идеальные станции, которые вам подходят</button>
                             <button type="button" class="tabs__switch">Также вам подойдут станции</button>
                         </div>
-                        <div class="catalog__tabs_notice fz10">
+                        <div class="catalog__tabs_notice fz12">
                             По вашим параметрам система <span class="fw700">подобрала 6 станций</span>
                         </div>
 
@@ -1536,7 +1534,7 @@
                 </div>
 
                 <div class="catalog__engineer">
-                    <h2 class="catalog__engineer_title fz18">
+                    <h2 class="catalog__engineer_title fz20">
                         Замеры сможет сделать наш выездной инженер.<br>
                         <span class="fw700">Выезд инженера БЕСПЛАТНЫЙ.</span>
                     </h2>
@@ -1554,7 +1552,7 @@
                             <div class="catalog__engineer_descr">
                                 <h3 class="catalog__engineer_subtitle "><span class="fw700">Инженер приедет к вам на<br>
                                     участок</span> в удобное для Вас время и:</h3>
-                                <ul class="catalog__engineer_list fz13">
+                                <ul class="catalog__engineer_list fz14">
                                     <li>
                                         <span class="fw700">Составит смету</span> в максимально развёрнутом
                                         виде на 13-ти листах;
@@ -1569,20 +1567,20 @@
                                 </ul>
                             </div>
         <!-- small form -->                    
-                            <form action="#" class="catalog__engineer_form small__form">
-                                <div class="small__form-label fz12"><span class="pseudo-btn_inner">Выезд инженера БЕСПЛАТНЫЙ<span></div>
+                            <form action="#" class="catalog__engineer_form small__form" id="small_form">
+                                <div class="small__form-label fz13"><span class="pseudo-btn_inner">Выезд инженера БЕСПЛАТНЫЙ<span></div>
                                 <div class="sending__form_question fz14">Проверьте ваш номер телефона</div>
                                 <div>
-                                    <input type="text" placeholder="Ваш телефон" class="sending__form_input" name="phone" required>
-                                    <input type="text" placeholder="Адрес" class="sending__form_input" name="address" required>
+                                    <input type="tel" placeholder="Ваш телефон" class="sending__form_input" name="phone" required>
+                                    <input type="text" placeholder="Адрес" class="sending__form_input" name="address" required> 
                                 </div>
                                 <button type="submit" class="btn_large sending__form_btn fw500">
                                     Перезвонить и согласовать выезд
                                 </button>
-                                <div class="sending__form_privacy fz10">
-                                    <input type="checkbox" name="" id="small__form_privacy" required>
+                                <div class="sending__form_privacy fz12">
+                                    <input type="checkbox" name="" id="small__form_privacy" required checked>
                                     <label for="small__form_privacy" class=" ">
-                                        <span>Ознакомлен с <a href="#" class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
+                                        <span>Ознакомлен с <a data-fancybox data-src="#privacy-policy" data-modal href=" " class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
                                     </label>
                                 </div>
                             </form>
@@ -1593,20 +1591,31 @@
                 </div>
 
                 <div class="catalog__photos">
-                    <h2 class="catalog__photos_title fz18">
+                    <h2 class="catalog__photos_title fz20">
                         <span class="fw700">Установили более 1500 септиков</span> в прошлом<br>
                         году по всей Московской области</h2>
                     <div class="catalog__photos_descr fz14">Посмотрите как проходит процесс установки</div>
                     <div class="catalog__photos_gallery gallery__wrapper">
-                        <a href=" "><img src="img/slider1.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider2.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider3.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider1.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider2.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider3.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider1.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider2.png" alt="установка септик бака" class="gallery__item"></a>
-                        <a href=" "><img src="img/slider3.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider1.png "><img src="img/slider1.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider2.png "><img src="img/slider2.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider3.png "><img src="img/slider3.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider1.png "><img src="img/slider1.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider2.png "><img src="img/slider2.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider3.png "><img src="img/slider3.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider1.png "><img src="img/slider1.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider2.png "><img src="img/slider2.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        <a data-fancybox="gallery" href="img/slider3.png "><img src="img/slider3.png" alt="установка септик бака" class="gallery__item"></a>
+
+                        
                     </div>
                     <button type="button" class="catalog__photos_btn btn_large">Оставить заявку на подбор и расчёт стоимости септика</button>
                     <img src="icons/dashed_arrow_down_icon.png" alt="стрелка" class="catalog__photos_arrow">
@@ -1623,7 +1632,381 @@
         </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div class="popup-small" id="popup-small">
+        <form action="#" class="popup-small_form small__form" id="popup-small_form">
+            <h3 class="popup-small_title fz18">
+                <span class="fw700">Узнайте точную стоимость<span><br>
+                и все характеристики у нашего <br>
+                специалиста + условия скидки
+            </h3>
+            <div class="sending__form_question fz14 fw700">Проверьте ваш номер телефона</div>
+            
+            <input type="tel" placeholder="Ваш телефон" class="sending__form_input" name="phone" required>
+            
+            <button type="submit" class="btn_large sending__form_btn btn-flare fw500 fz14">
+                Жду звонка
+            </button>
+            <div class="sending__form_privacy fz12">
+                <input type="checkbox" name="" id="small__popup_privacy" required checked>
+                <label for="small__popup_privacy" class=" ">
+                    <span>Ознакомлен с <a data-fancybox data-src="#privacy-policy" data-modal href=" " class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <div class="popup-large " id="popup-large">
+            <div class="popup-large__wrapper">
+                <div class="popup-large__content ">
+                
+    <!-- form -->     
+
+                    <form action="#" class="loading__content_form sending__form" id="popup-large_form">
+                        <h2 class="sending__form_title fz18 fw900">Скачайте БЕСПЛАТНО инструкцию: <br>
+                            "16 советов как выбрать идеальный септик"
+                        </h2>
+                        <div class="sending__form_question fz13">Как вам удобнее отправить?</div>
+                        <div class="sending__form_socials fz13" data-social="2">
+                            <div class="social social_whatsapp active" >
+                                <img src="icons/whatsapp_social_icon.png" alt="WhatsApp" class="social_img">
+                                <div class="social_descr">WhatsApp</div>
+                            </div>
+                            <div class="social social_viber" >
+                                <img src="icons/viber_social_icon.png" alt="Viber" class="social_img">
+                                <div class="social_descr">Viber</div>
+                            </div>
+                            <div class="social social_telegram" >
+                                <img src="icons/telegram_social_icon.png" alt="Telegram" class="social_img">
+                                <div class="social_descr">Telegram</div>
+                            </div>
+                            <div class="social social_email">
+                                <img src="icons/email_social_icon.png" alt="Email" class="social_img">
+                                <div class="social_descr">Email</div>
+                            </div>
+                        </div>
+                        <input type="tel" placeholder="Ваш телефон в WhatsApp" class="sending__form_input" name="phone" required>
+                        <input type="email" placeholder="Ваш email" class="sending__form_input" name="email" hidden>
+                        <!-- <div class="sending__form_note fz10 ">
+                            Подарок и Скидка на монтаж будет закреплена за вашим номером
+                        </div> -->
+                        <button type="submit" class="btn_large sending__form_btn fw500">Скачать инструкцию (PDF 1.5 Mb)
+                        </button>
+                        <div class="sending__form_privacy fz10">
+                            <input type="checkbox"  id="large__popup_privacy" required checked>
+                            <label for="large__popup_privacy" class=" ">
+                                <span>Ознакомлен с <a data-fancybox data-src="#privacy-policy" data-modal href=" " class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
+                            </label>
+                        </div>
+                    </form>
+    
+    <!-- form end-->                    
+                    
+                </div>
+                <img src="img/handle_book_large.png" alt="инструкция" class="popup-large__picture">
+            </div>
+                
+        
+
+    </div>
+
+    <div class="popup-large privacy-policy" id="privacy-policy">
+        <div class="privacy-policy__wrapper fz14">
+            <h2 class="fz20 fw700 mb">
+                ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+            </h2>
+            <p class="mbm">
+                Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности)
+                действует в отношении всей информации, которую данный сайт, на котором размещен текст этой Политики
+                конфиденциальности, может получить о Пользователе, а также любых программ и продуктов, размещенных
+                на нем.
+            </p>
+            <p class=" mb fw700">
+                1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ
+            </p>
+            <p class=" ">
+                1.1. В настоящей Политике конфиденциальности используются следующие термины:
+            </p>
+            <p class=" ">
+                1.1.1. «Администрация сайта» – уполномоченные сотрудники на управления сайтом, действующие от его
+                имени, которые организуют и (или) осуществляет обработку персональных данных, а также определяет
+                цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия
+                (операции), совершаемые с персональными данными.
+            </p>
+            <p class=" ">
+                1.1.2. «Персональные данные» — любая информация, относящаяся к прямо или косвенно определенному или
+                определяемому физическому лицу (субъекту персональных данных).
+            </p>
+            <p class=" ">
+                1.1.3. «Обработка персональных данных» — любое действие (операция) или совокупность действий
+                (операций), совершаемых с использованием средств автоматизации или без использования таких средств с
+                персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение
+                (обновление, изменение), извлечение, использование, передачу (распространение, предоставление,
+                доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+            </p>
+            <p class=" ">
+                1.1.4. «Конфиденциальность персональных данных» — обязательное для соблюдения Администрацией сайта
+                требование не допускать их умышленного распространения без согласия субъекта персональных данных или
+                наличия иного законного основания.
+            </p>
+            <p class=" ">
+                1.1.5. «Пользователь сайта (далее Пользователь)» – лицо, имеющее доступ к сайту, посредством сети
+                Интернет и использующее данный сайт для своих целей.
+            </p>
+            <p class=" ">
+                1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере
+                пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе
+                при попытке открыть страницу соответствующего сайта.
+            </p>
+            <p class="  mbm">
+                1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.
+            </p>
+            <p class="mb fw700">
+                ОБЩИЕ ПОЛОЖЕНИЯ
+            </p>
+            <p class=" ">
+                2.1. Использование Пользователем сайта означает согласие с настоящей Политикой конфиденциальности и
+                условиями обработки персональных данных Пользователя.
+            </p>
+            <p class=" ">
+                2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить
+                использование сайта.
+            </p>
+            <p class=" ">
+                2.3. Настоящая Политика конфиденциальности применяется только к данному сайту. Администрация сайта
+                не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может
+                перейти по ссылкам, доступным на данном сайте.
+            </p>
+            <p class="  mbm">
+                2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых
+                Пользователем сайта.
+            </p>
+            <p class=" mb fw700">
+                ПРЕДМЕТ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ
+            </p>
+            <p class=" ">
+                3.1. Настоящая Политика конфиденциальности устанавливает обязательства Администрации сайта по
+                умышленному неразглашению персональных данных, которые Пользователь предоставляет по разнообразным
+                запросам Администрации сайта (например, при регистрации на сайте, оформлении заказа, подписки на
+                уведомления и т.п).
+            </p>
+            <p class=" ">
+                3.2. Персональные данные, разрешённые к обработке в рамках настоящей Политики конфиденциальности,
+                предоставляются Пользователем путём заполнения специальных форм на Сайте и обычно включают в себя
+                следующую информацию:
+            </p>
+            <p class=" ">
+                3.2.1. фамилию, имя, отчество Пользователя;
+            </p>
+            <p class=" ">
+                3.2.2. контактный телефон Пользователя;
+            </p>
+            <p class=" ">
+                3.2.3. адрес электронной почты (e-mail);
+            </p>
+            <p class=" ">
+                3.2.4. место жительство Пользователя и другие данные.
+            </p>
+            <p class=" ">
+                3.3. Администрация сайта также принимает усилия по защите Персональных данных, которые автоматически
+                передаются в процессе посещения страниц сайта:
+            </p>
+            <p class=" ">
+                IP адрес;
+            </p>
+            <p class="text-md">
+                информация из cookies;
+            </p>
+            <p class="text-md">
+                информация о браузере (или иной программе, которая осуществляет доступ к сайту);
+            </p>
+            <p class="text-md">
+                время доступа;
+            </p>
+            <p class="text-md">
+                посещенные адреса страниц;
+            </p>
+            <p class="text-md">
+                реферер (адрес предыдущей страницы) и т.п.
+            </p>
+            <p class="text-md">
+                3.3.1. Отключение cookies может повлечь невозможность доступа к сайту.
+            </p>
+            <p class="text-md">
+                3.3.2. Сайт осуществляет сбор статистики об IP-адресах своих посетителей. Данная информация
+                используется с целью выявления и решения технических проблем, для контроля корректности проводимых
+                операций.
+            </p>
+            <p class="text-md mbm">
+                3.4. Любая иная персональная информация неоговоренная выше (история заказов, используемые браузеры и
+                операционные системы и т.д.) не подлежит умышленному разглашению, за исключением случаев,
+                предусмотренных в п.п. 5.2. и 5.3. настоящей Политики конфиденциальности.
+            </p>
+            <p class="text-md modal_pol-header mbm fw700">
+                4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ ПОЛЬЗОВАТЕЛЯ
+            </p>
+            <p class="text-md">
+                4.1. Персональные данные Пользователя Администрация сайта может использовать в целях:
+            </p>
+            <p class="text-md">
+                4.1.1. Идентификации Пользователя, зарегистрированного на сайте, для оформления заказа и (или)
+                заключения Договора.
+            </p>
+            <p class="text-md">
+                4.1.2. Предоставления Пользователю доступа к персонализированным ресурсам сайта.
+            </p>
+            <p class="text-md">
+                4.1.3. Установления с Пользователем обратной связи, включая направление уведомлений, запросов,
+                касающихся использования сайта, оказания услуг, обработка запросов и заявок от Пользователя.
+            </p>
+            <p class="text-md">
+                4.1.4. Определения места нахождения Пользователя для обеспечения безопасности, предотвращения
+                мошенничества.
+            </p>
+            <p class="text-md">
+                4.1.5. Подтверждения достоверности и полноты персональных данных, предоставленных Пользователем.
+            </p>
+            <p class="text-md">
+                4.1.6. Создания учетной записи для совершения заказов, если Пользователь дал согласие на создание
+                учетной записи.
+            </p>
+            <p class="text-md">
+                4.1.7. Уведомления Пользователя сайта о состоянии Заказа.
+            </p>
+            <p class="text-md">
+                4.1.8. Обработки и получения платежей.
+            </p>
+            <p class="text-md">
+                4.1.9. Предоставления Пользователю эффективной клиентской и технической поддержки при возникновении
+                проблем, связанных с использованием сайта.
+            </p>
+            <p class="text-md">
+                4.1.10. Предоставления Пользователю с его согласия, обновлений продукции, специальных предложений,
+                информации о ценах, новостной рассылки и иных сведений от имени сайта или от имени партнеров сайта.
+            </p>
+            <p class="text-md">
+                4.1.11. Осуществления рекламной деятельности с согласия Пользователя.
+            </p>
+            <p class="text-md mbm">
+                4.1.12. Предоставления доступа Пользователю на сторонние сайты или сервисы партнеров данного сайта с
+                целью получения их предложений, обновлений или услуг.
+            </p>
+            <p class="text-md mbm fw700 modal_pol-header">
+                5. СПОСОБЫ И СРОКИ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ
+            </p>
+            <p class="text-md">
+                5.1. Обработка персональных данных Пользователя осуществляется без ограничения срока, любым законным
+                способом, в том числе в информационных системах персональных данных с использованием средств
+                автоматизации или без использования таких средств.
+            </p>
+            <p class="text-md">
+                5.2. Пользователь соглашается с тем, что Администрация сайта вправе передавать персональные данные
+                третьим лицам, в частности, курьерским службам, организациями почтовой связи, операторам
+                электросвязи, исключительно в целях выполнения заявок Пользователя, оформленных на сайте, в рамках
+                Договора публичной оферты
+            </p>
+            <p class="text-md mbm">
+                5.3. Персональные данные Пользователя могут быть переданы уполномоченным органам государственной
+                власти только по основаниям и в порядке, установленным действующим законодательством.
+            </p>
+            <p class="text-md modal_pol-header mbm fw700">
+                6. ОБЯЗАТЕЛЬСТВА СТОРОН
+            </p>
+            <p class="text-md">
+                6.1. Пользователь обязуется:
+            </p>
+            <p class="text-md">
+                6.1.1. Предоставить корректную и правдивую информацию о персональных данных, необходимую для
+                пользования сайтом.
+            </p>
+            <p class="text-md">
+                6.1.2. Обновить или дополнить предоставленную информацию о персональных данных в случае изменения
+                данной информации.
+            </p>
+            <p class="text-md">
+                6.1.3. Принимать меры для защиты доступа к своим конфиденциальным данным, хранящимся на сайте.
+            </p>
+            <p class="text-md">
+                6.2. Администрация сайта обязуется:
+            </p>
+            <p class="text-md">
+                6.2.1. Использовать полученную информацию исключительно для целей, указанных в п. 4 настоящей
+                Политики конфиденциальности.
+            </p>
+            <p class="text-md">
+                6.2.2. Не разглашать персональных данных Пользователя, за исключением п.п. 5.2. и 5.3. настоящей
+                Политики Конфиденциальности.
+            </p>
+            <p class="text-md mbm">
+                6.2.3. Осуществить блокирование персональных данных, относящихся к соответствующему Пользователю, с
+                момента обращения или запроса Пользователя или его законного представителя либо уполномоченного
+                органа по защите прав субъектов персональных данных на период проверки, в случае выявления
+                недостоверных персональных данных или неправомерных действий.
+            </p>
+            <p class="text-md modal_pol-header mbm fw700">
+                7. ОТВЕТСТВЕННОСТЬ СТОРОН
+            </p>
+            <p class="text-md">
+                7.1. Администрация сайта несёт ответственность за умышленное разглашение Персональных данных
+                Пользователя в соответствии с действующим законодательством, за исключением случаев, предусмотренных
+                п.п. 5.2., 5.3. и 7.2. настоящей Политики Конфиденциальности
+            </p>
+            <p class="text-md">
+                7.2. В случае утраты или разглашения Персональных данных Администрация сайта не несёт
+                ответственность, если данная конфиденциальная информация:
+            </p>
+            <p class="text-md">
+                7.2.1. Стала публичным достоянием до её утраты или разглашения.
+            </p>
+            <p class="text-md">
+                7.2.2. Была получена от третьей стороны до момента её получения Администрацией сайта.
+            </p>
+            <p class="text-md">
+                7.2.3. Была получена третьими лицами путем несанкционированного доступа к файлам сайта.
+            </p>
+            <p class="text-md">
+                7.2.4. Была разглашена с согласия Пользователя.
+            </p>
+            <p class="text-md mbm">
+                7.3. Пользователь несет ответственность за правомерность, корректность и правдивость предоставленной
+                Персональных данных в соответствии с действующим законодательством.
+            </p>
+            <p class="text-md modal_pol-header mbm fw700">
+                8. РАЗРЕШЕНИЕ СПОРОВ
+            </p>
+            <p class="text-md">
+                8.1. До обращения в суд с иском по спорам, возникающим из отношений между Пользователем сайта и
+                Администрацией сайта, обязательным является предъявление претензии (письменного предложения о
+                добровольном урегулировании спора).
+            </p>
+            <p class="text-md">
+                8.2. Получатель претензии в течение 30 календарных дней со дня получения претензии, письменно
+                уведомляет заявителя претензии о результатах рассмотрения претензии.
+            </p>
+            <p class="text-md">
+                8.3. При не достижении соглашения спор будет передан на рассмотрение в судебный орган в соответствии
+                с действующим законодательством.
+            </p>
+            <p class="text-md mbm">
+                8.4. К настоящей Политике конфиденциальности и отношениям между Пользователем и Администрацией сайта
+                применяется действующее законодательство.
+            </p>
+            <p class="text-md modal_pol-header mbm fw700">
+                9. ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ
+            </p>
+            <p class="text-md">
+                9.1. Администрация сайта вправе вносить изменения в настоящую Политику конфиденциальности без
+                согласия Пользователя.
+            </p>
+            <p class="text-md">
+                9.2. Новая Политика конфиденциальности вступает в силу с момента ее размещения на Сайте, если иное
+                не предусмотрено новой редакцией Политики конфиденциальности.
+            </p>
+        </div>
+    </div>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.3.1/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

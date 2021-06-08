@@ -57,6 +57,11 @@ img {
 input {
     border: none;
     outline: none;
+    font-size: 1rem;
+}
+
+form button {
+    font-size: 0.9rem;
 }
 
 .container {
@@ -139,7 +144,8 @@ input {
 .mr {
 	margin-right: 1.5rem;
 }
-.mbs {
+.mbs,
+.mbm {
 	margin-bottom: .5rem;
 }
 .mb {
