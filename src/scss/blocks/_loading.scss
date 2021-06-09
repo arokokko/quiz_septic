@@ -43,7 +43,7 @@
             background: url(../icons/dashed_arrow_up_icon.png);
             background-size: contain;
             bottom: 22%;
-            left: 37%;
+            left: 41%;
             transform: rotate(-65deg);
         }
         &::after {
@@ -54,14 +54,14 @@
             background: url(../icons/dashed_arrow_down_icon.png);
             background-size: contain;
             bottom: 38%;
-            left: 43%;
+            left: 46%;
             transform: rotate(177deg);
         }
     }
     &__content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         min-width: 50%;
         &_wrapper {
             width: 80%;
@@ -136,8 +136,8 @@
     }
 
     &__loader {
-        display: none;
-        margin-top: 20%;
+        // display: none;s
+        margin-top: 3rem;
        
         &_img {
             width: 4rem;

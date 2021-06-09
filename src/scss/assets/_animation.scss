@@ -2,21 +2,23 @@
     0% {
         transform: rotate(0deg)
     }
-  
+
     100% {
         transform: rotate(360deg)
     }
 }
-  
+
 @keyframes flare {
     0% {
         left: -3rem;
         margin-left: 0;
     }
+
     30% {
         left: 110%;
         margin-left: 8rem;
     }
+
     100% {
         left: 110%;
         margin-left: 8rem;
@@ -24,29 +26,36 @@
 }
 
 @keyframes progress_bar {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: 100rem 0;
-	}
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100rem 0;
+    }
 }
 
-// @keyframes knock {
-//     0%, to {
-//         top: calc(100% + 80px);
-//     }
-//     50% {
-//         top: calc(100% - 5px);
-//     }
-//     display: block;
-//     opacity: .67;
-//     border-radius: 10px;
-//     border-top: 2px solid;
-//     padding-top: 40px;
-//     top: calc(100% + 80px);
-//     position: absolute;
-//     width: 890px;
-//     left: calc(50% - 445px);
-//     transition: .2s linear;
-// }
+@keyframes knock {
+
+    0%, 20%, 53%, 100% {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0);
+    }
+    40%, 43% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, 34px, 0) scaleY(1.1);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transform: translate3d(0, 15px, 0) scaleY(1.05);
+    }
+    80% {
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translateZ(0) scaleY(0.95);
+    }
+    90% {
+        transform: translate3d(0, 4px, 0) scaleY(1.02);
+    }
+}
+
+

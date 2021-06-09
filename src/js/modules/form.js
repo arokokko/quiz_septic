@@ -1,3 +1,5 @@
+import { on } from "gulp";
+
 const form = () => {
 
     $('input[name=phone]').mask("+7999-999-99-99");
@@ -24,11 +26,17 @@ const form = () => {
                     inputPhone.attr('placeholder', "Ваш телефон в Telegram");
                 }
                 inputPhone.attr('required', true);
+                inputEmail.attr('hidden', true);
                 inputEmail.attr('required', null);
             }
             
         });
     }
+
+    $('[data-main-form-submit]').on('click', (e) => {
+        e.preventDefault();
+        // window.location.href="./thanks.html";
+    })
     
 }
 

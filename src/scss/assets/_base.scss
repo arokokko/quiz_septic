@@ -161,7 +161,7 @@ form button {
     color: $blue;
 }
 .hide {
-    display: none;
+    display: none!important;
 }
 
 @media (max-width: 992px) {

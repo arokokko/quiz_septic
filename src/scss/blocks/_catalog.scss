@@ -1,5 +1,5 @@
 .catalog {
-    display: none;
+    // display: none;
     &__created {
         margin-top: 1.5rem;
         line-height: 1.5;
@@ -279,6 +279,31 @@
         }
         
     }
+
+    &__knocking {
+        top: calc(100% - 7rem);
+        position: absolute;
+        transition: .2s linear;
+        width: 100%;
+        animation: knock 2s infinite ;
+        transform-origin: center top;
+
+        
+        
+        & .layout {
+            border-radius: .5rem;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $black;
+            opacity: .5;
+            z-index: 9;
+        }
+    }
+    &__knocking .catalog__outer {
+        position: relative;
+        min-height: 0;
+    }
 }
 .tabs__switch {
     width: 45%;
@@ -444,6 +469,7 @@
                 transform: translateX(-50%);
             }
         }
+        
     }
     .tabs__switch {
         width: 50%;

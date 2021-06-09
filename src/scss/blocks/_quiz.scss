@@ -42,21 +42,7 @@
             text-transform: uppercase;
         }
     }
-    &__content2 {
-        display: none;
-    }
-    &__content3 {
-        display: none;
-    }
-    &__content4 {
-        display: none;
-    }
-    &__content6 {
-        display: none;
-    }
-    &__content5 {
-        display: none;
-    }
+    
     
 
     &__content {
@@ -176,6 +162,7 @@
                 padding: .5rem 1rem;
                 position: relative;
                 margin-bottom: 1rem;
+                transition: all .4s;
                 
                 &:before {
                     content: '';
