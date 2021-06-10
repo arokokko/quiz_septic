@@ -30,6 +30,138 @@ export default () => {
             scoreCount = $('[data-count]');
 
 
+        const images = [
+
+                `<div class="quiz__content_gift-wrapper fz14">
+                <div class="quiz__content_gift-stickers fz8">
+                    <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                        на-30%</span></div>
+                    
+                </div>
+                <img data-img2 src="img/septic_tank_single.png" alt="септический бак">
+                <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                    Промежуточный результат
+                </div>
+                <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                    Вам подходит станция
+                </div>
+                <div data-img-descr2 class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                    Deka 5
+                </div>
+            </div>
+                <div data-img-relev2 class="quiz__content_gift-bottom fz13">и ещё 37 станций</div>`,
+
+                `<div class="quiz__content_gift-wrapper fz14">
+                    <div class="quiz__content_gift-stickers fz8">
+                        <div class="gift__sticker gift__sticker-top gift__sticker-red"><img src="icons/star_icon.png" alt="сезон"><span>Лидер по <br>
+                        отзывам 5.0</span></div>
+                        <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
+                        при высоком уровне <br>грунтовых вод</span></div>
+                        
+                    </div>
+                    <img src="img/astra-septic.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Юнилос Астра 4
+                    </div>
+                </div>
+                <div class="quiz__content_gift-bottom fz13">и ещё 18 станций</div>`,
+
+                `<div class="quiz__content_gift-wrapper fz14">
+                    <div class="quiz__content_gift-stickers fz8">
+                        <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                        на-30%</span></div>
+                        <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
+                        для сезонного <br>проживания</span></div>
+                        
+                    </div>
+                    <img data-img2 src="img/genesis.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Genesis 1200
+                    </div>
+                </div>
+                <div  class="quiz__content_gift-bottom fz13">и ещё 11 станций</div>`,
+
+                `<div class="quiz__content_gift-wrapper fz14">
+                    <div class="quiz__content_gift-stickers fz8">
+                        <div class="gift__sticker gift__sticker-top gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                        2021 года</span></div>
+                        <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
+                        при высоком уровне <br>грунтовых вод</span></div>
+                        
+                        
+                    </div>
+                    <img src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Deka 8
+                    </div>
+                </div>
+                <div class="quiz__content_gift-bottom fz13">и ещё 11 станций</div>`,
+                
+                `<div class="quiz__content_gift-wrapper fz14">
+                    <div class="quiz__content_gift-stickers fz8">
+                        <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
+                        при высоком уровне <br>грунтовых вод</span></div>
+                        
+                        
+                    </div>
+                    <img src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Deka T-700
+                    </div>
+                </div>
+                <div class="quiz__content_gift-bottom fz13">и ещё 9 станций</div>`,
+
+                `<div class="quiz__content_gift-wrapper fz14">
+                    <div class="quiz__content_gift-stickers fz8">
+                        <div class="gift__sticker gift__sticker-top gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                        2021 года</span></div>
+                        <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
+                        при высоком уровне <br>грунтовых вод</span></div>
+                        <div class="gift__sticker gift__sticker-bottom gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                        на-30%</span></div>
+                        
+                    </div>
+                    <img src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Deka T-900
+                    </div>
+                </div>
+                <div class="quiz__content_gift-bottom fz13">и ещё 9 станций</div>`,
+
+                
+
+        ];
+
         const arr = [
             {
                 isChecked: false,
@@ -37,6 +169,7 @@ export default () => {
                 description: `По количеству проживающих<br>
                 определяем <span class="fw700">суточный<br>
                 объём стоков.</span>`
+                
             },
             {
                 isChecked: false,
@@ -79,52 +212,104 @@ export default () => {
                             
             }
         ];
+
+        const imagesGift = [
+
+            `<img data-img="true" src="img/gift_installation.png" alt="подарок">
+            <div class="quiz__content_gift-wrapper_text gift_text-top ">
+                
+            </div>
+            <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                Ваш подарок
+            </div>
+            <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700 ttu">
+                Скидка на монтаж <br>
+                5 000 рублей
+            </div>`,
+
+            `<img data-img="true" src="img/trees.png" alt="подарок">
+            <div class="quiz__content_gift-wrapper_text gift_text-top ">
+                
+            </div>
+            <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                Ваш подарок
+            </div>
+            <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700 ttu">
+                5 роскошных туй
+            </div>`,
+
+        
+        ];
         
 
         // is inputs checked
         checkInputs(first, 0, firstBtnFor);
-        checkInputsCustom(second, 1, secondBtnFor);
+        checkInputsCustom(second, 1, secondBtnFor, changeImgSecond);
         checkInputs(third, 2, thirdBtnFor);
         checkInputs(fourth, 3, fourthBtnFor);
         checkInputs(fifth, 4, fifthBtnFor);
-        checkInputs(sixth, 5, sixthBtnFor);
+        checkInputs(sixth, 5, sixthBtnFor, changeImgGift);
 
 
-        function checkInputs(screenSel, count, btnSel) {
+        function checkInputs(screenSel, count, btnSel, cb = changeImg) {
             screenSel.addEventListener('click', () => {
-                screenSel.querySelectorAll('input').forEach(item => {
+                screenSel.querySelectorAll('input').forEach((item, i) => {
                     if(item.checked) {
                         changeObj(count, btnSel);
                         arr[count].value = item.value;
+                        cb(i);
                         
                     }
                 });
             });
+            
+        }
+
+        // change picture first screen
+        function changeImg(i) {
+            $('[data-img').html(images[i]);
+        }
+
+        //change picture second screen
+        function changeImgSecond() {
+            $('[data-img').html(images[5]);
+        }
+
+        // change picture sixth screen
+        function changeImgGift(i) {
+            $('[data-img-gift').html(imagesGift[i]);
         }
 
         // for second screen
-        function checkInputsCustom(screenSel, count, btnSel) {
+        function checkInputsCustom(screenSel, count, btnSel, cb) {
             screenSel.addEventListener('click', () => {
                 let array = Array.from(screenSel.getElementsByTagName('input'));
-                if(array.some(item => item.value !== '0')) {
-                    changeObj(count, btnSel);
-                } else {
-                    reverseChangeObj(count, btnSel);
-                }
+                let arraySome = array.some(item => item.value !== '0');
+                array.forEach(item => {
+                    if(arraySome && parseInt(item.value) < 3) {
+                        changeObj(count, btnSel);
+                        
+                    } else if(arraySome && parseInt(item.value) >= 3) {
+                        changeObj(count, btnSel);
+                        cb();
+                    } else {
+                        reverseChangeObj(count, btnSel);
+                    }
+                });
                 
             });
         }
         function reverseChangeObj(count, btn) {
             arr[count].isChecked = false;
             btn.css('cursor', 'no-drop');
-            btn.toggleClass('btn-flare');
+            btn.removeClass('btn-flare');
         }
         // second screen end
 
         function changeObj(count, btn) {
             arr[count].isChecked = true;
             btn.css('cursor', 'pointer');
-            btn.toggleClass('btn-flare');
+            btn.addClass('btn-flare');
             progressBarLine.css('width', arr[count].bar);
             progressBarText.text(arr[count].bar);
         }
@@ -194,20 +379,27 @@ export default () => {
             setTimeout(() => {
                 $('.loading__loader').addClass('hide');
                 
-            }, 3000);
-            setTimeout(showMainForm, 3000);
+            }, 2500);
+            setTimeout(showMainForm, 2500);
         }
         function showMainForm() {
             $('.loading__inner').removeClass('hide');
+            $('.catalog__knocking').removeClass('hide');
         }
         sixthBtnFor.on('click', (e) => {
             e.preventDefault();
-            $('.quiz').addClass('hide');
-            $('.loading').removeClass('hide');
-            showLoader();
+            if(!arr[5].isChecked) {
+
+                showHelp($(`#sixth .quiz__btn_forward-help`));
+
+            } else {
+                $('.quiz').addClass('hide');
+                $('.loading').removeClass('hide');
+                showLoader();
+            }
         });
-    } catch {
-        console.log('Oops');
+    } catch(e) {
+        
     }
    
     

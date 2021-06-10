@@ -4,6 +4,13 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    &_warning {
+        color: red;
+        font-size: 0.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+
     &_question {
         margin-top: .6rem;
     }

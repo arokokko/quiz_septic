@@ -14,11 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
     quiz();
 
 
-    // start quiz
-    // $('.button_start_quiz').on('click', () => {
-    //     $('.main__screen').addClass('hide');
-    //     $('.quiz').removeClass('hide');
-    // });
+    
 
  
 })

@@ -112,14 +112,14 @@
 
         <!-- first gift -->
 
-                                <div class="quiz__content_gift">
+                                <div data-img class="quiz__content_gift">
                                     <div class="quiz__content_gift-wrapper fz14">
                                         <div class="quiz__content_gift-stickers fz8">
                                             <div class="gift__sticker gift__sticker-top "></div>
                                             <div class="gift__sticker gift__sticker-middle "></div>
                                             <div class="gift__sticker gift__sticker-bottom "></div>
                                         </div>
-                                        <img data-img="true" src="img/septic_tank_blurred.png" alt="септический бак">
+                                        <img src="img/septic_tank_blurred.png" alt="септический бак">
                                         <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
                                             
                                         </div>
@@ -278,7 +278,7 @@
                             </div>
 
         <!-- second gifts-->                        
-                                <div class="quiz__content_gift">
+                                <div data-img class="quiz__content_gift">
                                     <div class="quiz__content_gift-wrapper fz14">
                                         <div class="quiz__content_gift-stickers fz8">
                                             <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
@@ -288,18 +288,18 @@
                                             <div class="gift__sticker gift__sticker-bottom gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
                                                 2021 года</span></div>
                                         </div>
-                                        <img data-img="true" src="img/septic_tank_single.png" alt="септический бак">
+                                        <img  src="img/septic_tank_single.png" alt="септический бак">
                                         <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
                                             Промежуточный результат
                                         </div>
                                         <div class="quiz__content_gift-wrapper_text gift_text-middle">
                                             Вам подходит станция
                                         </div>
-                                        <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                                        <div  class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
                                             Юнилос Астра 4
                                         </div>
                                     </div>
-                                    <div class="quiz__content_gift-bottom fz13">и ещё 12 станций</div>
+                                    <div  class="quiz__content_gift-bottom fz13">и ещё 37 станций</div>
                                 </div>
                             </div>
 
@@ -384,7 +384,7 @@
                                 </div>
 
         <!-- third gifts-->                        
-                                <div class="quiz__content_gift">
+                                <div data-img class="quiz__content_gift">
                                     <div class="quiz__content_gift-wrapper fz14">
                                         <div class="quiz__content_gift-stickers fz8">
                                             <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
@@ -483,7 +483,7 @@
                                 </div>
 
         <!-- fourth gifts-->                        
-                                <div class="quiz__content_gift">
+                                <div data-img class="quiz__content_gift">
                                     <div class="quiz__content_gift-wrapper fz14">
                                         <div class="quiz__content_gift-stickers fz8">
                                             <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
@@ -638,7 +638,7 @@
 
         <!-- fifth gift-->  
 
-                                <div class="quiz__content_gift quiz__content_gift-custom">
+                                <div data-img class="quiz__content_gift quiz__content_gift-custom">
                                     <div class="quiz__content_gift-wrapper fz14">
                                         <div class="quiz__content_gift-stickers fz8">
                                             <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
@@ -742,16 +742,16 @@
 
         <!-- sixth gift-->                        
                                 <div class="quiz__content_gift ">
-                                    <div class="quiz__content_gift-wrapper fz14">
-                                        <img data-img="true" src="img/trees.png" alt="подарок">
+                                    <div data-img-gift class="quiz__content_gift-wrapper fz14">
+                                        <img data-img="true" src="img/gift_blurred.png" alt="подарок">
                                         <div class="quiz__content_gift-wrapper_text gift_text-top ">
                                             
                                         </div>
                                         <div class="quiz__content_gift-wrapper_text gift_text-middle">
-                                            Ваш подарок
+                                            Выберите ваш подарок
                                         </div>
                                         <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700 ttu">
-                                            5 роскошных туй
+                                           
                                         </div>
                                         
                                     </div>
@@ -810,10 +810,12 @@
         </div>
     </section>
 
+<!--quiz loading section-->
+
     <section class="loading hide">
         <div class="container">
             
-            <div class="loading__outer">
+            <div class="loading__outer ">
                 <img src="img/leaves.png " class="loading__leaves " alt="септик">
                 <div class="loading__content_wrapper">
 
@@ -859,8 +861,8 @@
                                         <div class="social_descr">Email</div>
                                     </div>
                                 </div>
-                                <input type="tel" placeholder="Ваш телефон в WhatsApp" class="sending__form_input" name="phone" required>
-                                <input type="email" placeholder="Ваш email" class="sending__form_input" name="email"  hidden>
+                                <input type="tel" placeholder="Ваш телефон в WhatsApp" class="sending__form_input sending__form_phone" name="phone" required>
+                                <input type="email" placeholder="Ваш email" class="sending__form_input sending__form_email" name="email"  hidden>
                                 <div class="sending__form_note fz10 ">
                                     Подарок и Скидка на монтаж будет закреплена за вашим номером
                                 </div>
@@ -868,10 +870,13 @@
                                     <span class="sending__form_btn-bonus fw500">   + бонусы</span>
                                 </button>
                                 <div class="sending__form_privacy fz10">
-                                    <input type="checkbox"  id="form_privacy" required checked>
-                                    <label for="form_privacy" class=" ">
+                                    <input type="checkbox"  id="large__form_privacy" required checked>
+                                    <label for="large__form_privacy" class=" ">
                                         <span>Ознакомлен с <a data-fancybox data-src="#privacy-policy" data-modal href=" " class="fw700 sending__form_privacy-link">политикой конфиденциальности</a></span>
                                     </label>
+                                </div>
+                                <div class="sending__form_warning hide ">
+                                    Все поля должны быть заполнены
                                 </div>
                             </form>
 

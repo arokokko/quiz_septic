@@ -1,10 +1,10 @@
-import { on } from "gulp";
 
 const form = () => {
 
     $('input[name=phone]').mask("+7999-999-99-99");
 
     toggleActiveSocial($('[data-social]'));
+    toggleActiveSocial($('[data-social1]'));
 
     function toggleActiveSocial(sel) {
         $(sel).on('click', '.social:not(.active)', function() {
@@ -35,8 +35,25 @@ const form = () => {
 
     $('[data-main-form-submit]').on('click', (e) => {
         e.preventDefault();
-        // window.location.href="./thanks.html";
-    })
+        if($('#large_form input[type=tel]').val() !== '') {
+            let phone = $('#large_form input[type=tel]').val();
+            localStorage.setItem('tel', `${phone}`);
+            
+            window.location.href="./thanks.html";
+            
+        } else {
+            $('#large_form .sending__form_warning').removeClass('hide');
+        }
+
+    });
+
+    // add phone in inputs thanks.html
+    try {
+        document.querySelector('input.form_catalog-phone').value = localStorage.getItem('tel');
+        document.querySelector('input.popup_catalog-form').value = localStorage.getItem('tel');
+    } catch (e) {
+        
+    }
     
 }
 
