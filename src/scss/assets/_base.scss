@@ -65,7 +65,7 @@ form button {
 }
 
 .container {
-    max-width: 80rem;
+    max-width: 73rem;
     margin: 0 auto;
 }
 
@@ -73,6 +73,7 @@ form button {
     max-width: 90rem;
     margin: 0 auto;
 }
+
 
 
 .center {
@@ -113,29 +114,27 @@ form button {
 .fz30 {
     font-size: 2.2rem;
 }
-.fz24 {
+// .fz24 {
+//     font-size: 1.5rem;
+// }
+.fz20 {
     font-size: 1.5rem;
 }
-.fz20 {
+.fz18 {
     font-size: 1.2rem;
 }
-.fz18 {
-    font-size: 1.1rem;
-}
 .fz14 {
-    font-size: .9rem;
+    font-size: 1rem;
 }
 .fz13 {
-    font-size: .8rem;
+    font-size: .9rem;
 }
-.fz12 {
-    font-size: 0.7rem;
-}
+
 .fz10 {
-    font-size: .64rem;
+    font-size: .75rem;
 }
 .fz8 {
-    font-size: .5rem;
+    font-size: .6rem;
 }
 
 .mrs {
@@ -143,6 +142,9 @@ form button {
 }
 .mr {
 	margin-right: 1.5rem;
+}
+.mrl {
+    margin-right: 3.5rem;
 }
 .mbs,
 .mbm {
@@ -166,7 +168,7 @@ form button {
 
 @media (max-width: 992px) {
 	html {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	.container {
         max-width: 90vw;

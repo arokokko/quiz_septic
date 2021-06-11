@@ -5,12 +5,12 @@
     right: 0;
 }
 .side__bar {
-    
-    background-image: linear-gradient(to bottom, #72f76b, $green);
+    font-size: 0.6rem;
+    background-image: linear-gradient(to bottom, #70ec69, #39c23f);
     color: white;
     text-transform: uppercase;
-    padding-top: 1.7rem;
-    padding-bottom: 1.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: .9rem;
     border-radius: .5rem 0 0 .5rem;
     display: flex;
     flex-direction: column;
@@ -18,31 +18,35 @@
     text-align: center;
     cursor: no-drop;
     transition: all .4s;
+    letter-spacing: .05rem;
 
     &_item {
         position: relative;
         width: 100%;
-        min-width: 6rem;
+        min-width: 5rem;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        line-height: 1.4;
 
         &::after {
             content: "";
             position: absolute;
-            width: 1.4rem;
-            height: 2rem;
+            width: 1rem;
+            height: 1.4rem;
             background: url(../icons/locker_icon.png);
             background-size: contain;
             top: .5rem;
-            right: 1.2rem;
+            right: 1.6rem;
         }
 
         & > img {
-            width: 2rem;
+            width: 1.5rem;
             margin-top: 1rem;
             margin-bottom: 0.2rem;
 
         }
         &:not(:last-child) {
-            padding-bottom: .9rem;
+            padding-bottom: .5rem;
             border-bottom: .1rem solid $white;
         }
     }
@@ -50,8 +54,8 @@
     &_toggle {
         border-radius:50%;
         background: $white;
-        width: 1.6rem;
-        height: 1.6rem;
+        width: 1.3rem;
+        height: 1.3rem;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -75,7 +79,7 @@
             content:"×";
             position: absolute;
             color: $white;
-            font-size: 1.5rem;
+            font-size: .9rem;
         }
         &:hover {
             transform: translateX(-50%) scale(1.1);

@@ -1,7 +1,7 @@
 export default () => {
 
     // mobile menu
-    $('.menu').on('click', () => {
+    $('.burger').on('click', () => {
         $('header').addClass('mobile');
     });
 

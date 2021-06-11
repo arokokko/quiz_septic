@@ -1,12 +1,13 @@
 .btn-small {
-    width: 8rem;
-    height: 2.8rem;
-    border-radius: .64rem;
+    width: 7rem;
+    height: 2.4rem;
+    border-radius: .5rem;
     background-color: $white;
     transition: all .4s;
 }
 .btn-small:hover {
     text-decoration: underline;
+    box-shadow: 0px 1rem 1.5rem 0 rgba($black, 0.25);
 
 }
 .btn-small:hover img {
@@ -15,18 +16,19 @@
 }
 
 .btn_large {
-    width: 28rem;
-    height: 5rem;
+    width: 31rem;
+    height: 6rem;
     border-radius: 5rem;
     box-shadow: 0px 1rem 1.5rem 0 rgba(4, 179, 25, 0.25), inset 0 0 2.5rem 0 rgba(151, 215, 146, 0.71);
-    background-image: linear-gradient(90deg, $green 0%, $green_light 50%, $green 100%);
+    background-image: linear-gradient(90deg, #31ca3c 0%, #7ef178 50%, #31ca3c 100%);
     color: $white;
     transition: all .4s;
     position: relative;
     overflow: hidden;
+    z-index: 2;
 }
 .btn_large:hover {
-    box-shadow: 0 0.4rem 1.5rem $green;
+    box-shadow: 0 0.4rem 1.5rem #31ca3c;
 }
 
 .btn-flare:after {
@@ -99,7 +101,7 @@
 .pseudo-btn_long {
     display: inline-block;
     background-color: #fce37e;
-    padding: .6rem 2.5rem;
+    padding: .6rem 1.4rem;
     border-radius: .3rem;
     transform: skewX(-5deg);
 }
@@ -108,7 +110,7 @@
     
     display: inline-block;
     background-color: $white;
-    padding: .3rem 1.5rem;
+    padding: .3rem 1.2rem;
     border-radius: .2rem;
     transform: skewX(-5deg);
 }
@@ -122,13 +124,9 @@ span.pseudo-btn_inner {
 	
     .pseudo-btn_long {
         padding: .5rem 2rem;
-        font-size: 12px;
+        font-size: 1rem;
     }
-    .btn_large {
-        width: 27rem;
-        height: 4rem;
-        z-index: 2;
-    }
+    
     
 }
 @media (max-width: 786px) {
@@ -144,10 +142,21 @@ span.pseudo-btn_inner {
 	
     .pseudo-btn_long {
         padding: .5rem 2rem;
-        font-size: 11px;
     }
     .btn_large {
-        width: 25rem;
+        width: 80vw;
     }
+    
+}
+@media (max-width: 420px) {
+	
+    .pseudo-btn_long {
+        font-size: 12px;
+        text-align: center;
+    }
+    .btn_large {
+        width: 90vw;
+    }
+    
     
 }
