@@ -3,6 +3,11 @@ const form = () => {
 
     $('input[name=phone]').mask("+7999-999-99-99");
 
+    $('[data-fancybox]').fancybox({
+        // touch: false,
+        autoFocus: false
+      });
+
     toggleActiveSocial($('[data-social]'));
     toggleActiveSocial($('[data-social1]'));
 

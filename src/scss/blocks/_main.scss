@@ -58,6 +58,9 @@
         justify-content: start;
         align-items: center;
         position: relative;
+        &_wrapper {
+            position: relative;
+        }
 
         &_img1 {
             margin-left: -4rem;
@@ -66,13 +69,17 @@
             height: auto;
             z-index: 3;
         }
+        &_clock {
+            margin-left: -3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         &_img2 {
-            margin-left: -4rem;
             width: 5rem;
-            height: 3.5rem;
+            height: auto;
         }
         &_text {
-            align-self: center;
             margin-left: -.5rem;
             
         }
@@ -81,9 +88,14 @@
         &_pseudo {
             position: absolute;
             bottom: -.8rem;
-            left: 3rem;
+            left: 50%;
             z-index: 3;
             font-size: 1rem;
+            display: inline-block;
+            background-color: $white;
+            padding: .3rem 1.2rem;
+            border-radius: .2rem;
+            transform: skewX(-5deg) translateX(-50%);
             
         }
         
@@ -131,23 +143,13 @@
             width: 22rem;
         }
         &__bottom {
-            &_img2,
-            &_text {
-                
+            &_clock {
                 position: absolute;
-                bottom: -65%;
-                
-            }
-            &_img2 {
-                width: 4.5rem;
-                height: 3rem;
-                left: 20%;
-                bottom: -65%;
+                bottom: -75%;
+                left: 22%;
             }
             &_text {
-                left: 22%;
-                bottom: -55%;
-
+                font-size: 12px;
                 
             }
         }
@@ -177,7 +179,7 @@
         }
     
         &__septic {
-            bottom: 7.5rem;
+            bottom: 8.5rem;
             left: 50%;
             transform: translateX(-50%);
             width: 21rem;
@@ -186,11 +188,10 @@
         &__bottom {
             margin-top: 20rem;
             
-            &_img2 {
-                left: 30%;
-            }
-            &_text {
-                left: 33%;
+            &_clock {
+                
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
             
@@ -229,22 +230,18 @@
             margin-top: 20.5rem;
             &_pseudo {
                 font-size: 12px;
-                left: 20%;
             }
             &_img1 {
                 width: 8rem;
                 position: absolute;
                 right: -3%;
                 top: -54%;
+            } 
+            &_clock {
+                transform: translateX(-25%);
             }
-            &_img2 {
-                left: 35%;
-                bottom: -4rem;
-            }
-            &_text {
-                bottom: -3.5rem;
-                left: 40%;
-            }
+            
+            
         }
         &__button {
             &_arrows {

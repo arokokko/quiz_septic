@@ -147,14 +147,14 @@
 	
     .header {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         position: fixed;
 		margin-top: 0;
 		
 		top: 0;
         left: 0;
-		background: #fff;
-		height: 100vh;
+		background: $grey;
+		min-height: 100vh;
 		width: 100vw;
 		padding: 3rem 3rem 6rem;
 		z-index: 5;
@@ -169,10 +169,50 @@
         }
     }
     .header > * {
-        margin-bottom: 2.5rem;
+        margin-bottom: 10vh;
     }
-    header.mobile .header {
-        transform: translateX(0);
+
+    header.mobile {
+        & .header {
+            transform: translateX(0);
+            &__logo {
+                
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 0;
+                &_img {
+                    width: 5.8rem;
+                    margin-right: 0;
+                    margin-bottom: 1rem;
+                }
+                &_text {
+                    font-size: .9rem;
+                }
+            }
+            &__yandex_img {
+                width: 11rem;
+                margin-right: 0;
+            }
+            &__whatsapp_btn {
+                font-size: 0.8rem;
+            }
+            &__contacts_descr {
+                font-size: .9rem;
+                margin-bottom: .4rem;
+            }
+            &__contacts_phone {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            &__contacts_circle {
+                top: 34%;
+            }
+        }
+        & .btn-small {
+            width: 8rem;
+            height: 3rem;
+        }
     }
 
     
