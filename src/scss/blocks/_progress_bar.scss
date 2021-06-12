@@ -2,7 +2,6 @@
     order: -1;
     display: flex;
     align-items: center;
-    margin-bottom: 2.5rem;
     width: 100%;
     border: .2rem solid $grey;
     border-radius: 2rem;
@@ -25,7 +24,7 @@
     top: 50%;
     transform: translateY(-50%);
     height: 100%;
-    width: 0;
+    width: 12%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,6 +37,7 @@
     padding: 0;
 }
 .progress-bar__inner_text {
+    font-size: 1rem;
     display: inline-block;
     position: absolute;
     z-index: 2;

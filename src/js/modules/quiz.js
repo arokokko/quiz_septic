@@ -32,14 +32,14 @@ export default () => {
 
         const images = [
 
-                `<div class="quiz__content_gift-wrapper fz14">
-                <div class="quiz__content_gift-stickers fz8">
+                `<div class="quiz__content_gift-wrapper ">
+                <div class="quiz__content_gift-stickers ">
                     <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
                         на-30%</span></div>
                     
                 </div>
-                <img data-img2 src="img/septic_tank_single.png" alt="септический бак">
-                <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                <img  src="img/septic_tank_single.png" alt="септический бак">
+                <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
                     Промежуточный результат
                 </div>
                 <div class="quiz__content_gift-wrapper_text gift_text-middle">
@@ -48,19 +48,19 @@ export default () => {
                 <div data-img-descr2 class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
                     Deka 5
                 </div>
-            </div>
-                <div data-img-relev2 class="quiz__content_gift-bottom fz13">и ещё 37 станций</div>`,
+                </div>
+                <div data-img-relev2 class="quiz__content_gift-bottom ">и ещё <span class="fw700">37</span> станций</div>`,
 
-                `<div class="quiz__content_gift-wrapper fz14">
-                    <div class="quiz__content_gift-stickers fz8">
+                `<div class="quiz__content_gift-wrapper ">
+                    <div class="quiz__content_gift-stickers ">
                         <div class="gift__sticker gift__sticker-top gift__sticker-red"><img src="icons/star_icon.png" alt="сезон"><span>Лидер по <br>
                         отзывам 5.0</span></div>
                         <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
                         при высоком уровне <br>грунтовых вод</span></div>
                         
                     </div>
-                    <img src="img/astra-septic.png" alt="септический бак">
-                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                    <img  src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
                         Промежуточный результат
                     </div>
                     <div class="quiz__content_gift-wrapper_text gift_text-middle">
@@ -70,18 +70,18 @@ export default () => {
                         Юнилос Астра 4
                     </div>
                 </div>
-                <div class="quiz__content_gift-bottom fz13">и ещё 18 станций</div>`,
+                <div class="quiz__content_gift-bottom ">и ещё <span class="fw700">28</span> станций</div>`,
 
-                `<div class="quiz__content_gift-wrapper fz14">
-                    <div class="quiz__content_gift-stickers fz8">
+                `<div class="quiz__content_gift-wrapper ">
+                    <div class="quiz__content_gift-stickers ">
                         <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
                         на-30%</span></div>
                         <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/sun_icon.png" alt="сезон"><span>Идеально подходит <br>
                         для сезонного <br>проживания</span></div>
                         
                     </div>
-                    <img data-img2 src="img/genesis.png" alt="септический бак">
-                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                    <img  src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
                         Промежуточный результат
                     </div>
                     <div class="quiz__content_gift-wrapper_text gift_text-middle">
@@ -91,10 +91,10 @@ export default () => {
                         Genesis 1200
                     </div>
                 </div>
-                <div  class="quiz__content_gift-bottom fz13">и ещё 11 станций</div>`,
+                <div  class="quiz__content_gift-bottom ">и ещё <span class="fw700">35</span> станций</div>`,
 
-                `<div class="quiz__content_gift-wrapper fz14">
-                    <div class="quiz__content_gift-stickers fz8">
+                `<div class="quiz__content_gift-wrapper ">
+                    <div class="quiz__content_gift-stickers ">
                         <div class="gift__sticker gift__sticker-top gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
                         2021 года</span></div>
                         <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
@@ -103,7 +103,7 @@ export default () => {
                         
                     </div>
                     <img src="img/septic_tank_single.png" alt="септический бак">
-                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
                         Промежуточный результат
                     </div>
                     <div class="quiz__content_gift-wrapper_text gift_text-middle">
@@ -113,17 +113,17 @@ export default () => {
                         Deka 8
                     </div>
                 </div>
-                <div class="quiz__content_gift-bottom fz13">и ещё 11 станций</div>`,
+                <div class="quiz__content_gift-bottom ">и ещё <span class="fw700">17</span> станций</div>`,
                 
-                `<div class="quiz__content_gift-wrapper fz14">
-                    <div class="quiz__content_gift-stickers fz8">
+                `<div class="quiz__content_gift-wrapper ">
+                    <div class="quiz__content_gift-stickers ">
                         <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
                         при высоком уровне <br>грунтовых вод</span></div>
                         
                         
                     </div>
                     <img src="img/septic_tank_single.png" alt="септический бак">
-                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
                         Промежуточный результат
                     </div>
                     <div class="quiz__content_gift-wrapper_text gift_text-middle">
@@ -133,10 +133,10 @@ export default () => {
                         Deka T-700
                     </div>
                 </div>
-                <div class="quiz__content_gift-bottom fz13">и ещё 9 станций</div>`,
+                <div class="quiz__content_gift-bottom ">и ещё <span class="fw700">16</span> станций</div>`,
 
-                `<div class="quiz__content_gift-wrapper fz14">
-                    <div class="quiz__content_gift-stickers fz8">
+                `<div class="quiz__content_gift-wrapper ">
+                    <div class="quiz__content_gift-stickers ">
                         <div class="gift__sticker gift__sticker-top gift__sticker-orange"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
                         2021 года</span></div>
                         <div class="gift__sticker gift__sticker-middle gift__sticker-blue"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
@@ -146,7 +146,7 @@ export default () => {
                         
                     </div>
                     <img src="img/septic_tank_single.png" alt="септический бак">
-                    <div class="quiz__content_gift-wrapper_text gift_text-top fz10 fcb">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
                         Промежуточный результат
                     </div>
                     <div class="quiz__content_gift-wrapper_text gift_text-middle">
@@ -156,7 +156,7 @@ export default () => {
                         Deka T-900
                     </div>
                 </div>
-                <div class="quiz__content_gift-bottom fz13">и ещё 9 станций</div>`,
+                <div class="quiz__content_gift-bottom <span class="fw700">37</span>">и ещё <span class="fw700">12</span> станций</div>`,
 
                 
 
@@ -165,7 +165,7 @@ export default () => {
         const arr = [
             {
                 isChecked: false,
-                bar: "15%",
+                bar: "25%",
                 description: `По количеству проживающих<br>
                 определяем <span class="fw700">суточный<br>
                 объём стоков.</span>`
@@ -173,14 +173,14 @@ export default () => {
             },
             {
                 isChecked: false,
-                bar: "30%",
+                bar: "40%",
                 description: `По количеству точек<br>
                 определяем <span class="fw700">суточный<br>
                 объём стоков.</span>`
             },
             {
                 isChecked: false,
-                bar: "45%",
+                bar: "55%",
                 description: `Определяем <span class="fw700">риск<br>
                 выдавливания</span> станции<br>
                 из почвы.`
@@ -189,7 +189,7 @@ export default () => {
             },
             {
                 isChecked: false,
-                bar: "60%",
+                bar: "70%",
                 description: `Выясняем <span class="fw700">потребуется<br>
                 ли консервация</span> станции<br>
                 на зиму.`
@@ -197,7 +197,7 @@ export default () => {
             },
             {
                 isChecked: false,
-                bar: "75%",
+                bar: "85%",
                 description: `Уточняем, <span class="fw700">какой необходим<br>
                 отвод стоков</span> - принудительный<br>
                 или самотёчный`
@@ -205,7 +205,7 @@ export default () => {
             },
             {
                 isChecked: false,
-                bar: "90%",
+                bar: "99%",
                 description: `<span class="fw700">Выберите подарок,</span><br>
                 который вы получите, если закажите<br>
                 установку септика у нас.`
@@ -314,6 +314,10 @@ export default () => {
             progressBarText.text(arr[count].bar);
         }
 
+        $('[data-aside-description]').on('animationend', () => {
+            $('[data-aside-description]').removeClass('animate__bounce');
+        })
+
         
         // handle forward buttons
         handleForward(firstBtnFor, 0, '#first', '#second');
@@ -335,9 +339,17 @@ export default () => {
                     scoreCount.text(count + 2);
                     $(current).addClass('hide');
                     $(next).removeClass('hide');
+                    $('[data-aside-description]').addClass('animate__bounce');
+                    $('html,body').animate({ scrollTop: $('#quiz__main').offset().top  }, 1000);
                 }
             });
         }
+
+        // $('a[href="#catal"]').on('click', function(e){
+        //     e.preventDefault();
+        //     const __href = $(this).attr('href');
+        //     $('html,body').animate({ scrollTop: $('.quiz__main').offset().top }, 1000);
+        // });
 
         
         // popup help

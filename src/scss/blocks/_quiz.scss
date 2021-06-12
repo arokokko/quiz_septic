@@ -9,7 +9,7 @@
     }
 
     &__main {
-        width: 90%;
+        width: 88%;
         min-height: 90vh;
         border-radius: .5rem;
         box-shadow: 0 0 5rem 0 rgba(25, 25, 25, 0.15);
@@ -18,10 +18,10 @@
         justify-content: flex-end; 
     }
     &__scoreboard {
-        width: 9%;
+        width: 10%;
         min-height: 100%;
         border-radius: 0 .5rem .5rem 0;
-        background-image: linear-gradient(to bottom, #53bded, #0581ca);
+        background-image: linear-gradient(to bottom, #5ab9e5, #1e89c9);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -31,6 +31,10 @@
     &__score {
         letter-spacing: .2rem;
         margin: 1rem 0;
+        font-size: 1.5rem;
+        & > span {
+            font-size: 2.5rem;
+        }
         &_wrapper {
             color: $white;
             display: flex;
@@ -39,34 +43,51 @@
             align-items: center;
         }
         &_title {
+            font-size: 1rem;
             text-transform: uppercase;
+        }
+    }
+    &__btn-close {
+        border-radius:50%;
+        background: $white;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: $dark_grey;
+        font-size: 1.5rem;
+        transition: all .4s;
+        
+        &:hover {
+            box-shadow: 0 0.4rem 1rem $grey;
         }
     }
     
     
 
     &__content {
+        margin-top: 2rem;
         &_wrapper {
-            width: 70%;
+            width: 72%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
             padding: 3rem 6rem 2rem 4rem;
         }
         &_title {
+            font-size: 1.3rem;
             &-wrapper {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-bottom: 2.5rem;
+                margin-bottom: 2rem;
             }
             &-count {
+                font-size: 1rem;
                 background-color: #49baec;
                 padding: .4rem 1rem;
                 border-radius: .2rem;
                 transform: skewX(-5deg);
                 color: #fff;
-                margin-right: 1rem;
+                margin-right: 1.5rem;
             }
         }
         &_selects {
@@ -96,6 +117,18 @@
                 padding: 2rem 1rem 1rem;
                 margin-bottom: .5rem;
                 position: relative;
+
+                & .gift_text {
+                    &-top {
+                        font-size: 0.8rem;
+                    }
+                    &-middle {
+                        font-size: 1rem;
+                    }
+                    &-bottom {
+                        font-size: 1.2rem;
+                    }
+                }
             }
             &-wrapper > *:not(:last-child) {
                 margin-bottom: .5rem;
@@ -104,19 +137,21 @@
                 margin-bottom: 1rem;
             }
             &-wrapper > img {
-                width: 80%;
+                width: 75%;
                 height: auto;
             }
             &-bottom {
                 text-decoration: underline;
+                font-size: 1rem;
             }
             &-stickers {
+                font-size: 0.7rem;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 position: absolute;
                 top: .5rem;
-                left: -2rem;
+                left: -1rem;
                 color: $white;
             }
             
@@ -128,6 +163,7 @@
         flex-direction: column;
         width: 65%;
         &-help {
+            font-size: 0.8rem;
             margin-top: 2rem;
             position: relative;
         }
@@ -149,6 +185,20 @@
     }
     &__btn {
         &_forward {
+            font-size: 1.1rem;
+            width: 14rem;
+            height: 4rem;
+            border-radius: 5rem;
+            box-shadow: 0px 1rem 1.5rem 0 rgba(4, 179, 25, 0.25), inset 0 0 2.5rem 0 rgba(151, 215, 146, 0.71);
+            background-image: linear-gradient(90deg, #34c340 0%, #72e66f 50%, #34c340 100%);
+            color: $white;
+            transition: all .4s;
+            position: relative;
+            overflow: hidden;
+            cursor: not-allowed;
+            
+                
+            
             &-wrapper {
                 display: flex;
                 flex-direction: column;
@@ -156,6 +206,7 @@
                 align-items: flex-end;
             }
             &-help {
+                font-size: 0.8rem;
                 border-radius: .3rem;
                 background: #fff;
                 box-shadow: 0 0 2rem 0 $dark_grey;
@@ -195,7 +246,7 @@
     }
 }
 .aside {
-    width: 24%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -217,44 +268,51 @@
         position: absolute;
         top: -2.5rem;
         left: -4rem;
-        width: 9rem;
+        width: 10rem;
     }
 
     &__online {
+        font-size: .8rem;
         position: absolute;
         top: 1rem;
         right: 1rem;
         color: $white;
-        background: $green;
-        padding: .5rem .5rem .5rem 1rem;
+        background: #4ec35a;
+        padding: .55rem .55rem .55rem 1.1rem;
         border-radius: .4rem;
 
         &_circle {
             position: absolute;
-            top: .67rem;
+            top: .85rem;
             left: .45rem;
         }
 
     }
 
     &__photo {
-        width: 70%;
+        width: 75%;
         margin: 0 auto;
     }
     &__pseudo-btn {
-        width: 80%;
-        margin: -1rem auto .5rem auto;
+        font-size: 1rem;
+        width: 100%;
+        margin: 0 auto;
         background-color: $blue;
-        padding: .4rem 1rem;
+        padding: .5rem 1rem;
         border-radius: .2rem;
         transform: skewX(-5deg);
         color: $white;
     }
+    &__occupation {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
     &__text {
-        margin-top: 1.5rem;
+        font-size: 1rem;
+        margin-top: 1rem;
         background: $white;
         border-radius: .3rem;
-        padding: .5rem;
+        padding: .4rem;
         position: relative;
         z-index: 2;
         &:before {
@@ -275,12 +333,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
 
         &_title {
+            font-size: 1rem;
             text-transform: uppercase;
         }
         &_buttons {
+            font-size: 1rem;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -289,7 +349,7 @@
 
     }
     &__button {
-        width: 85%;
+        width: 90%;
         margin-top: 1rem;
         color: $white;
         display: flex;
@@ -301,7 +361,7 @@
         position: relative;
 
         & > img {
-            width: 1rem;
+            width: .8rem;
         }
 
     }
@@ -408,16 +468,16 @@
                 padding-left: 10%;
             }
         }
-        &__selects-help::before {
-            display: none;
-        }
+        // &__selects-help::before {
+        //     display: none;
+        // }
     }
     .quiz .container {
         max-width: 100%;
     }
     .aside {
         position: relative;
-        width: 80%;
+        width: 100%;
         align-self: center;
         &__info {
             display: none;
@@ -428,14 +488,12 @@
             flex-direction: column;
             align-items: center;
             margin-top: 1.5rem;
-    
             &_buttons {
                 width: 100%;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                flex-wrap: wrap;
             }
         }
         &__button {
@@ -454,18 +512,10 @@
         }
 
         &__scoreboard {
-            flex-direction: row-reverse;
-            width: 100%;
-            align-self: flex-end;
-            order: -1;
-            padding: 2rem 2rem 0 0;
-            background: transparent;
+            display: none;
+            
         }
         
-        &__score_wrapper,
-        &__score_bottom {
-            display: none;
-        }
     
         &__main {
             flex-direction: column;
@@ -474,11 +524,10 @@
         &__content {
             &_wrapper {
                 width: 100%;
-                padding: 0 10% 2rem;
+                padding: 2rem 3% 2rem;
             }
             &_title {
                 text-align: center;
-                margin-top: 1rem;
                 &-wrapper {
                     flex-wrap: wrap;
                 }
@@ -487,7 +536,7 @@
                 flex-direction: column;
             }
             &_gift {
-                width: 50%;
+                width: 65%;
                 margin: 0 auto;
 
                 &-wrapper {
@@ -500,7 +549,11 @@
             width: 100%;
 
             &-help {
-                margin: 0 0 1.5rem;
+                margin: 1rem 5rem 1.5rem 0;
+
+                &::before {
+                    left: 80%;
+                }
             }
         }
         
@@ -522,6 +575,80 @@
         margin: 0 auto;
         justify-content: center;
     }
+    .quiz__content1 {
+        & .quiz {
+            &__btn_forward {
+                align-self: center;
+                width: 65%;
+                height: 5rem;
+                font-size: 1.5rem;
+                &-wrapper {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .aside {
+        &__bottom {
+            &_buttons {
+                flex-direction: column;
+            }
+        }
+        &__button {
+            width: 20rem;
+            margin: 1rem 1rem 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+	.quiz {
+        
+        
+        &__content {
+            &_title {
+                font-size: 1.5rem;
+                & br {
+                    display: none;
+                }
+                &-count {
+                    margin-bottom: 0.5rem;
+                }
+                &-wrapper {
+                    flex-wrap: wrap;
+                }
+            }
+            &_gift {
+                width: 80%;
+
+                &-wrapper {
+                    & .gift_text {
+                        &-top {
+                            font-size: 1rem;
+                        }
+                        &-middle {
+                            font-size: 1.2rem;
+                        }
+                        &-bottom {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                &-bottom {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .quiz__content1 {
+        & .quiz {
+            &__btn_forward {
+                font-size: 1.8rem;
+                width: 95%;
+                height: 6rem;
+            }
+        }
+    }
 }
 
 
@@ -530,7 +657,7 @@
         &__content {
             
             &_gift {
-                width: 70%;
+                width: 90%;
                 margin: 0 auto;
 
                 &-wrapper {
@@ -541,6 +668,14 @@
     }
     .quiz__content6 .quiz__selects > div {
         margin: 2rem 0;
+    }
+    .quiz__content1 {
+        & .quiz {
+            &__btn_forward {
+                width: 100%;
+                
+            }
+        }
     }
 }
 
