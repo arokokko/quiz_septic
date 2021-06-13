@@ -23,7 +23,7 @@
                         <img src="img/manager.png " class="aside__photo" alt="фото">
                         <div class="aside__pseudo-btn "><span class="pseudo-btn_inner">Иванов Иван</span></div>
                         <div class="aside__occupation ">Старший менеджер</div>
-                        <div class=" aside__text aside__text1 animate__animated animate__bounce animate__delay-2s" data-aside-description>
+                        <div class=" aside__text aside__text1 animate__animated animate__bounce animate__delay-1s" data-aside-description>
                             По количеству проживающих<br>
                             определяем <span class="fw700">суточный<br>
                             объём стоков.</span>
@@ -59,7 +59,7 @@
 
                         <div class="quiz__progress-bar progress-bar">
 							<div class="progress-bar__line-wrap ">
-                                <span class="progress-bar__inner_text">Расчет&nbsp;<span class="fw700" >пройден&nbsp;на&nbsp;<span data-bar-count>10%</span></span></span>
+                                <span class="progress-bar__inner_text">Расчет&nbsp;<span class="fw700" >пройден&nbsp;на&nbsp;<span class="fw700" data-bar-count>10%</span></span></span>
 								<div class="progress-bar__line" data-bar>
                                     
 								</div>
@@ -70,8 +70,8 @@
                         
                         <form class="quiz__content quiz__content1 animate__animated animate__slideInRight" id="first" data-first>
                             <div class="quiz__content_title-wrapper">
-                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner "><span class="fw700">Вопрос 1</span> из 6</span></div>
-                                <h3 class="quiz__content_title " >Сколько человек будет проживать<br>
+                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner "><span class="fw700">Вопрос&nbsp;1</span>&nbsp;из&nbsp;6</span></div>
+                                <h3 class="quiz__content_title fw500" >Сколько человек будет проживать<br>
                                     и пользоваться канализацией?
                                 </h3>
                             </div>
@@ -80,25 +80,25 @@
         <!-- first selects -->                                
 
                                 <div class="quiz__selects ">
-                                    <div>
+                                    <div class="quiz__selects_outer">
                                         <input type="radio" id="control_11" name="people" value="От 1 до 3 человек" >
                                         <label for="control_11">
-                                        <span>От 1 до 3 человек</span>
+                                        <span class="fw400">От 1 до 3 человек</span>
                                         </label>
                                     </div>
-                                    <div>
+                                    <div class="quiz__selects_outer">
                                         <input type="radio" id="control_12" name="people" value="4 - 6 человек">
                                         <label for="control_12">
                                         <span>4 - 6 человек</span>
                                         </label>
                                     </div>
-                                    <div>
+                                    <div class="quiz__selects_outer">
                                         <input type="radio" id="control_13" name="people" value="7 - 11 человек">
                                         <label for="control_13">
                                         <span>7 - 11 человек</span>
                                         </label>
                                     </div>
-                                    <div>
+                                    <div class="quiz__selects_outer">
                                         <input type="radio" id="control_14" name="people" value="Больше 12">
                                         <label for="control_14">
                                         <span>Больше 12</span>
@@ -166,8 +166,8 @@
 
                         <form class="quiz__content quiz__content2 animate__animated animate__slideInRight hide" id="second">
                             <div class="quiz__content_title-wrapper">
-                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner">Вопрос 2 из 6</span></div>
-                                <div class="quiz__content_title " >
+                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner "><span class="fw700">Вопрос&nbsp;2</span>&nbsp;из&nbsp;6</span></div>
+                                <div class="quiz__content_title fw500" >
                                     Укажите количество сантехнических точек?
                                 </div>
                             </div>
@@ -175,106 +175,109 @@
 
         <!-- second selects-->                        
                             <div class="quiz__selects ">
-                                <div>
-                                    <div class="quiz__select-name">
-                                        <img src="icons/bath_icon.png" alt="ванная">
-                                        <span>Ванная, шт</span>
+                                <div class="quiz__select_wrap">
+                                    <div>
+                                        <div class="quiz__select-name">
+                                            <img src="icons/bath_icon.png" alt="ванная">
+                                            <span>Ванная, шт</span>
+                                        </div>
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus" type="button">
+                                                -
+                                            </button>
+                                            <input type="number" value="0" name="bath" class="quantity" data-max-count="10" id="control_21" >
+                                            <button class="bt_plus" type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="quantity_inner">        
-                                        <button class="bt_minus" type="button">
-                                            -
-                                        </button>
-                                        <input type="number" value="0" name="bath" class="quantity" data-max-count="10" id="control_21" >
-                                        <button class="bt_plus" type="button">
-                                            +
-                                        </button>
+                                    <div>
+                                        <div class="quiz__select-name">
+                                            <img src="icons/shower_icon.png" alt="Душ">
+                                            <span>Душ, шт</span>
+                                        </div>
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus" type="button">
+                                                -
+                                            </button>
+                                            <input type="number" value="0" name="shower" class="quantity" data-max-count="10" id="control_22" >
+                                            <button class="bt_plus" type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                        
                                     </div>
-                                    
                                 </div>
-                                <div>
-                                    <div class="quiz__select-name">
-                                        <img src="icons/shower_icon.png" alt="Душ">
-                                        <span>Душ, шт</span>
+                                <div class="quiz__select_wrap">
+                                    <div>
+                                        <div class="quiz__select-name">
+                                            <img src="icons/sink_icon.png" alt="Раковина">
+                                            <span>Раковина, шт</span>
+                                        </div>
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus" type="button">
+                                                -
+                                            </button>
+                                            <input type="number" value="0" name="sink" class="quantity" data-max-count="10" id="control_23" >
+                                            <button class="bt_plus" type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="quantity_inner">        
-                                        <button class="bt_minus" type="button">
-                                            -
-                                        </button>
-                                        <input type="number" value="0" name="shower" class="quantity" data-max-count="10" id="control_22" >
-                                        <button class="bt_plus" type="button">
-                                            +
-                                        </button>
+                                    <div>
+                                        <div class="quiz__select-name">
+                                            <img src="icons/dish_wash_icon.png" alt="Посудомойка">
+                                            <span>Посудомойка, шт</span>
+                                        </div>
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus" type="button">
+                                                -
+                                            </button>
+                                            <input type="number" value="0" name="dish-wash" class="quantity" data-max-count="10" id="control_24" >
+                                            <button class="bt_plus" type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                        
                                     </div>
-                                    
                                 </div>
-                                <div>
-                                    <div class="quiz__select-name">
-                                        <img src="icons/sink_icon.png" alt="Раковина">
-                                        <span>Раковина, шт</span>
+                                <div class="quiz__select_wrap">
+                                    <div>
+                                        <div class="quiz__select-name">
+                                            <img src="icons/toilet_icon.png" alt="Унитаз">
+                                            <span>Унитаз, шт</span>
+                                        </div>
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus" type="button">
+                                                -
+                                            </button>
+                                            <input type="number" value="0" name="toilet" class="quantity" data-max-count="10" id="control_25" >
+                                            <button class="bt_plus" type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="quantity_inner">        
-                                        <button class="bt_minus" type="button">
-                                            -
-                                        </button>
-                                        <input type="number" value="0" name="sink" class="quantity" data-max-count="10" id="control_23" >
-                                        <button class="bt_plus" type="button">
-                                            +
-                                        </button>
+                                    <div>
+                                        <div class="quiz__select-name">
+                                            <img src="icons/washing_machine_icon.png" alt="Стир. машина">
+                                            <span>Стир. машина, шт</span>
+                                        </div>
+                                        <div class="quantity_inner">        
+                                            <button class="bt_minus" type="button">
+                                                -
+                                            </button>
+                                            <input type="number" value="0" name="washing" class="quantity" data-max-count="10" id="control_26" >
+                                            <button class="bt_plus" type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                        
                                     </div>
-                                    
                                 </div>
-                                <div>
-                                    <div class="quiz__select-name">
-                                        <img src="icons/dish_wash_icon.png" alt="Посудомойка">
-                                        <span>Посудомойка, шт</span>
-                                    </div>
-                                    <div class="quantity_inner">        
-                                        <button class="bt_minus" type="button">
-                                            -
-                                        </button>
-                                        <input type="number" value="0" name="dish-wash" class="quantity" data-max-count="10" id="control_24" >
-                                        <button class="bt_plus" type="button">
-                                            +
-                                        </button>
-                                    </div>
-                                    
-                                </div>
-                                <div>
-                                    <div class="quiz__select-name">
-                                        <img src="icons/toilet_icon.png" alt="Унитаз">
-                                        <span>Унитаз, шт</span>
-                                    </div>
-                                    <div class="quantity_inner">        
-                                        <button class="bt_minus" type="button">
-                                            -
-                                        </button>
-                                        <input type="number" value="0" name="toilet" class="quantity" data-max-count="10" id="control_25" >
-                                        <button class="bt_plus" type="button">
-                                            +
-                                        </button>
-                                    </div>
-                                    
-                                </div>
-                                <div>
-                                    <div class="quiz__select-name">
-                                        <img src="icons/washing_machine_icon.png" alt="Стир. машина">
-                                        <span>Стир. машина, шт</span>
-                                    </div>
-                                    <div class="quantity_inner">        
-                                        <button class="bt_minus" type="button">
-                                            -
-                                        </button>
-                                        <input type="number" value="0" name="washing" class="quantity" data-max-count="10" id="control_25" >
-                                        <button class="bt_plus" type="button">
-                                            +
-                                        </button>
-                                    </div>
-                                    
-                                </div>
-                                <div class="quiz__selects-help ">
-                                    <span class="fw700">Выберите вариант,</span> чтобы<br>
-                                    система продолжила подбор септика
-                                </div>
+                                
                             </div>
 
         <!-- second gifts-->                        
@@ -333,8 +336,8 @@
 
                         <form class="quiz__content quiz__content3 animate__animated animate__slideInRight hide" id="third" data-third>
                             <div class="quiz__content_title-wrapper">
-                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner">Вопрос 3 из 6</span></div>
-                                <div class="quiz__content_title " data-question3>
+                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner "><span class="fw700">Вопрос&nbsp;3</span>&nbsp;из&nbsp;6</span></div>
+                                <div class="quiz__content_title fw500" >
                                     Какой уровень грунтовых вод на вашем участке?
                                 </div>
                             </div>
@@ -342,10 +345,12 @@
 
         <!-- third selects-->                        
                                 <div class="quiz__selects ">
-                                    <div>
+                                    <div class="quiz__selects_outer">
                                         <input type="radio" id="control_31" name="level" value="Низкий. Ниже 1,5 метра" >
                                         <label for="control_31">
                                         <span>Низкий. Ниже 1,5 метра</span>
+                                        
+                                        </label>
                                         <div class="input_help">
                                             <img src="icons/question_icon.png" alt="подсказка">
                                             <div class="input_help-text">
@@ -354,13 +359,14 @@
                                                 стандартная станция.    
                                             </div>
                                         </div>
-                                        </label>
                                         
                                     </div>
-                                    <div>
+                                    <div class="quiz__selects_outer">
                                         <input type="radio" id="control_32" name="level" value="Высокий. Выше 1,5 метра">
                                         <label for="control_32">
                                         <span>Высокий. Выше 1,5 метра</span>
+                                        
+                                        </label>
                                         <div class="input_help">
                                             <img src="icons/question_icon.png" alt="подсказка">
                                             <div class="input_help-text ">
@@ -369,18 +375,17 @@
                                                 нестандартная станция.    
                                             </div>
                                         </div>
-                                        </label>
                                     </div>
-                                    <div>
+                                    <div class="quiz__selects_outer">
                                         <input type="radio" id="control_33" name="level" value="Не знаю">
                                         <label for="control_33">
                                         <span>Не знаю</span>
                                         </label>
                                     </div>
-                                    <div class="quiz__selects-help ">
+                                    <!-- <div class="quiz__selects-help ">
                                         <span class="fw700">Выберите вариант,</span> чтобы<br>
                                         система продолжила подбор септика
-                                    </div>
+                                    </div> -->
                                 </div>
 
         <!-- third gifts-->                        
@@ -439,8 +444,8 @@
 
                         <form class="quiz__content quiz__content4 animate__animated animate__slideInRight hide" id="fourth" data-fourth>
                             <div class="quiz__content_title-wrapper">
-                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner">Вопрос&nbsp;4&nbsp;из&nbsp;6</span></div>
-                                <div class="quiz__content_title " data-question4>
+                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner "><span class="fw700">Вопрос&nbsp;4</span>&nbsp;из&nbsp;6</span></div>
+                                <div class="quiz__content_title fw500 class="quiz__selects_outer" >
                                     Планируете использовать канализацию круглогодично?
                                 </div>
                             </div>
@@ -448,37 +453,44 @@
 
         <!-- fourth selects-->                        
                                 <div class="quiz__selects ">
-                                    <div>
-                                        <input type="radio" id="control_41" name="time" value="Проживаю круглый год" >
-                                        <label for="control_41" class="pressure">
+                                    <div class="quiz__selects_outer">
+                                        <input type="radio" id="control_41" name="season" value="Проживаю круглый год" >
+                                        <label for="control_41">
                                         <span>Проживаю круглый год</span>
+                                        
                                         </label>
+                                        
+                                        
                                     </div>
-                                    <div>
-                                        <input type="radio" id="control_42" name="time" value="Проживаю только летом. Зимой не пользуюсь канализацией">
-                                        <label for="control_42" class="pressure">
-                                        <span>Проживаю только летом. Зимой не
-                                            пользуюсь канализацией</span>
+                                    <div class="quiz__selects_outer less">
+                                        <input type="radio" id="control_42" name="season" value="Проживаю только летом. Зимой не
+                                        пользуюсь канализацией" >
+                                        <label for="control_42">
+                                        <span>Проживаю только летом. Зимой не пользуюсь канализацией</span>
+                                        
                                         </label>
+                                        
                                     </div>
-                                    <div>
-                                        <input type="radio" id="control_43" name="time" value="Проживаю летом. Зимой пользуюсь канализацией один раз в 2 недели или чаще">
-                                        <label for="control_43" class="pressure">
-                                        <span>Проживаю летом. Зимой пользуюсь
-                                            канализацией один раз в 2 недели
-                                            или чаще</span>
+                                    <div class="quiz__selects_outer less">
+                                        <input type="radio" id="control_43" name="season" value="Проживаю летом. Зимой пользуюсь канализацией один раз в 2 недели или чаще" >
+                                        <label for="control_43">
+                                            <span>Проживаю летом. Зимой пользуюсь канализацией один раз в 2 недели или чаще</span>
+                                        
                                         </label>
+                                        
                                     </div>
-                                    <div>
-                                        <input type="radio" id="control_44" name="time" value="Не знаю">
-                                        <label for="control_44" class="pressure">
+                                    
+                                    <div class="quiz__selects_outer">
+                                        <input type="radio" id="control_44" name="season" value="Не знаю" >
+                                        <label for="control_44">
                                         <span>Не знаю</span>
+                                        
                                         </label>
                                     </div>
-                                    <div class="quiz__selects-help ">
+                                    <!-- <div class="quiz__selects-help ">
                                         <span class="fw700">Выберите вариант,</span> чтобы<br>
                                         система продолжила подбор септика
-                                    </div>
+                                    </div> -->
                                     
                                 </div>
 
@@ -538,8 +550,8 @@
 
                         <form class="quiz__content quiz__content5 animate__animated animate__slideInRight hide" id="fifth" data-fifth>
                             <div class="quiz__content_title-wrapper">
-                                <div class="quiz__content_title-cou"><span class="pseudo-btn_inner">Вопрос 5 из 6</div>
-                                <div class="quiz__content_title " >
+                                <div class="quiz__content_title-count "><span class="pseudo-btn_inner "><span class="fw700">Вопрос&nbsp;5</span>&nbsp;из&nbsp;6</span></div>
+                                <div class="quiz__content_title fw500" >
                                     Куда будем отводить переработанные стоки?
                                 </div>
                             </div>
@@ -794,7 +806,7 @@
                         <a href="./index.html"><button class="quiz__btn-close btn__close">&times;</button></a>
                         <div class="quiz__score_wrapper">
                             <div class="quiz__score_title ">Вопрос:</div>
-                            <div class="quiz__score "><span class=" fw900">1</span>/6</div>
+                            <div class="quiz__score "><span class=" fw900" data-count>1</span>/6</div>
                             <span class=" ">
                                 <img class="button__arrow button__arrow1 animate__animated animate__flash animate__infinite animate__slower" src="icons/arrow_right.png" alt="стрелка вправо">
                                 <img class="button__arrow button__arrow2 animate__animated animate__flash animate__infinite animate__slow" src="icons/arrow_right.png" alt="стрелка вправо">

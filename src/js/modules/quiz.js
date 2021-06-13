@@ -33,21 +33,21 @@ export default () => {
         const images = [
 
                 `<div class="quiz__content_gift-wrapper ">
-                <div class="quiz__content_gift-stickers ">
-                    <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
-                        на-30%</span></div>
-                    
-                </div>
-                <img  src="img/septic_tank_single.png" alt="септический бак">
-                <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
-                    Промежуточный результат
-                </div>
-                <div class="quiz__content_gift-wrapper_text gift_text-middle">
-                    Вам подходит станция
-                </div>
-                <div data-img-descr2 class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
-                    Deka 5
-                </div>
+                    <div class="quiz__content_gift-stickers ">
+                        <div class="gift__sticker gift__sticker-top gift__sticker-violet"><img src="icons/percent_icon.png" alt="скидка"><span>Цена снижена<br>
+                            на-30%</span></div>
+                        
+                    </div>
+                    <img  src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div data-img-descr2 class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Deka 5
+                    </div>
                 </div>
                 <div data-img-relev2 class="quiz__content_gift-bottom ">и ещё <span class="fw700">37</span> станций</div>`,
 
@@ -156,7 +156,7 @@ export default () => {
                         Deka T-900
                     </div>
                 </div>
-                <div class="quiz__content_gift-bottom <span class="fw700">37</span>">и ещё <span class="fw700">12</span> станций</div>`,
+                <div class="quiz__content_gift-bottom ">и ещё <span class="fw700">15</span> станций</div>`,
 
                 
 
@@ -340,7 +340,7 @@ export default () => {
                     $(current).addClass('hide');
                     $(next).removeClass('hide');
                     $('[data-aside-description]').addClass('animate__bounce');
-                    $('html,body').animate({ scrollTop: $('#quiz__main').offset().top  }, 1000);
+                    // $('html,body').animate({ scrollTop: $('body').offset().top  }, 1000);
                 }
             });
         }

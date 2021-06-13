@@ -31,17 +31,7 @@
         }
     }
 
-    // more than 2 lines in description
-    // start
-    & label.pressure {
-        width: 20rem;
-        min-height: 4rem;
-        padding: .3rem .5rem .3rem 4rem;
-        display: flex;
-        align-items: center;
-        
-    }
-    // end
+    
 
     & input[type="radio"] + label {
         &::before {
@@ -49,7 +39,8 @@
             background: url(../icons/success_disable_icon.png);
             background-size: contain;
             position: absolute;
-            top: .7rem;
+            top: 50%;
+            transform: translateY(-50%);
             left: 1rem;
             height: 2.7rem;
             width: 2.7rem;
@@ -71,7 +62,8 @@
                 background: url(../icons/success_icon.png);
                 background-size: contain;
                 position: absolute;
-                top: .7rem;
+                top: 50%;
+                transform: translateY(-50%);
                 left: 1rem;
                 height: 2.7rem;
                 width: 2.7rem;
@@ -88,26 +80,31 @@
         font-weight: 700;
     }
 }  
+
+.less label {
+    font-size: 1rem;
+}
 .input_help {
     position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    top: -.9rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: -1.3rem;
     right: 1rem;
     cursor: pointer;
     transition: all .4s;
     z-index: 1;
 
     &-text {
+        font-size: 0.6rem;
         opacity: 0;
-        width: 7rem;
+        min-width: 7rem;
         border-radius: .3rem;
         background: #fff;
         box-shadow: 0 0 2rem 0 #d3d5d5;
         padding: .4rem .4rem;
         position: absolute;
         top: -1.5rem;
-        right: 1.2rem;
+        right: 2rem;
         text-align: center;
         z-index: -1;
     }
@@ -168,6 +165,11 @@
         width: 100%;
         height: 100%;
     }
+
+    & > div {
+         position: relative;
+    }
+    
     
 }
 // screen 5 end
@@ -223,7 +225,10 @@ input[type="number"]:focus {
 
   
 .quantity_inner {
-    display: inline-flex;
+    min-width: 11rem;
+    display: flex;
+    height: 3.5rem;
+    justify-content: space-between;
     align-items: center;
     background: $grey;
     border-radius: .3rem;
@@ -232,9 +237,9 @@ input[type="number"]:focus {
 } 
 .quantity_inner .bt_minus,
 .quantity_inner .bt_plus {
-    font-size: 1rem;
-    height: 1.2rem;
-    width: 1.2rem;
+    font-size: 1.2rem;
+    height: 1.6rem;
+    width: 1.6rem;
     background: $white;
     border-radius: 50%;
     font-weight: 500;
@@ -249,19 +254,21 @@ input[type="number"]:focus {
     
 }
 .quantity_inner .quantity {
-    height: 2.5rem;
+    // height: 2.5rem;
     width: 3.5rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background: transparent;
 }
 
 .quiz__select {
     &-name {
-        margin-bottom: 0.4rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
 
         & > img {
-            height: 1rem;
+            height: 1.2rem;
+            margin-right: 0.5rem;
         }
     }
 }
@@ -272,6 +279,47 @@ input[type="number"]:focus {
         & label.label_custom,
         & label.label_gift {
             width: 12rem;
+        }
+
+        &_outer {
+            width: 90%;
+            & label {
+                width: 100%;
+            }
+        }
+    }
+    .quiz__select {
+        &-name {
+            font-size: .9rem;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .quantity_inner {
+        height: 4rem;
+    }
+    
+}
+@media (max-width: 420px) {
+    .quantity_inner {
+        min-width: 0;
+        height: 3.5rem;
+
+        & .bt_minus,
+        & .bt_plus {
+            font-size: 1.5rem;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+    .quiz__select {
+        &-name {
+            // font-size: .9rem;
+    
+            & > img {
+                height: 1.1rem;
+                margin-right: 0.2rem;
+            }
         }
     }
     
