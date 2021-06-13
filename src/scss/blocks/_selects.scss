@@ -42,8 +42,8 @@
             top: 50%;
             transform: translateY(-50%);
             left: 1rem;
-            height: 2.7rem;
-            width: 2.7rem;
+            height: 3rem;
+            width: 3rem;
         }
     }
     & input[type="radio"] + label.pressure {
@@ -65,8 +65,8 @@
                 top: 50%;
                 transform: translateY(-50%);
                 left: 1rem;
-                height: 2.7rem;
-                width: 2.7rem;
+                height: 3rem;
+                width: 3rem;
             }
     }
     & input[type="radio"]:checked + label.pressure {
@@ -76,6 +76,7 @@
                 
             }
     }
+    & input[type="radio"]:checked + label div,
     & input[type="radio"]:checked + label > span {
         font-weight: 700;
     }
@@ -83,20 +84,21 @@
 
 .less label {
     font-size: 1rem;
+    padding: 1rem 1.3rem 1rem 4rem;
 }
 .input_help {
     position: absolute;
-    width: 2.5rem;
-    height: 2.5rem;
-    top: -1.3rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    top: -1.1rem;
     right: 1rem;
     cursor: pointer;
     transition: all .4s;
     z-index: 1;
 
     &-text {
+        display: none;
         font-size: 0.6rem;
-        opacity: 0;
         min-width: 7rem;
         border-radius: .3rem;
         background: #fff;
@@ -113,7 +115,7 @@
         transform: scale(1.1);
     }
     &:hover .input_help-text {
-        opacity: .9;
+        display: block;
     }
 
     & > img {
@@ -122,90 +124,91 @@
 }
 
 // screen 5 start
-.label_custom {
+.label_fifth {
     span {
         display: block;
         position: absolute;
         padding-left: 2rem;
-        margin-top: .4rem;
+        font-size: 1rem;
     }
 }
 .quiz__selects {
+    input[type="radio"] + label.label_fifth .quiz__select_mark {
+        background: url(../icons/success_disable_icon.png) center center / contain no-repeat;
+        height: 1.7rem;
+        width: 2rem;
+        margin-right: .1rem;
+    }
+    input[type="radio"]:checked + label.label_fifth .quiz__select_mark {
+        background: url(../icons/success_icon.png) center center / contain no-repeat;
+        height: 1.7rem;
+        width: 2rem;
+        margin-right: .1rem;
+    }
 
-    & input[type="radio"]:checked + label.label_custom::before,
-    & input[type="radio"] + label.label_custom::before {
-        top: 97%;
-        left: 0;
+    & input[type="radio"]:checked + label.label_fifth::before,
+    & input[type="radio"] + label.label_fifth::before {
+        display: none;
     }
-    & input[type="radio"]:checked + label.label_custom-dbl::before,
-    & input[type="radio"] + label.label_custom-dbl::before { 
-        top: 105%;
-        left: 0;
-    }
-    & label.label_custom {
-        border: none;
-    }
-    & input[type="radio"]:checked + label.label_custom {
+    
+    & input[type="radio"]:checked + label.label_fifth {
         border: none;
         
-    }   
-
-    & input[type="radio"]:checked + label.label_custom > img {
-        border: .1rem solid $green;
-        border-radius: .3rem;
     }  
-    & label.label_custom {
-        width: 10rem;
+    & input[type="radio"] + label.label_gift {
+        border: .1rem solid $dark_grey;
+        
+    }    
+
+    & input[type="radio"]:checked + label.label_fifth > img {
+        border: .1rem solid $green;
+        border-radius: .4rem;
+    }  
+    & label.label_fifth {
+        width: 11.5rem;
         padding: 0;
-        margin-bottom: 4rem;
-        margin-right: 2rem;
+        border: none;
+
+        &:hover {
+            box-shadow: none;
+        }
     }
 
-    & label.label_custom > img {
-        width: 100%;
-        height: 100%;
+    & label.label_fifth > img {
+        width: 11.5rem;
+
+        &:hover {
+            box-shadow: 0 0.6rem 3rem $dark_grey;
+            
+        }
     }
 
     & > div {
-         position: relative;
+        position: relative;
     }
-    
-    
 }
+.quiz__select {
+    &_fifth {
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1rem;
+    }
+}
+
 // screen 5 end
 
 // screen 6 start
-.label_gift {
-    margin-right: 1.5rem;
-    span {
-        display: block;
-        position: absolute;
-        bottom: -1.7rem;
-        left: 2.1rem;
-    }
-    span.dbl_line {
-        bottom: -2.1rem;
-    }
-}
-.quiz__selects {
 
-    & input[type="radio"]:checked + label.label_gift::before,
-    & input[type="radio"] + label.label_gift::before {
-        top: 103%;
-        left: 0;
-    }
+// .quiz__selects {
+
     
-    & label.label_gift > img {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-    }
-    & label.label_gift {
-        width: 10rem;
-        min-height: 12.5rem;
-        padding: 1rem .5rem;
-    }
-}
+//     & label.label_gift {
+//         height: 14rem;
+//         border: .1rem solid $dark_grey;
+//     }
+// }
 // screen 6 end
 
 // screen 2 start
@@ -276,7 +279,7 @@ input[type="number"]:focus {
 
 @media (max-width: 786px) {
     .quiz__selects {
-        & label.label_custom,
+        & label.label_fifth,
         & label.label_gift {
             width: 12rem;
         }
@@ -298,6 +301,15 @@ input[type="number"]:focus {
     .quantity_inner {
         height: 4rem;
     }
+    .quiz__selects {
+        & label.label_fifth > img {
+            width: 100%;
+        }
+        & label.label_gift > img {
+            width: 11.5rem;
+        }
+    }
+    
     
 }
 @media (max-width: 420px) {
@@ -314,12 +326,14 @@ input[type="number"]:focus {
     }
     .quiz__select {
         &-name {
-            // font-size: .9rem;
     
             & > img {
                 height: 1.1rem;
                 margin-right: 0.2rem;
             }
+        }
+        &_fifth {
+            font-size: 0.9rem;
         }
     }
     

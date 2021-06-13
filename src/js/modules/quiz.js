@@ -223,7 +223,7 @@ export default () => {
                 Ваш подарок
             </div>
             <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700 ttu">
-                Скидка на монтаж <br>
+                Скидка&nbsp;на&nbsp;монтаж <br>
                 5 000 рублей
             </div>`,
 

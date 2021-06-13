@@ -137,10 +137,7 @@
             &-wrapper > :first-child {
                 margin-bottom: 1rem;
             }
-            &-wrapper > img {
-                width: 75%;
-                height: auto;
-            }
+            
             &-bottom {
                 text-decoration: underline;
                 font-size: 1rem;
@@ -188,6 +185,9 @@
 
         & > div:first-child {
             margin-right: 2rem;
+        }
+        & > div {
+            position: relative;
         }
     }
     
@@ -397,11 +397,7 @@
 
 }
 
-.quiz__content6 .quiz__selects,
-.quiz__content5 .quiz__selects {
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+
 
 .quiz__content5 .quiz__selects,
 .quiz__content2 .quiz__selects {
@@ -411,16 +407,17 @@
     }
 }
 
-.quiz__content6 .quiz__selects {
-        
-    &-help::before {
-        left: 80%;
+.quiz__content6 {
+    & .quiz__selects {
+        &-help::before {
+            left: 80%;
+        }
+    }
+    & .quiz__content_gift-wrapper > img {
+        width: 90%;
     }
 }
 
-.quiz__content6 .quiz__selects > div {
-    margin: 0 .5rem 2.5rem;
-}
 
 
 .gift__sticker {
@@ -480,9 +477,9 @@
                 padding-left: 10%;
             }
         }
-        // &__selects-help::before {
-        //     display: none;
-        // }
+        &__selects-help::before {
+            display: none;
+        }
     }
     .quiz .container {
         max-width: 100%;
@@ -511,6 +508,20 @@
         &__button {
             width: 15rem;
             margin: 1rem 1rem 0;
+        }
+    }
+    .quiz__content6 {
+        & .quiz {
+            &__select_wrap > div:first-child {
+                margin-right: 1rem;
+            }
+        }
+    }
+    .quiz__content6 {
+        & .quiz {
+            &__select_wrap > div {
+                margin-right: 1rem;
+            }
         }
     }
 }
@@ -586,11 +597,7 @@
             }
         }
     }
-    .quiz__content6 .quiz__selects,
-    .quiz__content5 .quiz__selects {
-        margin: 0 auto;
-        justify-content: center;
-    }
+    
     .quiz__content1 {
         & .quiz {
             &__btn_forward {
@@ -615,6 +622,7 @@
             margin: 1rem 1rem 0;
         }
     }
+    
 }
 
 @media (max-width: 576px) {
@@ -690,6 +698,13 @@
             }
         }
     }
+    // .quiz__content6 {
+    //     & .quiz {
+    //         &__select_wrap {
+    //             width: auto;
+    //         }
+    //     }
+    // }
 }
 
 
