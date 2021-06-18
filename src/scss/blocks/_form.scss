@@ -171,15 +171,16 @@
 @media (max-width: 786px) {
 	.sending__form {
         align-items: center;
+        text-align: center;
+        &_title {
+            text-align: center;
+        }
         
         &_question {
-            margin-top: 23rem;
+            margin-top: 26rem;
         }
-        &_title br {
-            display: none;
-        }
+        
         &_privacy {
-            margin: 1rem 0;
             font-size: 0.8rem;
         }
         &_note {
@@ -198,4 +199,48 @@
         }
     }
 
+}
+
+@media (max-width: 576px) {
+	.sending__form {
+        width: 100%;
+        &_title br {
+            display: none;
+        }
+        &_note {
+            font-size: 0.8rem;
+        } 
+        &_btn {
+            height: 6rem;
+        }
+        &_input {
+            padding: 2rem;
+        }
+        & input, 
+        & button {
+            font-size: 1rem;
+            width: 100%;
+        }
+
+    }
+}
+
+@media (max-width: 420px) {
+	.sending__form {
+        
+        &_question {
+            margin-top: calc(90vw);
+        }
+        &_socials {
+            width: 100%;
+        }
+        
+        &_privacy {
+            font-size: 0.7rem;
+        }
+
+    }
+    .social {
+        width: 25%;
+    }
 }
