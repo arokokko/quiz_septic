@@ -20,7 +20,9 @@ const form = () => {
             
 
             if ($(this).hasClass('social_email')) {
-                inputEmail.removeAttr('hidden').attr('required', true);
+                inputEmail.removeAttr('hidden');
+                inputEmail.attr('required', true);
+                inputPhone.attr('hidden', true);
                 inputPhone.attr('required', null);
             } else {
                 if($(this).hasClass('social_whatsapp')) {
@@ -30,6 +32,7 @@ const form = () => {
                 } else if ($(this).hasClass('social_telegram')) {
                     inputPhone.attr('placeholder', "Ваш телефон в Telegram");
                 }
+                inputPhone.removeAttr('hidden');
                 inputPhone.attr('required', true);
                 inputEmail.attr('hidden', true);
                 inputEmail.attr('required', null);
@@ -43,7 +46,10 @@ const form = () => {
         if($('#large_form input[type=tel]').val() !== '') {
             let phone = $('#large_form input[type=tel]').val();
             localStorage.setItem('tel', `${phone}`);
-            
+            window.location.href="./thanks.html";
+        } else if ($('#large_form input[type=email]').val() !== '') {
+            let email = $('#large_form input[type=email]').val();
+            localStorage.setItem('email', `${email}`);
             window.location.href="./thanks.html";
             
         } else {

@@ -134,13 +134,13 @@
 }
 .quiz__selects {
     input[type="radio"] + label.label_fifth .quiz__select_mark {
-        background: url(../icons/success_disable_icon.png) center center / contain no-repeat;
+        background: url(../icons/success_disable_icon.png) left center / contain no-repeat;
         height: 1.7rem;
         width: 2rem;
         margin-right: .1rem;
     }
     input[type="radio"]:checked + label.label_fifth .quiz__select_mark {
-        background: url(../icons/success_icon.png) center center / contain no-repeat;
+        background: url(../icons/success_icon.png) left center / contain no-repeat;
         height: 1.7rem;
         width: 2rem;
         margin-right: .1rem;
@@ -155,8 +155,9 @@
         border: none;
         
     }  
-    & input[type="radio"] + label.label_gift {
+    & input[type="radio"] + label.label_gift >img {
         border: .1rem solid $dark_grey;
+        border-radius: .4rem;
         
     }    
 
@@ -165,7 +166,7 @@
         border-radius: .4rem;
     }  
     & label.label_fifth {
-        width: 11.5rem;
+        // width: 11.5rem;
         padding: 0;
         border: none;
 
@@ -279,10 +280,10 @@ input[type="number"]:focus {
 
 @media (max-width: 786px) {
     .quiz__selects {
-        & label.label_fifth,
-        & label.label_gift {
-            width: 12rem;
-        }
+        // & label.label_fifth,
+        // & label.label_gift {
+        //     width: 12rem;
+        // }
 
         &_outer {
             width: 90%;
@@ -305,9 +306,7 @@ input[type="number"]:focus {
         & label.label_fifth > img {
             width: 100%;
         }
-        & label.label_gift > img {
-            width: 11.5rem;
-        }
+        
     }
     
     

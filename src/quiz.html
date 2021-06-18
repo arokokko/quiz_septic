@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <section class="quiz ">
+    <section class="quiz hide">
         <div class="container_large">
             <div class="quiz__basic">
 <!--quiz aside--> 
@@ -752,7 +752,7 @@
                                                 <img src="img/gift_installation.png" alt="подарок">
                                                 <div class="quiz__select_fifth">
                                                     <div class="quiz__select_mark"></div>
-                                                    <div >Скидка&nbsp;на&nbsp;монтаж
+                                                    <div >Скидка на&nbsp;монтаж
                                                         - 5000 руб</div>
                                                 </div>
                                                 
@@ -853,7 +853,7 @@
                                 <img class="button__arrow button__arrow3 animate__animated animate__flash animate__infinite" src="icons/arrow_right.png" alt="стрелка вправо">
                             </span>
                         </div>
-                        <div class="quiz__score_bottom no_opacity">nothing here</div>
+                        <div class="quiz__score_bottom no_opacity">Create by arokokko</div>
                     </div>
 
                 </div>
@@ -864,7 +864,7 @@
 
 <!--quiz loading section-->
 
-    <section class="loading hide">
+    <section class="loading ">
         <div class="container">
             
             <div class="loading__outer ">
@@ -873,27 +873,30 @@
 
                     <div class="progress-bar">
                         <div class="progress-bar__line-wrap ">
-                            <span class="progress-bar__inner_text">Расчет <span class="fw700">пройден на 99%</span></span>
+                            <span class="progress-bar__inner_text">Расчет&nbsp;<span class="fw700">пройден&nbsp;на&nbsp;99%</span></span>
                             <div class="progress-bar__line" style="width:99%;" >
                                 
                             </div>
                         </div>
                     </div>
-                    <div class="loading__loader ">
+                    <div class="loading__loader hide">
                         <img class="loading__loader_img" src="icons/loader_icon.png" alt="загрузка">
 
-                        <h2 class="loading__loader_descr catalog__created ">
+                        <h3 class="loading__loader_descr catalog__created titleH3">
                             <span class="fw700">Каталог станций сформирован.</span><br>
-                            Он откроется сразу после регистрации
-                        </h2>
+                            <span class="fw400">Он откроется сразу после регистрации</span>
+                        </h3>
                     </div>
-                    <div class="loading__inner hide animate__animated animate__slideInUp">
+                    <div class="loading__hide no_opacity">
+                        <div>Create by arokokko</div>
+                    </div>
+                    <div class="loading__inner animate__animated animate__slideInUp">
                         <div class="loading__content">
                             <div class="loading__content_pseudo-btn "><span class="pseudo-btn_inner">Спасибо за ответы</span></div>
         
         <!-- form -->                    
                             <form action="#" class="loading__content_form sending__form" id="large_form">
-                                <h2 class="sending__form_title "><span class="fw700">Система сформировала каталог<br> станций,</span> которые вам подходят.</h2>
+                                <h2 class="sending__form_title titleH2 "><span class="fw700">Система сформировала каталог<br> станций,</span> которые вам подходят.</h2>
                                 <div class="sending__form_question ">Как вам удобнее получить результат?</div>
                                 <div class="sending__form_socials " data-social>
                                     <div class="social social_whatsapp active">
@@ -916,7 +919,7 @@
                                 <input type="tel" placeholder="Ваш телефон в WhatsApp" class="sending__form_input sending__form_phone" name="phone" required>
                                 <input type="email" placeholder="Ваш email" class="sending__form_input sending__form_email" name="email"  hidden>
                                 <div class="sending__form_note  ">
-                                    Подарок и Скидка на монтаж будет закреплена за вашим номером
+                                    Подарок и Скидка будут закреплены за вашим номером
                                 </div>
                                 <button data-main-form-submit type="submit" class="btn_large sending__form_btn fw500">Получить результат 
                                     <span class="sending__form_btn-bonus fw500">   + бонусы</span>
