@@ -17,20 +17,23 @@
         font-weight: 900;
     }
     &__tech {
+        font-size: 1rem;
         line-height: 1.5;
     }
     &__links {
         margin-top: 0.6rem;
         display: flex;
         justify-content: space-between;
-        align-items: stretch;
+        align-items: center;
         
     }
     &__btn {
         width: 55%;
         border-radius: 5rem;
+        font-size: 1rem;
+        padding: .4rem;
         box-shadow: 0 .6rem 1rem 0 rgba(4, 179, 25, 0.25), inset 0 0 1.5rem 0 rgba(151, 215, 146, 0.71);
-        background-image: linear-gradient(90deg, $green 0%, $green_light 50%, $green 100%);
+        background-image: linear-gradient(90deg, #31ca3c 0%, #7ef178 50%, #31ca3c 100%);
         color: $white;
         transition: all .4s;
         position: relative;
@@ -46,7 +49,8 @@
         box-shadow: 0 0.3rem 1rem $green;
     }
     &__calc {
-        color: $green_light;
+        font-size: 0.8rem;
+        color: #5ce55c;
         text-decoration: underline;
         transition: all .4s;
     }
@@ -54,4 +58,26 @@
         color: $green;
     }
     
+}
+
+
+@media (max-width: 576px) {
+    .card {
+        &__picture > img {
+            width: 85%;
+        }
+        
+        &__tech {
+            font-size: .8rem;
+            line-height: 1.3;
+        }
+        &__btn {
+            border-radius: 2rem;
+            font-size: .8rem;
+
+        }
+        &__calc {
+            font-size: .7rem;
+        }
+    }
 }

@@ -78,8 +78,8 @@
         justify-content: center;
         align-items: center;
         width: 80%;
-        margin: 3rem auto 0 auto;
-        background: url(../img/background_remark.png) center center / cover no-repeat;
+        margin: 2rem auto 0;
+        background: url(../img/background_remark.png) right bottom / cover no-repeat;
         padding: 2rem;
         border-radius: .6rem;
 
@@ -91,26 +91,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
 
             
         }
         &_item {
             min-width: 10rem;
-            padding-left: 2.3rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             position: relative;
             margin-bottom: 1.2rem;
+            font-size: 1rem;
 
-            &::before {
-                content: "";
-                width: 1.7rem;
-                height: 1.7rem;
-                position: absolute;
-                background: url(../icons/success_blue_icon.png);
-                background-size: contain;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 0;
+            & > img {
+                margin-right: .5rem;
+                width: 1.6rem;
+                height: 1.6rem;
             }
         }
         &_item:not(:last-child) {
@@ -329,7 +326,7 @@
 }
 .active.tabs__switch {
     box-shadow: 0 1rem 1.5rem 0 rgba(4, 179, 25, .25), inset 0 0 2.5rem 0 rgba(151, 215, 146, .71);
-    background-image: linear-gradient(90deg, $green 0%, $green_light 50%, $green 100%);
+    background-image: linear-gradient(90deg, #31ca3c 0%, #7ef178 50%, #31ca3c 100%);
 }
 
 
@@ -340,6 +337,17 @@
         &__outer {
             margin: 0;
             width: 100%;
+        }
+        &__remark {
+            width: 100%;
+            padding: 2rem;
+            &_content {
+                width: 100%;
+            }
+            // &_item {
+            //     min-width: calc((100% - 6rem) / 4 );
+                
+            // }
         }
         &__engineer {
             &_left {
@@ -375,12 +383,19 @@
             padding: 0 3% 1rem;
         }
         &__remark {
-            &_title br {
-                display: none;
-            }
+            padding: 2rem 3%;
+
             &_content {
-                padding-left: 20%;
+                padding: 0 16%;
                 justify-content: flex-start;
+                flex-wrap: wrap;
+                
+            }
+            &_item {
+                width: 26%;
+                margin-left: 1rem;
+                
+                
             }
         }
         &__engineer {
@@ -404,6 +419,19 @@
             }
         }
         &__tabs {
+            &_wrapper {
+                justify-content: space-between;
+                padding: 0 5%;
+            }
+            &_item {
+                width: 45%;
+                margin: 0;
+                margin-top: 2rem;
+                
+                & .quiz__content_gift-wrapper {
+                    width: 100%;
+                }
+            }
             
             &_notice {
                 font-size: 0.8rem;
@@ -444,7 +472,43 @@
         &__pointer {
             width: 8rem;
             height: 4rem;
+
+            &_arrows {
+    
+                & > img {
+                    width: .8rem;
+                }
+            }
         }
+        &__tabs {
+            &_wrapper {
+                padding: 0 1%;
+            }
+            &_item {
+                width: 47%;
+
+                & .quiz__content_gift-stickers {
+                    font-size: 0.6rem;
+                }
+            }
+                
+            &_notice {
+                text-align: center;
+            }
+            
+        }
+        &__remark {
+            &_title br {
+                display: none;
+            }
+            &_content {
+                padding: 0 5%;
+            }
+            &_item {
+                font-size: .8rem;
+            }
+        }
+        
         
         &__engineer {
             width: 100%;
@@ -491,6 +555,23 @@
 	.catalog {
         &__knocking {
             height: 28rem;
+        }
+        &__remark {
+            &_content {
+                padding: 0;
+            }
+            &_item:not(:last-child) {
+                margin-right: .2rem;
+            }
+            &_item {
+                 margin-left: 0.2rem;   
+                & > img {
+                    margin-right: .3rem;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                }
+            }
+            
         }
         &__engineer {
             
