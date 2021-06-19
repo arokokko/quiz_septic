@@ -37,7 +37,7 @@
 
     &__outer {
         margin: 2rem auto;
-        width: 90%;
+        width: 100%;
         min-height: 90vh;
         border-radius: .5rem;
         box-shadow: 0 0 5rem 0 rgba(25, 25, 25, 0.15);
@@ -60,6 +60,7 @@
         align-items: center;
         background-color: $blue;
         color: $white;
+        font-size: 1rem;
         padding: .6rem 2rem;
         border-radius: .2rem;
         transform: skewX(-5deg);
@@ -253,11 +254,13 @@
     }
 
     &__tabs {
+        width: 100%;
         &_title {
             margin: 1.5rem 0;
             text-align: center;
         }
         &_switchers {
+            width: 100%;
             display: flex;
             justify-content: space-between;
             margin-bottom: 1rem;
@@ -277,17 +280,17 @@
             width: 16rem;
             margin: 1.5rem;
         }
+        &_notice {
+            font-size: 1rem;
+        }
         
     }
 
     &__knocking {
-        top: calc(100% - 7rem);
-        position: absolute;
-        transition: .2s linear;
-        width: 100%;
-        animation: knock 2s infinite ;
-        transform-origin: center top;
-
+        overflow: hidden;
+        position: relative;
+        height: 25rem;
+        margin-top: -5rem;
         
         
         & .layout {
@@ -301,15 +304,22 @@
         }
     }
     &__knocking .catalog__outer {
-        position: relative;
-        min-height: 0;
+        background: url(../img/background_catalog.png) center center / cover no-repeat;
+        margin: 0 auto;
+        cursor: no-drop;
+        // top: 0;
+        transition: .2s linear;
+        width: 100%;
+        animation: knock 2s infinite ;
+        transform-origin: center top;
     }
 }
 .tabs__switch {
-    width: 45%;
-    height: 3.5rem;
+    width: 47%;
+    padding: 1.5rem 1rem;
     border-radius: .5rem;
     color: $white;
+    font-size: 1rem;
     background-color: rgba(#1d89c9, .6);
     transition: all .4s;
 }
@@ -337,7 +347,11 @@
             }
         }
         &__knocking {
-            top: 100%;
+            margin-top: 0;
+        }
+        &__knocking .catalog__outer {
+            background: url(../img/background_catalog1.png) center center / cover no-repeat;
+            margin: 0 auto;
         }
         
     }
@@ -345,10 +359,21 @@
     .catalog .container {
         max-width: 100%;
     }
+    .tabs__switch {
+        font-size: .8rem;
+    }
+    
 
 }
 @media (max-width: 786px) {
 	.catalog {
+        &__knocking {
+            height: 26rem;
+        }
+        &__inner {
+            width: 100%;
+            padding: 0 3% 1rem;
+        }
         &__remark {
             &_title br {
                 display: none;
@@ -408,6 +433,10 @@
             font-size: 0.8rem;   
         }
     }
+    .tabs__switch {
+        width: 49%;
+        padding: 1rem;
+    }
     
 }
 @media (max-width: 576px) {
@@ -416,12 +445,7 @@
             width: 8rem;
             height: 4rem;
         }
-        &__tabs {
-            &_switchers {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+        
         &__engineer {
             width: 100%;
             &_wrapper {
@@ -452,14 +476,22 @@
                 left: 28%;
             }
         }
+        &__knocking {
+            height: 27rem;
+        }
+        &__knocking .catalog__outer {
+            background: url(../img/background_catalog2.png) center center / cover no-repeat;
+        }
         
     }
-    .tabs__switch:first-child {
-        margin-bottom: 1.5rem;
-    }
+    
+    
 }
 @media (max-width: 420px) {
 	.catalog {
+        &__knocking {
+            height: 28rem;
+        }
         &__engineer {
             
             &_form {
@@ -475,7 +507,5 @@
         }
         
     }
-    .tabs__switch {
-        width: 50%;
-    }
+    
 }
