@@ -92,6 +92,14 @@
             justify-content: center;
             align-items: center;
             flex-wrap: nowrap;
+            margin-left: 9%;
+
+            & > li {
+                display: flex;
+            }
+            & > li:not(:last-child) {
+                margin-right: 2rem;
+            }
 
             
         }
@@ -123,37 +131,43 @@
         &_title {
             text-align: center;
             margin-bottom: 1.5rem;
+            padding: 0 3%;
         }
 
         &_wrapper {
             width: 100%;
             display: flex;
             justify-content: space-between;
-            background: url(../img/background_engineer.png) center center / cover no-repeat;
-            padding: 2rem 2rem 1.5rem 1.5rem;
+            background: url(../img/background_engineer.png) left bottom / cover no-repeat;
+            padding: 2rem 1.5rem 1.5rem 1rem;
             border-radius: .6rem;
+            overflow: hidden;
         }
         &_left {
-            width: 80%;
+            width: 50%;
             position: relative;
-            bottom: -3.6rem;
-            margin-right: 1rem;
+            bottom: -2rem;
+            margin-right: -2rem;
+            font-size: 1rem;
+            z-index: 0;
         }
         &_left > div {
             position: absolute;
             top: 2.5rem;
-            right: 1rem;
+            left: 55%;
         }
         &_left span {
             display: inline-block;
             margin-bottom: .4rem;
         }
         &_right {
-            width: 100%;
+            width: 55%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
         &_subtitle {
             text-align: center;
@@ -162,7 +176,8 @@
         }
         &_list {
             text-align: left;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
 
         }
         &_list > li:not(:last-child) {
@@ -341,18 +356,16 @@
         &__remark {
             width: 100%;
             padding: 2rem;
+
             &_content {
                 width: 100%;
+                margin-left: 5%;
             }
-            // &_item {
-            //     min-width: calc((100% - 6rem) / 4 );
-                
-            // }
+            
         }
         &__engineer {
-            &_left {
-                bottom: -5.2rem;
-            }
+            width: 100%;
+            
         }
         &__knocking {
             margin-top: 0;
@@ -403,19 +416,30 @@
                 display: none;
             }
             &_list {
-                font-size: 1rem;
+                padding: 0 10%;
+    
             }
+            
             &_form {
-                margin: 24rem auto 0 auto;
+                margin-top: 32rem;
                 width: 80%;
 
             }
             &_left {
                 position: absolute;
                 left: 50%;
-                width: 20rem;
-                top: 19rem;
+                width: 25rem;
+                bottom: 22rem;
                 transform: translateX(-50%);
+                
+            }
+            &_left > div {
+                font-size: 0.8rem;
+                top: 1.5rem;
+                left: 60%;
+            }
+            &_right {
+                width: 100%;
             }
         }
         &__tabs {
@@ -502,35 +526,44 @@
                 display: none;
             }
             &_content {
-                padding: 0 5%;
+                margin: 0;
+                padding: 0 10%;
+                // justify-content: center;
+                // width: auto;
             }
             &_item {
+                
                 font-size: .8rem;
+                & > span {
+                    width: 120px;
+                }
             }
         }
         
         
         &__engineer {
-            width: 100%;
             &_wrapper {
-                padding: 2rem 1rem;
+                padding: 2rem 0;
+            }
+            &_subtitle {
+                padding: 0 3%;
             }
             &_form {
-                margin: 20rem auto 0 auto;
-                width: 80%;
+                width: 100%;
 
             }
+            &_list {
+                font-size: .8rem;
+    
+            }
             &_left {
-                position: absolute;
-                left: 50%;
-                width: 18rem;
-                top: 18rem;
-                transform: translateX(-50%);
+                width: 22rem;
+                bottom: 27rem;    
+            }
+            &_form {
+                margin-top: 27rem;
+                width: 100%;
 
-                & > div {
-                    top: 1.5rem;
-                    right: -2rem;
-                }
             }
         }
         &__photos {
@@ -558,10 +591,14 @@
         }
         &__remark {
             &_content {
+                margin: 0;
                 padding: 0;
+                // justify-content: center;
+                // width: auto;
             }
+            
             &_item:not(:last-child) {
-                margin-right: .2rem;
+                margin-right: 1rem;
             }
             &_item {
                  margin-left: 0.2rem;   
@@ -574,7 +611,10 @@
             
         }
         &__engineer {
-            
+            margin: 2rem auto 0;
+            &_wrapper {
+                padding: 1.2rem 0 0;
+            }
             &_form {
                 margin: 20rem auto 0 auto;
                 width: 100%;
@@ -582,8 +622,19 @@
             }
             &_left {
                 width: 16rem;
-                top: 23rem;
+                bottom: 26rem;
                 transform: translateX(-50%);
+            }
+            &_left > div {
+                font-size: .7rem;
+                top: .5rem;
+                left: 54%;
+            }
+            &_list > li {
+                padding: 0 0 0 3.3rem;
+            }
+            &_list > li::before {
+                left: 1rem;
             }
         }
         

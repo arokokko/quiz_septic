@@ -158,7 +158,9 @@
         padding: .4rem 1.5rem;
         border-radius: .2rem;
         transform: skewX(-5deg);
+        font-size: 1rem;
     }
+    
 }
 .small__form .sending__form_question {
     margin: 1rem;
@@ -193,10 +195,10 @@
     }
     .small__form {
         padding: 1rem;
-        & input, 
-        & button {
-            font-size: 0.9rem;
-        }
+        // & input, 
+        // & button {
+        //     font-size: 0.9rem;
+        // }
     }
 
 }
@@ -222,6 +224,9 @@
             width: 100%;
         }
 
+    }
+    .small__form_input-wrapper {
+        width: 100%;
     }
 }
 
