@@ -224,17 +224,24 @@
         }
         &_descr {
             text-align: center;
-            margin-bottom: 1.5rem;
+            // margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
         &_gallery {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            width: 100%;
 
             & > a {
-                width: 16rem;
-                margin: 1.5rem;
+                width: 18rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+            & > a:nth-child(3n + 2) {
+                margin-right: 2rem;
+                margin-left: 2rem;
             }
         }
         &_btn {
@@ -242,11 +249,11 @@
             margin: 0 auto 2rem auto;
             width: 60%;
             position: relative;
-
+            font-size: 1rem;
         }
         &_arrow {
             position: absolute;
-            bottom: 5rem;
+            bottom: 8rem;
             right: 2rem;
             width: 8rem;
         }
@@ -257,9 +264,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 1rem;
             
             & > img {
-                width: 2rem;
+                width: 3rem;
 
             }
         }
@@ -363,10 +371,22 @@
             }
             
         }
+        
         &__engineer {
             width: 100%;
             
         }
+        &__photos {
+            width: 100%;
+            padding: 0 3%;
+            &_gallery {
+
+                & > a {
+                    width: 16rem;
+                }
+            }
+        }
+        
         &__knocking {
             margin-top: 0;
         }
@@ -464,9 +484,6 @@
         }
         &__photos {
             
-            &_btn {
-                font-size: 0.8rem;
-            }
             &_title br{
                 display: none;
             }
@@ -476,6 +493,23 @@
             &_smile::before {
                 left: 34%;
             }
+            &_gallery {
+    
+                & > a {
+                    width: calc((100% - 2rem) / 2);
+                }
+                & > a:nth-child(3n + 2) {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                & > a:nth-child(odd) {
+                    margin-right: 2rem;
+                }
+                & > a:last-child {
+                    margin-right: 0;
+                }
+            }
+                
         }
 
     }
@@ -493,6 +527,9 @@
 }
 @media (max-width: 576px) {
 	.catalog {
+        &__outer {
+            padding-bottom: 1rem;
+        }
         &__pointer {
             width: 8rem;
             height: 4rem;
@@ -542,8 +579,9 @@
         
         
         &__engineer {
+            margin: 2rem auto 0;
             &_wrapper {
-                padding: 2rem 0;
+                padding: 2rem 0 0;
             }
             &_subtitle {
                 padding: 0 3%;
@@ -558,7 +596,7 @@
             }
             &_left {
                 width: 22rem;
-                bottom: 27rem;    
+                bottom: 25rem;    
             }
             &_form {
                 margin-top: 27rem;
@@ -567,11 +605,34 @@
             }
         }
         &__photos {
-            
+            margin: 2rem auto 0;
             
             &_smile::before {
                 left: 28%;
             }
+            &_btn {
+                width: 100%;
+                margin: 2rem auto 1rem;
+            }
+            
+            &_gallery {
+    
+                & > a {
+                    width: calc((100% - 1rem) / 2);
+                }
+                
+                & > a:nth-child(odd) {
+                    margin-right: 1rem;
+                }
+                & > a:last-child {
+                    margin-right: 0;
+                }
+                & > a {
+                    margin-bottom: 0;
+                }
+            }
+                    
+            
         }
         &__knocking {
             height: 27rem;
@@ -611,10 +672,7 @@
             
         }
         &__engineer {
-            margin: 2rem auto 0;
-            &_wrapper {
-                padding: 1.2rem 0 0;
-            }
+            
             &_form {
                 margin: 20rem auto 0 auto;
                 width: 100%;
