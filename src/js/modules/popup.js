@@ -8,13 +8,14 @@ const popup = () => {
         if ((!from || from.nodeName == "HTML") && (e.pageY < pageY) && !isClicked) {
             document.querySelector('.footer__mobile_download').click();
             document.removeEventListener('mouseout', showPopup);
+            localStorage.setItem('isClicked', 'yes');
         }
         pageY = e.pageY;
     });
     
-    document.addEventListener('click', function() {
-        localStorage.setItem('isClicked', 'yes');
-    });  
+    // document.addEventListener('click', function() {
+        
+    // });  
 }
 
 export default popup;
