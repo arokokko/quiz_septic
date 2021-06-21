@@ -149,6 +149,9 @@
     }
     
     &__loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         &_img {
             width: 4rem;
             animation: rotate 3s infinite linear;

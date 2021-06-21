@@ -13,9 +13,6 @@ const popup = () => {
         pageY = e.pageY;
     });
     
-    // document.addEventListener('click', function() {
-        
-    // });  
 }
 
 export default popup;

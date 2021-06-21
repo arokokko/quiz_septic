@@ -158,6 +158,50 @@ export default () => {
                 </div>
                 <div class="quiz__content_gift-bottom ">и ещё <span class="fw700">15</span> станций</div>`,
 
+                `<div class="quiz__content_gift-wrapper ">
+                    <div class="quiz__content_gift-stickers ">
+                        <div class="gift__sticker gift__sticker-top gift__sticker-red"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                        2021 года</span></div>
+                        <div class="gift__sticker gift__sticker-middle gift__sticker-green"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
+                        при высоком уровне <br>грунтовых вод</span></div>
+                        
+                        
+                    </div>
+                    <img src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Юнилос Пион 3
+                    </div>
+                </div>
+                <div class="quiz__content_gift-bottom ">и ещё <span class="fw700">9</span> станций</div>`,
+
+                `<div class="quiz__content_gift-wrapper ">
+                    <div class="quiz__content_gift-stickers ">
+                        <div class="gift__sticker gift__sticker-top gift__sticker-blue"><img src="icons/fire_icon.png" alt="сезон"><span>Хит продаж <br>
+                        2021 года</span></div>
+                        <div class="gift__sticker gift__sticker-middle gift__sticker-red"><img src="icons/water_icon.png" alt="сезон"><span>Идеально подходит <br>
+                        при высоком уровне <br>грунтовых вод</span></div>
+                        
+                        
+                    </div>
+                    <img src="img/septic_tank_single.png" alt="септический бак">
+                    <div class="quiz__content_gift-wrapper_text gift_text-top  fcb">
+                        Промежуточный результат
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-middle">
+                        Вам подходит станция
+                    </div>
+                    <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700">
+                        Septa 14
+                    </div>
+                </div>
+                <div class="quiz__content_gift-bottom ">и ещё <span class="fw700">7</span> станций</div>`,
+
                 
 
         ];
@@ -215,31 +259,28 @@ export default () => {
 
         const imagesGift = [
 
-            `<img data-img="true" src="img/gift_installation.png" alt="подарок">
-            <div class="quiz__content_gift-wrapper_text gift_text-top ">
-                
-            </div>
-            <div class="quiz__content_gift-wrapper_text gift_text-middle">
-                Ваш подарок
-            </div>
-            <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700 ttu">
-                Скидка&nbsp;на&nbsp;монтаж <br>
-                5 000 рублей
-            </div>`,
-
-            `<img data-img="true" src="img/trees.png" alt="подарок">
-            <div class="quiz__content_gift-wrapper_text gift_text-top ">
-                
-            </div>
-            <div class="quiz__content_gift-wrapper_text gift_text-middle">
-                Ваш подарок
-            </div>
-            <div class="quiz__content_gift-wrapper_text gift_text-bottom fw700 ttu">
-                5 роскошных туй
-            </div>`,
-
-        
+            {
+                img: `img/gift_installation.png`,
+                text: `Скидка&nbsp;на&nbsp;монтаж <br>
+                        5 000 рублей`
+            },
+            {
+                img: `img/trees.png`,
+                text: `5 роскошных туй`
+            },
+            
         ];
+
+        const counts = ['#first', '#second', '#third', '#fourth','#fifth', '#sixth'];
+
+        const inputs = {
+            control_21: 0,
+            control_22: 1,
+            control_23: 2,
+            control_24: 3,
+            control_25: 4,
+            control_26: 5,
+        };
         
 
         // is inputs checked
@@ -258,7 +299,9 @@ export default () => {
                         changeObj(count, btnSel);
                         arr[count].value = item.value;
                         cb(i);
-                        
+                        // setTimeout(() => {
+                        //     btnSel.click();
+                        // }, 1200);
                     }
                 });
             });
@@ -267,37 +310,68 @@ export default () => {
 
         // change picture first screen
         function changeImg(i) {
-            $('[data-img').html(images[i]);
+            $('[data-img]').html(images[i]);
+            
         }
 
         //change picture second screen
-        function changeImgSecond() {
-            $('[data-img').html(images[5]);
+        function changeImgSecond(i) {
+            $('[data-img]').html(images[i]);
         }
 
         // change picture sixth screen
         function changeImgGift(i) {
-            $('[data-img-gift').html(imagesGift[i]);
+            $('[data-img-gift]').attr('src', imagesGift[i].img);
+            $('[data-descr-gift]').text('Ваш подарок');
+            $('[data-text-gift]').html(imagesGift[i].text);
         }
 
         // for second screen
         function checkInputsCustom(screenSel, count, btnSel, cb) {
-            screenSel.addEventListener('click', () => {
-                let array = Array.from(screenSel.getElementsByTagName('input'));
-                let arraySome = array.some(item => item.value !== '0');
-                array.forEach(item => {
-                    if(arraySome && parseInt(item.value) < 3) {
-                        changeObj(count, btnSel);
-                        
-                    } else if(arraySome && parseInt(item.value) >= 3) {
-                        changeObj(count, btnSel);
-                        cb();
-                    } else {
-                        reverseChangeObj(count, btnSel);
+            let inputValue;
+            let inputId;
+            let array = Array.from(screenSel.getElementsByTagName('input'));
+            let arraySome;
+            screenSel.addEventListener('input', (e) => {
+                arraySome = array.some((item) => item.value !== '0');
+                if(e.target && e.target.classList.contains('quantity') && e.target.value > 0) {
+                    if( e.target.value < 3 ) {
+                        inputValue = e.target.value;
+                        inputId = inputs[e.target.getAttribute('id')];
+                        cb(inputId );
+                    } else if ( e.target.value >= 3 ){
+                        inputValue = e.target.value;
+                        inputId = inputs[e.target.getAttribute('id')];
+                        cb(inputId + 2);
                     }
-                });
+                    changeObj(count, btnSel);
+                } else if(!arraySome) {
+                    
+                    reverseChangeObj(count, btnSel);
+                }
+                
                 
             });
+            screenSel.addEventListener('click', (e) => {
+                arraySome = array.some((item) => item.value !== '0');
+                if((e.target.classList.contains('bt_minus') || e.target.classList.contains('bt_plus')) && arraySome) {
+                    let clickInput = e.target.parentElement.querySelector('input');
+                    if( clickInput.value == 1 ) {
+                        inputValue = clickInput.value;
+                        inputId = inputs[clickInput.getAttribute('id')];
+                        cb(inputId );
+                    } else if ( clickInput.value == 3 ){
+                        inputValue = clickInput.value;
+                        inputId = inputs[clickInput.getAttribute('id')];
+                        cb(inputId + 2);
+                    }
+                    changeObj(count, btnSel);
+                    
+                } else if(!arraySome) {
+                    reverseChangeObj(count, btnSel);
+                }
+            });
+            
         }
         function reverseChangeObj(count, btn) {
             arr[count].isChecked = false;
@@ -340,16 +414,10 @@ export default () => {
                     $(current).addClass('hide');
                     $(next).removeClass('hide');
                     $('[data-aside-description]').addClass('animate__bounce');
-                    // $('html,body').animate({ scrollTop: $('body').offset().top  }, 1000);
+                    $('html,body').animate({ scrollTop: $('body').offset().top  }, 1000);
                 }
             });
         }
-
-        // $('a[href="#catal"]').on('click', function(e){
-        //     e.preventDefault();
-        //     const __href = $(this).attr('href');
-        //     $('html,body').animate({ scrollTop: $('.quiz__main').offset().top }, 1000);
-        // });
 
         
         // popup help
