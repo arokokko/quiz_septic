@@ -1,29 +1,5 @@
 export default () => {
     try {
-        const first = document.querySelector('#first'),
-            firstBtnFor = $('[data-btn-forward1]');
-
-        const second = document.querySelector('#second'),
-            secondBtnFor = $('[data-btn-forward2]'),
-            secondBtnBack = $('[data-btn-back2]');
-
-        const third = document.querySelector('#third'),
-            thirdBtnFor = $('[data-btn-forward3]'),
-            thirdBtnBack = $('[data-btn-back3]');
-
-        const fourth = document.querySelector('#fourth'),
-            fourthBtnFor = $('[data-btn-forward4]'),
-            fourthBtnBack = $('[data-btn-back4]');
-
-        const fifth = document.querySelector('#fifth'),
-            fifthBtnFor = $('[data-btn-forward5]'),
-            fifthBtnBack = $('[data-btn-back5]');
-
-        const sixth = document.querySelector('#sixth'),
-            sixthBtnFor = $('[data-btn-forward6]'),
-            sixthBtnBack = $('[data-btn-back6]');
-
-
 
         const progressBarLine = $('[data-bar]'),
             progressBarText = $('[data-bar-count]'),
@@ -271,7 +247,44 @@ export default () => {
             
         ];
 
-        const counts = ['#first', '#second', '#third', '#fourth','#fifth', '#sixth'];
+        const counts = [
+            {
+                id: '#first',
+                forward: $('[data-btn-forward1]'),
+                back: null,
+
+            },
+            {
+                id: '#second',
+                forward: $('[data-btn-forward2]'),
+                back: $('[data-btn-back2]'),
+
+            },
+            {
+                id: '#third',
+                forward: $('[data-btn-forward3]'),
+                back: $('[data-btn-back3]'),
+
+            },
+            {
+                id: '#fourth',
+                forward: $('[data-btn-forward4]'),
+                back: $('[data-btn-back4]'),
+
+            },
+            {
+                id: '#fifth',
+                forward: $('[data-btn-forward5]'),
+                back: $('[data-btn-back5]'),
+
+            },
+            {
+                id: '#sixth',
+                forward: $('[data-btn-forward6]'),
+                back: $('[data-btn-back6]'),
+
+            },
+        ];
 
         const inputs = {
             control_21: 0,
@@ -283,16 +296,18 @@ export default () => {
         };
         
 
-        // is inputs checked
-        checkInputs(first, 0, firstBtnFor);
-        checkInputsCustom(second, 1, secondBtnFor, changeImgSecond);
-        checkInputs(third, 2, thirdBtnFor);
-        checkInputs(fourth, 3, fourthBtnFor);
-        checkInputs(fifth, 4, fifthBtnFor);
-        checkInputs(sixth, 5, sixthBtnFor, changeImgGift);
+        // are inputs checked
+        for(let i = 0, length = counts.length; i < length; i++) {
+            if(i == 1) {
+                checkInputsCount(document.querySelector(counts[i].id), i, counts[i].forward);
+            } else if (i == 5) {
+                checkInputs(document.querySelector(counts[i].id), i, counts[i].forward, switchImgGift);
+            } else {
+                checkInputs(document.querySelector(counts[i].id), i, counts[i].forward);
+            }
+        }
 
-
-        function checkInputs(screenSel, count, btnSel, cb = changeImg) {
+        function checkInputs(screenSel, count, btnSel, cb = switchImg) {
             screenSel.addEventListener('click', () => {
                 screenSel.querySelectorAll('input').forEach((item, i) => {
                     if(item.checked) {
@@ -308,78 +323,81 @@ export default () => {
             
         }
 
-        // change picture first screen
-        function changeImg(i) {
-            $('[data-img]').html(images[i]);
-            
-        }
-
-        //change picture second screen
-        function changeImgSecond(i) {
+        // switch picture first-fifth screens
+        function switchImg(i) {
             $('[data-img]').html(images[i]);
         }
 
-        // change picture sixth screen
-        function changeImgGift(i) {
+        // switch picture sixth screen
+        function switchImgGift(i) {
             $('[data-img-gift]').attr('src', imagesGift[i].img);
             $('[data-descr-gift]').text('Ваш подарок');
             $('[data-text-gift]').html(imagesGift[i].text);
         }
 
         // for second screen
-        function checkInputsCustom(screenSel, count, btnSel, cb) {
+        function checkInputsCount(screenSel, count, btnSel, cb = switchImg) {
             let inputValue;
-            let inputId;
-            let array = Array.from(screenSel.getElementsByTagName('input'));
-            let arraySome;
+            let inputId;            
+            function initVars(varInput, num = inputId) {
+                inputValue = varInput.value;
+                inputId = inputs[varInput.getAttribute('id')];
+                cb(num);
+            }
+
+            // check if at least one input checked
+            const array = Array.from(screenSel.getElementsByTagName('input'));
+            let isInputChecked = false;
+            function initIsInputChecked() {
+                isInputChecked = array.some((item) => item.value !== '0');
+            }
+
+            // backup second screen if all values are zero
+            function reverseChangeObj(count, btn) {
+                arr[count].isChecked = false;
+                btn.css('cursor', 'no-drop');
+                btn.removeClass('btn-flare');
+            }
+
             screenSel.addEventListener('input', (e) => {
-                arraySome = array.some((item) => item.value !== '0');
+                initIsInputChecked();
                 if(e.target && e.target.classList.contains('quantity') && e.target.value > 0) {
+
                     if( e.target.value < 3 ) {
-                        inputValue = e.target.value;
-                        inputId = inputs[e.target.getAttribute('id')];
-                        cb(inputId );
+                        initVars(e.target);
                     } else if ( e.target.value >= 3 ){
-                        inputValue = e.target.value;
-                        inputId = inputs[e.target.getAttribute('id')];
-                        cb(inputId + 2);
+                        initVars(e.target, inputId + 2);
                     }
                     changeObj(count, btnSel);
-                } else if(!arraySome) {
-                    
+
+                } else if(!isInputChecked) {
+
                     reverseChangeObj(count, btnSel);
                 }
-                
-                
             });
+
             screenSel.addEventListener('click', (e) => {
-                arraySome = array.some((item) => item.value !== '0');
-                if((e.target.classList.contains('bt_minus') || e.target.classList.contains('bt_plus')) && arraySome) {
+                initIsInputChecked();
+                if((e.target.classList.contains('bt_minus') || e.target.classList.contains('bt_plus')) && isInputChecked) {
+                    
                     let clickInput = e.target.parentElement.querySelector('input');
                     if( clickInput.value == 1 ) {
-                        inputValue = clickInput.value;
-                        inputId = inputs[clickInput.getAttribute('id')];
-                        cb(inputId );
+                        initVars(clickInput);
                     } else if ( clickInput.value == 3 ){
-                        inputValue = clickInput.value;
-                        inputId = inputs[clickInput.getAttribute('id')];
-                        cb(inputId + 2);
+                        initVars(clickInput, inputId + 2);
                     }
                     changeObj(count, btnSel);
                     
-                } else if(!arraySome) {
+                } else if(!isInputChecked) {
+
                     reverseChangeObj(count, btnSel);
                 }
             });
             
         }
-        function reverseChangeObj(count, btn) {
-            arr[count].isChecked = false;
-            btn.css('cursor', 'no-drop');
-            btn.removeClass('btn-flare');
-        }
         // second screen end
 
+        // change data in main array
         function changeObj(count, btn) {
             arr[count].isChecked = true;
             btn.css('cursor', 'pointer');
@@ -387,18 +405,11 @@ export default () => {
             progressBarLine.css('width', arr[count].bar);
             progressBarText.text(arr[count].bar);
         }
-
-        $('[data-aside-description]').on('animationend', () => {
-            $('[data-aside-description]').removeClass('animate__bounce');
-        })
-
         
-        // handle forward buttons
-        handleForward(firstBtnFor, 0, '#first', '#second');
-        handleForward(secondBtnFor, 1, '#second', '#third');
-        handleForward(thirdBtnFor, 2, '#third', '#fourth');
-        handleForward(fourthBtnFor, 3, '#fourth', '#fifth');
-        handleForward(fifthBtnFor, 4, '#fifth', '#sixth');
+        // initialize forward buttons first-fifth screens
+        for(let i = 0, length = counts.length - 1; i < length; i++) {
+            handleForward(counts[i].forward, i, counts[i].id, counts[i+1].id);
+        }
         
         function handleForward(btnSel, count, current, next) {
             btnSel.on('click', (e) => {
@@ -431,18 +442,22 @@ export default () => {
                     sel.addClass('no_opacity')
                 }, 2000);
             }
-            
         }
+
         // aside description
         function changeDescription(count) {
             $('[data-aside-description]').html(arr[count].description);
         }
+        // aside description animation 
+        $('[data-aside-description]').on('animationend', () => {
+            $('[data-aside-description]').removeClass('animate__bounce');
+        })
 
-        handleBack(secondBtnBack, 1, '#second', '#first');
-        handleBack(thirdBtnBack, 2, '#third', '#second');
-        handleBack(fourthBtnBack, 3, '#fourth', '#third');
-        handleBack(fifthBtnBack, 4, '#fifth', '#fourth');
-        handleBack(sixthBtnBack, 5, '#sixth', '#fifth');
+        
+        // buttons back initialize
+        for(let i = 1, length = counts.length; i < length; i++) {
+            handleBack(counts[i].back, i, counts[i].id, counts[i-1].id);
+        }
 
         function handleBack(btnSel, count, current, prev) {
             btnSel.on('click', () => {
@@ -455,18 +470,10 @@ export default () => {
                 
             });
         }
-        function showLoader() {
-            setTimeout(() => {
-                $('.loading__loader').addClass('hide');
-                
-            }, 2500);
-            setTimeout(showMainForm, 2500);
-        }
-        function showMainForm() {
-            $('.loading__inner').removeClass('hide');
-            $('.catalog__knocking').removeClass('hide');
-        }
-        sixthBtnFor.on('click', (e) => {
+
+    
+        // sixth screen button forward action
+        counts[5].forward.on('click', (e) => {
             e.preventDefault();
             if(!arr[5].isChecked) {
 
@@ -478,11 +485,20 @@ export default () => {
                 showLoader();
             }
         });
-    } catch(e) {
-        
-    }
-   
-    
-    
+
+        function showLoader() {
+            setTimeout(() => {
+                $('.loading__loader').addClass('hide');
+                
+            }, 2500);
+            setTimeout(showMainForm, 2500);
+        }
+
+        function showMainForm() {
+            $('.loading__inner').removeClass('hide');
+            $('.catalog__knocking').removeClass('hide');
+        }
+
+    } catch(e) {}
 
 }
