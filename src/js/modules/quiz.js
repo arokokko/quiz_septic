@@ -1,6 +1,7 @@
 export default () => {
     try {
         // window.addEventListener("DOMContentLoaded", () => {
+            
             const progressBarLine = $('[data-bar]'),
                 progressBarText = $('[data-bar-count]'),
                 scoreCount = $('[data-count]');
@@ -312,9 +313,9 @@ export default () => {
                             changeObj(count, btnSel);
                             arr[count].value = item.value;
                             cb(i);
-                            // setTimeout(() => {
-                            //     btnSel.click();
-                            // }, 1200);
+                            setTimeout(() => {
+                                btnSel.click();
+                            }, 1200);
                         }
                     });
                 });
@@ -424,7 +425,11 @@ export default () => {
                         $(current).addClass('hide');
                         $(next).removeClass('hide');
                         $('[data-aside-description]').addClass('animate__bounce');
-                        $('html,body').animate({ scrollTop: $('body').offset().top  }, 1000);
+                        // setTimeout(() => {
+                        //     $('html,body').animate({ scrollTop: $('#quiz__main').offset().top  }, 1000);
+                        // }, 0);
+                        
+                        document.querySelector('#quiz__main').scrollIntoView({behavior: "smooth"});
                     }
                 });
             }
