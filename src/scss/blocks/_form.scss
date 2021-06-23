@@ -94,10 +94,11 @@
                 content: "";
                 background-size: contain;
                 position: absolute;
-                top: .05rem;
+                top: 0;
                 left: 0;
                 height: .9rem;
                 width: .9rem;
+                z-index: 3;
             }
         }
     }
